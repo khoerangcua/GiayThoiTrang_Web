@@ -1,0 +1,80 @@
+.imgpro{
+	padding: 20px 10px 20px 0px;
+}
+.infor{
+	padding: 20px 20px 20px 10px;
+}
+ul.Loai :hover img{
+	transform: scale(1.1);
+	opacity: 0.8;
+	border-bottom: 2px solid;
+}
+
+.size{
+	padding: 20px;	
+}
+.button{
+	border: 20px;
+}
+.introduction{
+	padding: 30px 20px 50px 10px;
+	background-color: rgb(248,249,250);
+	margin-bottom: 50px;
+	
+}
+.introduction h2{
+	font-size: 300%;
+	text-transform: uppercase;
+	text-align: center;
+}
+.introduction h4{
+	font-size: 17px;
+	color: #000000;
+}
+.SimilarProduct{
+	padding-bottom: 50px;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.row{
+	display: flex;
+	justify-content: center;
+}
+ul.list-image{
+	display: flex;
+}
+ul.list-image li{
+	overflow: hidden;
+	max-width: 100%;
+}
+ul.list-image li a img{
+	max-width: 100%;
+	transition: all 0.3s ease-in-out;
+	display: block;
+}
+ul.list-image li a{
+	position: relative;
+	display: block;
+}
+ul.list-image li :hover img{
+	transform: scale(1.1);
+	opacity: 0.8 ;
+}
+ul.list-image li a .Khac{
+	position: absolute;
+	color: black;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	bottom: 0px;
+	transition: all 0.3s ease ease-in-out;
+	opacity: 0;
+}
+ul.list-image li  :hover .Khac{
+	top: 15%;
+	opacity: 2;
+}

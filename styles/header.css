@@ -1,0 +1,138 @@
+@import url("style-giohang.css");
+html, body{
+	font-family: 'Quicksand', sans-serif;
+	line-height:1.4;
+	font-size: 14px;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6 {margin:0 0 13px 0;  font-weight:500;}
+h1 { font-size: 36px; }
+h2 { font-size: 28px;}   
+h3 { font-size: 24px;}
+h4 { font-size: 13px; line-height: 18px; }
+h5 { font-size: 12px; line-height: 18px; }
+h6 { font-size: 10px; line-height: 18px; }
+
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	z-index: 100;
+}
+nav{
+	text-align: right;
+}
+navbar ul{
+	height: auto;
+	list-style-type: none;
+	display: inline-block;
+}
+nav ul li{
+	display: inline-block;
+	margin-right: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+nav ul li:hover{
+	border-bottom: 2px solid;
+	color: #666666;
+	
+}
+a{
+	text-decoration: none;
+	color: #000000;
+	
+}
+a:hover{
+	
+	color: #666666;
+	border-top: 1px thin #666666;
+}
+.action-menu a{
+	margin-left: 10px;
+}
+.menu-icon{
+	margin-left: 10px;
+	display: none;
+}
+@media only screen and (max-width: 992px){
+	nav ul{
+		position: absolute;
+		background: #FFFFFF;
+		top:115px;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		
+	}
+	nav ul li{
+		display: block;
+		margin: 15px 50px 15px 0px;
+	}
+	nav ul li a{
+		color: #000000;
+	}
+	.menu-icon{
+		display: block;
+		cursor: pointer;
+	}
+}
+.heading{
+	padding: 40px 0px;
+	text-align: center;
+}
+.heading h2{
+	font-weight: 600;
+}
+.heading.more a{
+	display: inline-block;
+	font-size: 13px;
+}
+@media (max-width: 991px){
+	.pro-list .products{
+		padding-right: 7.5px;
+		padding-left: 7.5px;
+		height: auto;
+	}
+}
+.products{
+	display: block;
+	overflow: hidden;
+	height: 378px;
+	margin-bottom: 30px;
+	padding: 0 10px ;	
+}
+.products .pro-img {
+	max-width: 100%;
+	height: auto;
+}
+.pro-detail{
+	text-align: center;
+	padding: 20px 0px;
+}
+.pro-detail h3{
+	text-transform: uppercase;
+	margin: 0 0 5px;
+	font-size:14px;
+	position: relative;
+
+}
+p.pro-price{
+	line-height: 1.4;
+	font-size: 14px;
+	font-weight: 700;
+}
+p.pro-price.sale{
+	color: #FF0004;
+}
+.pro-price-retail{
+	color: #222222;
+	font-size: 13px;
+	margin-left: 5px;
+	font-weight: 500;
+}
+
+
