@@ -81,7 +81,7 @@
     </header>
 
 
-    <!--CONTENT (chỉnh chỗ này)-->
+    <!--CONTENT-->
     <div class="container-fluid">
 
         <!--TIỀU ĐỀ-->
