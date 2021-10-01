@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <!--link style-->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/hienthitimkiem.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/hienthitimkiem.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <header>
         <div class="container-fluid">
             <div class="navbar">
-                <img src="images/header-icon.png" width="100px"><img>
+                <img src="../images/header-icon.png" width="100px"><img>
                 <nav class="m-auto">
                     <ul id="menuitems">
                         <li>
@@ -135,7 +135,7 @@
                         <div id="wapper">
                             <ul class="pro-list bod">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem  text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -163,7 +163,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -191,7 +191,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -219,7 +219,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -246,7 +246,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -274,7 +274,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -302,7 +302,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết</h4>
@@ -330,7 +330,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -357,7 +357,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -384,7 +384,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -411,7 +411,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -438,7 +438,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -465,7 +465,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -492,7 +492,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -519,7 +519,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -546,7 +546,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="../images/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -595,12 +595,12 @@
                 <div class=" sale-banner text-light display-2" style="height: 450px;">
                     <h2>ADIDAS</h2>
                     <h3 style="transform: scale(2);"> Flash Sale is on!</h3>
-                    <img class="logo-sale" src="images/logoA2-httk.jpg">
+                    <img class="logo-sale" src="../images/logoA2-httk.jpg">
                     <h1>UP TO 35%</h1>
                 </div>
             </div>
             <div class="col-lg-7 padding-0">
-                <a href="#"><img class="banner-img" src="images/banner3-httk.jpg"></a>
+                <a href="#"><img class="banner-img" src="../images/banner3-httk.jpg"></a>
             </div>
         </div>
 
@@ -619,7 +619,7 @@
                         style="width: 100%">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="images/banner2_1-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                                <img src="../images/banner2_1-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                     alt="">
                                 <div class="carousel-caption">
                                     <h2>Bộ sưu tập mới!</h2>
@@ -627,11 +627,11 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="images/banner2_2-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                                <img src="../images/banner2_2-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                     alt="">
                             </div>
                             <div class="carousel-item">
-                                <img src="images/banner2_3-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                                <img src="../images/banner2_3-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                     alt="">
                                 <div class="carousel-caption">
                                     <h2>Bộ sưu tập mới!</h2>
@@ -679,7 +679,7 @@
                     <!--picture-->
                     <div class="row" style="text-align: center;">
                         <div class="col" id="ftr-image">
-                            <img class="ftr-image" src="images/ftr-image6.jpg" alt="">
+                            <img class="ftr-image" src="../images/ftr-image6.jpg" alt="">
                         </div>
                     </div>
                     <!--shop's name-->
@@ -866,7 +866,7 @@
     </footer>
 
     <!--header-script-->
-    <script src="scripts/header.js"></script>
+    <script src="../scripts/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
         crossorigin="anonymous"></script>
@@ -875,10 +875,10 @@
         crossorigin="anonymous"></script>
 
     <!--footer-script-->
-    <script src="scripts/footer.js"></script>
+    <script src="../scripts/footer.js"></script>
 
     <!--hienthitimkiem-script-->
-    <script src="scripts/hienthitimkiem.js"></script>
+    <script src="../scripts/hienthitimkiem.js"></script>
     <!--(chỉnh chỗ này)-->
 
     <!--bootstrap 5-script-->

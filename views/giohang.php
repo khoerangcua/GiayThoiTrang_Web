@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin sản phẩm</title>
+    <title>Giỏ hàng</title>
     <!--bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--google font-->
@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <!--link style-->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/giohang.css">
     <!--(chỉnh chỗ này)-->
-    <link rel="stylesheet" href="styles/thongtinsp.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <header>
         <div class="container-fluid">
             <div class="navbar">
-                <img src="images/header-icon.png" width="100px"><img>
+                <img src="../images/header-icon.png" width="100px"><img>
                 <nav class="m-auto">
                     <ul id="menuitems">
                         <li>
@@ -82,113 +82,209 @@
 
 
     <!--CONTENT (chỉnh chỗ này)-->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-md-7 col-12">
-                <div class="imgpro">
-                    <ul class="picture">
-                        <img width="98%" src="images/AM96A-ttsp.png" alt="" id="ProductImg">
-                    </ul>
-                    <ul>
-                        <img style="padding-right: 10px;" width="24%" src="images/AM96A-ttsp.png" alt=""
-                            class="small-img">
-                        <img style="padding-right: 10px;" width="24%" src="images/A1-ttsp.png" alt="" class="small-img">
-                        <img style="padding-right: 10px;" width="24%" src="images/A2-ttsp.png" alt="" class="small-img">
-                        <img style="padding-right: 10px;" width="24%" src="images/A3-ttsp.png" alt="" class="small-img">
-                    </ul>
 
+    <div class="container">
+        <!-- heading1-->
+
+        <div class="row">
+            <div class="col">
+                <div class="heading">
+                    <h2>Giỏ hàng của bạn</h2>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-5 col-12">
-                <div class="infor">
-                    <div>
-                        <ul class="name">
-                            <h3> Air Max 96 II</h3>
-                            <h3> 4,699,000đ</h3>
-                        </ul>
-                        <ul class="Loai">
-                            <a href="">
-                                <img style="margin: 10px;" src="images/AM96A-ttsp.png" width="70px" alt="">
-                            </a>
-                            <a href="">
-                                <img src="images/AM96-ttsp.png" width="70px" alt="">
-                            </a>
-                        </ul>
-                        <ul>
-                            <h3>
-                                Chọn Size
-                            </h3>
-                        </ul>
-                        <ul class="size">
-                            <button type="button" class="btn btn-light">40</button>
-                            <button type="button" class="btn btn-light">40.5</button>
-                            <button type="button" class="btn btn-light">41</button>
-                            <button type="button" class="btn btn-light">41.5</button>
-                            <button type="button" class="btn btn-light">42</button>
-                            <button type="button" class="btn btn-light">42.5</button>
-                            <button type="button" class="btn btn-light">43</button>
-                            <button type="button" class="btn btn-light">44</button>
-                            <button type="button" class="btn btn-light">44.5</button>
-                        </ul>
-                        <ul class="button">
-                            <button style="margin:0px 30px 30px 30px;" type="button" class="btn btn-danger btn-lg">Mua
-                                Ngay</button>
-                            <button style="margin:0px 30px 30px 30px;" type="button" class="btn btn-info btn-lg">Thêm
-                                vào giỏ hàng</button>
+        </div>
+
+        <!-- cart-->
+
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 cart-info">
+                <p class="cart-note">Bạn đang có <b>2</b> sản phẩm trong giỏ hàng</p>
+                <div class="row cart-items">
+                    <div class="col-md-5 col-lg-3 col-xl-3 col-3">
+                        <a href="#!">
+                            <img class="img-fluid w-100" src="../images/AM96A-ttsp.png">
+                        </a>
+                    </div>
+
+                    <div class="col-md-7 col-lg-9 col-xl-9 col-9">
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3>Product 1</h3>
+                                    <p class="mb-3 text-muted text-uppercase small">Size: 41</p>
+                                    <p class="mb-2 text-muted text-uppercase small">Color: White/Black</p>
+                                </div>
+                                <div class="qty">
+                                    <button type="button"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                        class="minus decrease">-</button>
+                                    <input type="number" size="4" name="updates[]" min="1" value="1"
+                                        class="cart-number">
+                                    <button type="button"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                        class="plus increase">+</button>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                            <path fill-rule="evenodd"
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="mb-0"><span><strong>2,345,678₫</strong></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row cart-items">
+                    <div class="col-md-5 col-lg-3 col-xl-3 col-3">
+                        <a href="#!">
+                            <img class="img-fluid w-100" src="../images/AM96A-ttsp.png">
+                        </a>
+                    </div>
+
+                    <div class="col-md-7 col-lg-9 col-xl-9 col-9">
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3>Product 1</h3>
+                                    <p class="mb-3 text-muted text-uppercase small">Size: 41</p>
+                                    <p class="mb-2 text-muted text-uppercase small">Color: White/Black</p>
+                                </div>
+                                <div class="qty">
+                                    <button type="button"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                        class="minus decrease">-</button>
+                                    <input type="number" size="4" name="updates[]" min="1" value="1"
+                                        class="cart-number">
+                                    <button type="button"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                        class="plus increase">+</button>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                            <path fill-rule="evenodd"
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="mb-0"><span><strong>2,345,678₫</strong></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row cart-note">
+                    <div class="col-md-5 col-12">
+                        <label class="cart-note-label">Ghi chú đơn hàng</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="col-md-7 col 12">
+                        <p class="cart-note-label">Chính sách đổi trả</p>
+                        <ul class="policy">
+                            <li>Chính sách 1</li>
+                            <li>Chính sách 2</li>
+                            <li>Chính sách 3</li>
+                            <li>Chính sách 4</li>
+                            <li>Chính sách 5</li>
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <a href="#" class="continue">Tiếp tục mua hàng →</a>
+                <div class="cart-summary">
+                    <h3>Thông tin thanh toán</h3>
+                    <div class="summary-total">
+                        <p>
+                            Tổng tiền: <span>2,345,678₫</span>
+                        </p>
+                    </div>
+                    <h5>Bạn có thể nhập mã giảm giá khi xác nhận thanh toán</h5>
+                    <a class="checkout-btn" href="#">THANH TOÁN</a>
+                </div>
+            </div>
+        </div>
 
+        <!--heading 2-->
+        <div class="row">
+            <div class="col">
+                <div class="heading">
+                    <h2>Có thể bạn sẽ thích</h2>
+                    <a class="more" href="#">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <!--co the ban se thich-->
+
+        <div class="row pro-list">
+            <div class="col-lg-3 col-md-6 col-6 products">
+                <a href="#"><img class="pro-img" src="../images/C1-ttsp.png"></a>
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
             </div>
 
-        </div>
-        <div class="introduction">
-            <ul>
-                <h2>Giới thiệu</h2>
-                <h4>
-                    Lần đầu tiên, Air Max 96 II trở lại với bản làm lại 1-1. Mang lại nét thẩm mỹ thể thao do nhà thiết
-                    kế nổi tiếng của Nike Sergio Lorenzo tưởng tượng, với màu sắc hoài cổ trên cấu trúc cổ điển của thập
-                    niên 90, đó là sự trở lại với phong cách thể thao cũ. Đệm Nike Air giữ cho nó thoải mái với công
-                    nghệ Air được giới thiệu và phát triển năm 1979.
-                </h4>
-            </ul>
-        </div>
-        <div class="SimilarProduct">
-            <div class="danhmuc">
-                <ul>
-                    <h3>Sản Phẩm tương tự</h3>
-                </ul>
+            <div class="col-lg-3 col-md-6 col-6 products">
+                <a href="#"><img class="pro-img" src="../images/C1-ttsp.png"></a>
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <ul class="list-image">
-                    <li>
-                        <a href="">
-                            <img width="100%" src="images/B1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Max 2021<br>4,699,000đ</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img width="100%" src="images/C1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Max 97<br>4,999,000đ</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img width="100%" src="images/D1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Vapormax Evo SE<br>6,459,000đ</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img width="100%" src="images/E1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Force 1 '07 LV8<br>2,929,000đ</div>
-                        </a>
-                    </li>
-                </ul>
+
+            <div class="col-lg-3 col-md-6 col-6 products">
+                <a href="#"><img class="pro-img" src="../images/C1-ttsp.png"></a>
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6 products">
+                <a href="#"><img class="pro-img" src="../images/C1-ttsp.png"></a>
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
+
+
 
 
 
@@ -205,7 +301,7 @@
                     <!--picture-->
                     <div class="row" style="text-align: center;">
                         <div class="col" id="ftr-image">
-                            <img class="ftr-image" src="images/ftr-image6.jpg" alt="">
+                            <img class="ftr-image" src="../images/ftr-image6.jpg" alt="">
                         </div>
                     </div>
                     <!--shop's name-->
@@ -392,7 +488,7 @@
     </footer>
 
     <!--header-script-->
-    <script src="scripts/header.js"></script>
+    <script src="../scripts/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
         crossorigin="anonymous"></script>
@@ -401,12 +497,11 @@
         crossorigin="anonymous"></script>
 
     <!--footer-script-->
-    <script src="scripts/footer.js"></script>
+    <script src="../scripts/footer.js"></script>
 
-    <!--thongtinsp-script (chỉnh chỗ này)--> 
-    <script src="scripts/thongtinsp.js"></script>
+    <!--giohang-script-->
 
-    <!--bootstrap-script-->
+    <!--bootstrap 5-script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
