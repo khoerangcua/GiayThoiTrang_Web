@@ -24,7 +24,7 @@
 				</div>
 				<form class="login-form">
 					<div class="form-floating mb-4">
-						<input type="email" class="form-control" id="floatingInput" placeholder="Tên đăng nhập" src="">
+						<input type="email" class="form-control" id="floatingInput" placeholder="Tên đăng nhập">
 						<label for="floatingInput">Tên đăng nhập</label>
 					</div>
 					<div class="form-floating mb-2">
@@ -36,10 +36,9 @@
 						<label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
 					</div>
 					<button type="submit" class="login-btn mb-4">Đăng nhập</button>
-					<p>Chưa có tài khoản? <a href="dangky_form.php">Đăng ký tại đây</a></p>
+					<p class="login-signup">Chưa có tài khoản? <a href="dangky_form.php">Đăng ký tại đây</a></p>
 				</form>
 			</div>
-
 		</div>
 	</div>
 	
