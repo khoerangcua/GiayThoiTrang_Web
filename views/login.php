@@ -36,7 +36,7 @@
 						<label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
 					</div>
 					<button type="submit" class="login-btn mb-4">Đăng nhập</button>
-					<p class="login-signup">Chưa có tài khoản? <a href="dangky_form.php">Đăng ký tại đây</a></p>
+					<p class="login-signup">Chưa có tài khoản? <a href="dangky.php">Đăng ký tại đây</a></p>
 				</form>
 			</div>
 		</div>
