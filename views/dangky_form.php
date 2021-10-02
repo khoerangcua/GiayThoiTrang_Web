@@ -67,7 +67,7 @@
                         </div>
                     </div>
 					<div class="form-floating mb-3">
-						<input type="number" class="form-control" id="floatingInput_Pnumber" placeholder="Số điện thoại">
+						<input type="tel" class="form-control" id="floatingInput_Pnumber" placeholder="Số điện thoại">
 						<label for="floatingInput_Pnumber">Số điện thoại</label>
 					</div>
 					<div class="form-floating mb-2">
