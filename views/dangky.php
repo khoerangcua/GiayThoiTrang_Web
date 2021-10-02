@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Đăng ký | Register</title>
     <!--bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--google font-->
@@ -27,7 +27,7 @@
 					<img src="../images/header-icon.png" class="icon">
 				</div>
 				<div class="row dky-header">
-					<h3>đăng ký</h3>
+					<h3>đăng ký tài khoản</h3>
 				</div>
 				<form class="dky-form">
 					<div class="row">
@@ -80,7 +80,8 @@
 							Chấp nhận với <span><a href="">Điều khoản</a></span>
 						</label>
 					</div>
-					<button type="submit" class="dky-btn mb-4">Đăng ký</button>
+					<button type="submit" class="dky-btn mb-5">Đăng ký</button>
+					<p class="dky-login">Bạn đã có tài khoản? <a href="login.php">Đăng nhập</a></p>
 				</form>
 			</div>	
 		</div>

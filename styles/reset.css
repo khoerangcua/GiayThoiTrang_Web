@@ -38,7 +38,7 @@ h6 {
 	line-height: 18px;
 }
 
-.login-ui {
+.reset-ui {
 	align-content: center;
 	justify-content: center;
 	padding-top: 30px;
@@ -51,24 +51,24 @@ h6 {
 	margin-bottom: 20px;
 }
 
-.login-form {
+.reset-form {
 	padding: 20px;
 }
 
-.login-form input:focus {
+.reset-form input:focus {
 	color: #000000;
 }
 
-.login-header {
+.reset-header {
 	text-align: center;
 }
 
-.login-header h3 {
+.reset-header h3 {
 	font-weight: 600;
 	text-transform: uppercase;
 }
 
-.login-btn {
+.reset-btn {
 	background-color: #000000;
 	color: #FFFFFF;
 	text-transform: uppercase;
@@ -77,18 +77,18 @@ h6 {
 	border: solid 1px;
 	width: 100%;
 }
-
-.login-signup {
-	text-align: center;
+.reset-note{
+	font-size: 11px;
+	font-weight: 400;
+	margin-top: 10px;
 }
-
-.login-signup a {
+.reset-signup a {
 	text-decoration: none;
 	color: #000000;
 	font-weight: 600;
 }
 
-.login-signup a:hover {
+.reset-signup a:hover {
 	color: #666666;
 }
 
@@ -106,15 +106,6 @@ h6 {
 .form-check-input:focus {
 	border-color: #666666;
 	box-shadow: 0px 0px 5px 2px #666666;
-}
-.forgot{
-	float: right;
-	text-decoration: none;
-	color: #000000;
-	font-weight: 600;
-}
-.forgot:hover{
-	color: #666666;
 }
 
 
