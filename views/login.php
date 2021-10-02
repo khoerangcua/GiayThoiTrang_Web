@@ -34,7 +34,7 @@
 					<div class="mb-4 form-check">
 						<input type="checkbox" class="form-check-input" id="exampleCheck1">
 						<label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
-						<a href="#" class="forgot">Quên mật khẩu?</a>
+						<a href="resetpassword.php" class="forgot">Quên mật khẩu?</a>
 					</div>
 					<button type="submit" class="login-btn mb-4">Đăng nhập</button>
 					<p class="login-signup">Chưa có tài khoản? <a href="dangky.php">Đăng ký tại đây</a></p>
