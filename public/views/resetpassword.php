@@ -9,7 +9,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-	<link href="../styles/reset.css" rel="stylesheet" type="text/css">
+	<link href="public/styles/reset.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 		<div class="row vh-100 justify-content-center align-items-center">
 			<div class="col-sm-8 col-md-6 col-lg-4 shadow reset-ui">
 				<div class="row justify-content-center">
-					<img src="../images/header-icon.png" class="icon">
+					<img src="public/images/header-icon.png" class="icon">
 				</div>
 				<div class="row reset-header">
 					<h3>Quên mật khẩu</h3>

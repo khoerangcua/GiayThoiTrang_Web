@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
     <!--Style đăng ký-->
-    <link rel="stylesheet" href="../styles/dangky.css">
+    <link rel="stylesheet" href="public/styles/dangky.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 		<div class="row vh-100 justify-content-center align-items-center">
 			<div class="col-sm-8 col-md-8 col-lg-6 shadow dky-ui">
 				<div class="row justify-content-center">
-					<img src="../images/header-icon.png" class="icon">
+					<img src="public/images/header-icon.png" class="icon">
 				</div>
 				<div class="row dky-header">
 					<h3>đăng ký tài khoản</h3>
