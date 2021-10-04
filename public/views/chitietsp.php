@@ -23,7 +23,7 @@
     <!--HEADER-->
     <header>
         <?php
-        include_once("public/views/header.php");
+        include_once("public/templates/header.php");
         ?>
     </header>
 
@@ -34,14 +34,14 @@
             <div class="col-lg-7 col-md-7 col-12">
                 <div class="imgpro">
                     <ul class="picture">
-                        <img width="98%" src="public/images/AM96A-ttsp.png" alt="" id="ProductImg">
+                        <img width="98%" src="public/images/products/AM96A-ttsp.png" alt="" id="ProductImg">
                     </ul>
                     <ul>
-                        <img style="padding-right: 10px;" width="24%" src="public/images/AM96A-ttsp.png" alt=""
+                        <img style="padding-right: 10px;" width="24%" src="public/images/products/AM96A-ttsp.png" alt=""
                             class="small-img">
-                        <img style="padding-right: 10px;" width="24%" src="public/images/A1-ttsp.png" alt="" class="small-img">
-                        <img style="padding-right: 10px;" width="24%" src="public/images/A2-ttsp.png" alt="" class="small-img">
-                        <img style="padding-right: 10px;" width="24%" src="public/images/A3-ttsp.png" alt="" class="small-img">
+                        <img style="padding-right: 10px;" width="24%" src="public/images/products/A1-ttsp.png" alt="" class="small-img">
+                        <img style="padding-right: 10px;" width="24%" src="public/images/products/A2-ttsp.png" alt="" class="small-img">
+                        <img style="padding-right: 10px;" width="24%" src="public/images/products/A3-ttsp.png" alt="" class="small-img">
                     </ul>
 
                 </div>
@@ -55,10 +55,10 @@
                         </ul>
                         <ul class="Loai">
                             <a href="">
-                                <img style="margin: 10px;" src="public/images/AM96A-ttsp.png" width="70px" alt="">
+                                <img style="margin: 10px;" src="public/images/products/AM96A-ttsp.png" width="70px" alt="">
                             </a>
                             <a href="">
-                                <img src="public/images/AM96-ttsp.png" width="70px" alt="">
+                                <img src="public/images/products/AM96-ttsp.png" width="70px" alt="">
                             </a>
                         </ul>
                         <ul>
@@ -110,25 +110,25 @@
                 <ul class="list-image">
                     <li>
                         <a href="">
-                            <img width="100%" src="public/images/B1-ttsp.png" alt="">
+                            <img width="100%" src="public/images/products/B1-ttsp.png" alt="">
                             <div class="Khac">Nike Air Max 2021<br>4,699,000đ</div>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img width="100%" src="public/images/C1-ttsp.png" alt="">
+                            <img width="100%" src="public/images/products/C1-ttsp.png" alt="">
                             <div class="Khac">Nike Air Max 97<br>4,999,000đ</div>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img width="100%" src="public/images/D1-ttsp.png" alt="">
+                            <img width="100%" src="public/images/products/D1-ttsp.png" alt="">
                             <div class="Khac">Nike Air Vapormax Evo SE<br>6,459,000đ</div>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img width="100%" src="public/images/E1-ttsp.png" alt="">
+                            <img width="100%" src="public/images/products/E1-ttsp.png" alt="">
                             <div class="Khac">Nike Air Force 1 '07 LV8<br>2,929,000đ</div>
                         </a>
                     </li>
@@ -142,7 +142,7 @@
     <!--FOOTER-->
     <footer>
      <?php
-     include_once("public/views/footer.php");
+     include_once("public/templates/footer.php");
      ?>
     </footer>
 

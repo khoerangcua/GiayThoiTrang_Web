@@ -17,7 +17,7 @@
 		<div class="row vh-100 justify-content-center align-items-center">
 			<div class="col-sm-8 col-md-6 col-lg-4 shadow login-ui">
 				<div class="row justify-content-center">
-					<img src="public/images/header-icon.png" class="icon">
+					<img src="public/images/icons/header-icon.png" class="icon">
 				</div>
 				<div class="row login-header">
 					<h3>đăng nhập</h3>

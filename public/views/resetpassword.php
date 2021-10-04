@@ -17,7 +17,7 @@
 		<div class="row vh-100 justify-content-center align-items-center">
 			<div class="col-sm-8 col-md-6 col-lg-4 shadow reset-ui">
 				<div class="row justify-content-center">
-					<img src="public/images/header-icon.png" class="icon">
+					<img src="public/images/icons/header-icon.png" class="icon">
 				</div>
 				<div class="row reset-header">
 					<h3>Quên mật khẩu</h3>

@@ -23,7 +23,7 @@
     <!--HEADER-->
     <header>
         <?php
-        include_once("public/views/header.php");
+        include_once("public/templates/header.php");
         ?>
     </header>
 
@@ -49,7 +49,7 @@
                 <div class="row cart-items">
                     <div class="col-md-5 col-lg-3 col-xl-3 col-3">
                         <a href="#!">
-                            <img class="img-fluid w-100" src="public/images/AM96A-ttsp.png">
+                            <img class="img-fluid w-100" src="public/images/products/AM96A-ttsp.png">
                         </a>
                     </div>
 
@@ -86,7 +86,7 @@
                 <div class="row cart-items">
                     <div class="col-md-5 col-lg-3 col-xl-3 col-3">
                         <a href="#!">
-                            <img class="img-fluid w-100" src="public/images/AM96A-ttsp.png">
+                            <img class="img-fluid w-100" src="public/images/products/AM96A-ttsp.png">
                         </a>
                     </div>
 
@@ -165,7 +165,7 @@
 
         <div class="row pro-list">
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/C1-ttsp.png"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -177,7 +177,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/C1-ttsp.png"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -189,7 +189,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/C1-ttsp.png"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -201,7 +201,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/C1-ttsp.png"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -222,7 +222,7 @@
     <!--FOOTER-->
     <footer>
         <?php
-        include_once("public/views/footer.php");
+        include_once("public/templates/footer.php");
         ?>
     </footer>
 

@@ -23,7 +23,7 @@
 
     <header>
         <?php
-        include_once("public/views/header.php");
+        include_once("public/templates/header.php");
         ?>
     </header>
 
@@ -81,7 +81,7 @@
                         <div id="wapper">
                             <ul class="pro-list bod">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem  text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -109,7 +109,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -137,7 +137,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -165,7 +165,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -192,7 +192,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -220,7 +220,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -248,7 +248,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết</h4>
@@ -276,7 +276,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -303,7 +303,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -330,7 +330,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -357,7 +357,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -384,7 +384,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -411,7 +411,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -438,7 +438,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -465,7 +465,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -492,7 +492,7 @@
                         <div id="wapper">
                             <ul class="pro-list">
                                 <li>
-                                    <a href="#"><img class="pro-img" src="public/images/giay3-httk.jpg">
+                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
                                         <div class="hienthi">
                                             <button type="button" class="btn-xem text-center ">
                                                 <h4>Xem chi tiết </h4>
@@ -541,12 +541,12 @@
                 <div class=" sale-banner text-light display-2" style="height: 450px;">
                     <h2>ADIDAS</h2>
                     <h3 style="transform: scale(2);"> Flash Sale is on!</h3>
-                    <img class="logo-sale" src="public/images/logoA2-httk.jpg">
+                    <img class="logo-sale" src="public/images/logos/logoA2-httk.jpg">
                     <h1>UP TO 35%</h1>
                 </div>
             </div>
             <div class="col-lg-7 padding-0">
-                <a href="#"><img class="banner-img" src="public/images/banner3-httk.jpg"></a>
+                <a href="#"><img class="banner-img" src="public/images/banners/banner3-httk.jpg"></a>
             </div>
         </div>
 
@@ -564,17 +564,17 @@
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 100%">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="public/images/banner2_1-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px" alt="">
+                                <img src="public/images/banners/banner2_1-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px" alt="">
                                 <div class="carousel-caption">
                                     <h2>Bộ sưu tập mới!</h2>
                                     <h3>Liên hện ngay đến hotline: 0123456789</h3>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="public/images/banner2_2-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px" alt="">
+                                <img src="public/images/banners/banner2_2-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px" alt="">
                             </div>
                             <div class="carousel-item">
-                                <img src="public/images/banner2_3-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px" alt="">
+                                <img src="public/images/banners/banner2_3-httk.jpg" class="d-block w-100" style="width: 100%; height: 500px" alt="">
                                 <div class="carousel-caption">
                                     <h2>Bộ sưu tập mới!</h2>
                                     <h3>Liên hện ngay đến hotline: 0123456789</h3>
@@ -609,7 +609,7 @@
     <!--FOOTER-->
     <footer>
         <?php
-        include_once("public/views/footer.php");
+        include_once("public/templates/footer.php");
         ?>
     </footer>
 

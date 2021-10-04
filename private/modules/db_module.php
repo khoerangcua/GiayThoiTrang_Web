@@ -1,5 +1,5 @@
 <?php
-require_once "../config/config.php";
+require_once "config.php";
 
 function taoKetNoi(&$link){
     $link = mysqli_connect(HOST,USER,PASSWORD,DB);

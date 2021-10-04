@@ -23,7 +23,7 @@
     <!--HEADER-->
     <header>
         <?php
-        include_once("public/views/header.php");
+        include_once("public/templates/header.php");
         ?>
     </header>
 
@@ -39,19 +39,19 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="public/images/sneaker1-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                            <img src="public/images/products/sneaker1-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                 alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="public/images/showroom-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                            <img src="public/images/banners/showroom-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                 alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="public/images/showroom2-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                            <img src="public/images/banners/showroom2-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                 alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="public/images/sale-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                            <img src="public/images/banners/sale-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                 alt="">
                         </div>
                     </div>
@@ -81,7 +81,7 @@
         </div>
         <div class="row pro-list">
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -93,7 +93,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -105,7 +105,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -117,7 +117,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -129,7 +129,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -138,7 +138,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -147,7 +147,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -156,7 +156,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -177,7 +177,7 @@
 
         <div class="row pro-list">
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -189,7 +189,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -201,7 +201,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -213,7 +213,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -225,7 +225,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -234,7 +234,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -243,7 +243,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -252,7 +252,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -273,7 +273,7 @@
 
         <div class="row pro-list">
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -285,7 +285,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -297,7 +297,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -309,7 +309,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <div class="pro-price">
@@ -321,7 +321,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -330,7 +330,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -339,7 +339,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -348,7 +348,7 @@
 
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/SP-tc.jpg"></a>
+                <a href="#"><img class="pro-img" src="public/images/products/sp-tc.jpg"></a>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">kong on the street</a></h3>
                     <p class="pro-price">2,345,678₫</p>
@@ -368,15 +368,15 @@
                 <div id="carouselControls" class="carousel slide" data-bs-ride="carousel" style="width: 100%">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="public/images/anh-giay-converse-tc.jpg" class="d-block w-100"
+                            <img src="public/images/banners/anh-giay-converse-tc.jpg" class="d-block w-100"
                                 style="width: 100%; height: 500px" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="public/images/giay-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                            <img src="public/images/banners/giay-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                 alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="public/images/doigiay-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
+                            <img src="public/images/banners/doigiay-tc.jpg" class="d-block w-100" style="width: 100%; height: 500px"
                                 alt="">
                         </div>
                     </div>
@@ -402,15 +402,15 @@
             <div class="col-md-4 col-xs-4 ttin">
 
                 <h2>Cam Kết chính hãng</h2>
-                <img class="morett" src="public/images/quality-tc.png">
+                <img class="morett" src="public/images/icons/quality-tc.png">
             </div>
             <div class="col-md-4 col-xs-4 ttin">
                 <h2>Giao hàng toàn quốc</h2>
-                <img class="morett" src="public/images/shipping-tc.png">
+                <img class="morett" src="public/images/icons/shipping-tc.png">
             </div>
             <div class="col-md-4 col-xs-4 ttin">
                 <h2>Hỗ trợ 24/24</h2>
-                <img class="morett" src="public/images/support-tc.png">
+                <img class="morett" src="public/images/icons/support-tc.png">
             </div>
         </div>
     </div>
@@ -420,7 +420,7 @@
     <!--FOOTER-->
     <footer>
         <?php
-        include_once("public/views/footer.php");
+        include_once("public/templates/footer.php");
         ?>
     </footer>
 

@@ -9,7 +9,7 @@
             <!--picture-->
             <div class="row" style="text-align: center;">
                 <div class="col" id="ftr-image">
-                    <img class="ftr-image" src="public/images/ftr-image6.jpg" alt="">
+                    <img class="ftr-image" src="public/images/logos/ftr-image6.jpg" alt="">
                 </div>
             </div>
             <!--shop's name-->

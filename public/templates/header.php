@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="navbar">
-        <img src="public/images/header-icon.png" width="100px"><img>
+        <img src="public/images/icons/header-icon.png" width="100px"><img>
         <nav class="m-auto">
             <ul id="menuitems">
                 <li>
