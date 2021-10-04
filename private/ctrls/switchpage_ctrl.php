@@ -20,7 +20,7 @@ class SwichPage_Controler
                 case 'signup':
                     include_once("public/views/dangky.php");
                     break;
-                case 'resetpassword':
+                case 'rspw':
                     include_once("public/views/resetpassword.php");
                     break;
 
