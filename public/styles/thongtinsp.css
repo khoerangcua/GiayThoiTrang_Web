@@ -82,6 +82,7 @@
 	margin-top: 10px;
 }
 .detail-number{
+	text-align: center;
 	width: 80px;
 	height: 30px;
 	border: 1px solid #F3F3F3;
@@ -145,48 +146,7 @@
 	font-weight: 600;
 	
 }
-.introduction h3{
-	text-transform: uppercase;
-	text-align: center;
-}
-.SimilarProduct{
-	padding-bottom: 50px;
-}
 
-ul.list-image{
-	display: flex;
-}
-ul.list-image li{
-	overflow: hidden;
-	max-width: 100%;
-}
-ul.list-image li a img{
-	max-width: 100%;
-	transition: all 0.3s ease-in-out;
-	display: block;
-}
-ul.list-image li a{
-	position: relative;
-	display: block;
-}
-ul.list-image li :hover img{
-	transform: scale(1.1);
-	opacity: 0.8 ;
-}
-ul.list-image li a .Khac{
-	position: absolute;
-	color: black;
-	font-weight: bold;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	bottom: 0px;
-	transition: all 0.3s ease ease-in-out;
-	opacity: 0;
-}
-ul.list-image li  :hover .Khac{
-	top: 15%;
-	opacity: 2;
-}
 
 /* Giấu cái nhẹ */
 input::-webkit-outer-spin-button,
