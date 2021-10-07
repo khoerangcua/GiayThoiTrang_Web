@@ -165,7 +165,19 @@
 
         <div class="row pro-list">
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -177,7 +189,19 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -189,7 +213,19 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -201,7 +237,19 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-6 products">
-                <a href="#"><img class="pro-img" src="public/images/products/C1-ttsp.png"></a>
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">

@@ -47,9 +47,9 @@
                 <div class="pro-title">
                 	<h3>Air Max 96 II</h3>
 				</div>
-				<div class="pro-price">
-                	<span class="pro-sale">-99%</span>
-					<span class="pro-price">2,345,678₫</span>
+				<div class="detail-pro-price">
+                	<span class="detail-pro-sale">-99%</span>
+					<span class="detail-pro-price">2,345,678₫</span>
 					<del>3,456,789₫</del>
 				</div>
 				<form>
@@ -101,46 +101,117 @@
 				nghệ Air được giới thiệu và phát triển năm 1979.
 			</p>
         </div>
-	</div>
-        
-        <div class="SimilarProduct">
-            <div class="danhmuc">
-                <div>
-                    <h3>Sản Phẩm tương tự</h3>
-                </ul>
+		<div class="row">
+            <div class="col">
+                <div class="heading">
+                    <h2>Có thể bạn sẽ thích</h2>
+                    <a class="more" href="#">Xem thêm</a>
+                </div>
             </div>
-            <div class="row">
-                <ul class="list-image">
-                    <li>
-                        <a href="">
-                            <img width="100%" src="public/images/products/B1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Max 2021<br>4,699,000đ</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img width="100%" src="public/images/products/C1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Max 97<br>4,999,000đ</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img width="100%" src="public/images/products/D1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Vapormax Evo SE<br>6,459,000đ</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img width="100%" src="public/images/products/E1-ttsp.png" alt="">
-                            <div class="Khac">Nike Air Force 1 '07 LV8<br>2,929,000đ</div>
-                        </a>
-                    </li>
-                </ul>
+        </div>
+        <!--co the ban se thich-->
+
+        <div class="row pro-list">
+            <div class="col-lg-3 col-md-6 col-6 products">
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6 products">
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6 products">
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6 products">
+				<div class="pro-img">
+					<div class="pro-sale"><span>-10%</span></div>
+					<a href="#">
+						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
+						<img class="pro-img" src="public/images/products/C1-ttsp.png">
+						
+					</a>
+					<div class="pro-btn d-flex">
+						<button type="submit" class="hidden-btn">Mua ngay</button>
+						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+					</div>
+				</div>
+				
+                <div class="pro-detail">
+                    <h3 class="pro-name"><a href="#">Item</a></h3>
+                    <div class="pro-price">
+                        <p class="pro-price sale">2,345,678₫
+                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-
-
+	</div>
+        
+        
     <!--FOOTER-->
     <footer>
      <?php

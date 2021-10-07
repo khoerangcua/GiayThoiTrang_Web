@@ -99,15 +99,12 @@ a:hover{
 	}
 }
 .products{
+	position: relative;
 	display: block;
 	overflow: hidden;
 	height: 378px;
 	margin-bottom: 30px;
 	padding: 0 10px ;	
-}
-.products .pro-img {
-	max-width: 100%;
-	height: auto;
 }
 .pro-detail{
 	text-align: center;
@@ -134,5 +131,68 @@ p.pro-price.sale{
 	margin-left: 5px;
 	font-weight: 500;
 }
+.pro-img{
+	text-align: center;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	transition: all 0.5s ease 0s;
+}
+.pro-sale{
+	position: absolute;
+    top: 10px;
+	left: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 2;
+    color: #FFFFFF;
+    background: #FF0004;
+	opacity: 0.8;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+.pro-btn{
+	width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: -10%;
+    transition: all ease 0.5s;
+	
+}
+.hidden-btn{
+	border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    border: 0;
+    background: #000000;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 8px 5px;
+    outline: none;
+}
+.pro-img:hover .pro-btn{
+	z-index: 2;
+	visibility: visible;
+	opacity: 0.7;
+	bottom: 0;
+  	width: 100%;
+}
+.pro-img-1{
+	position: absolute;
+	opacity: 0;
+}
+.pro-img:hover .pro-img-1{
+	opacity: 1;
+	z-index: 1;
+	transition: all ease 0.5s;
+}
+
+	
 
 
