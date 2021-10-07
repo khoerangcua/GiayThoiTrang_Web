@@ -69,3 +69,13 @@ button{
 	padding: 10px 5px;
 	text-align: center;
 }
+
+/* Giấu cái nhẹ */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type=number] {
+	-moz-appearance: textfield;
+}
