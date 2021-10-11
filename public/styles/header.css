@@ -7,7 +7,7 @@ html, body{
 	box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6 {margin:0 0 13px 0;  font-weight:500;}
-h1 { font-size: 28px; }
+h1 { font-size: 28px;}
 h2 { font-size: 24px;}   
 h3 { font-size: 20px;}
 h4 { font-size: 13px; line-height: 18px; }
@@ -102,7 +102,7 @@ a:hover{
 	position: relative;
 	display: block;
 	overflow: hidden;
-	height: 378px;
+	height: 380px;
 	margin-bottom: 30px;
 	padding: 0 10px ;	
 }
@@ -121,6 +121,7 @@ p.pro-price{
 	line-height: 1.4;
 	font-size: 14px;
 	font-weight: 700;
+	margin-bottom: 0;
 }
 p.pro-price.sale{
 	color: #FF0004;

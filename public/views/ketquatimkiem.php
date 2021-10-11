@@ -29,7 +29,7 @@
 
 
     <!--CONTENT-->
-    <div class="container-fluid">
+    <div class="container">
 
         <!--TIỀU ĐỀ-->
         <div class="row">
@@ -39,64 +39,171 @@
         </div>
 
         <!--BỘ LỌC-->
-        <div class="row" style="margin: 0px 50px;">
-            <div class="col-lg-2">
-                <div class="home-filter">
-                    <span class="home-filter_label">
-                        <h2>Bộ lọc</h2>
-                    </span>
-                    <hr width="60%" size="4px" align="right" />
-                    <span class="home-filter_label">
-                        <h4>Thương hiệu
-                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropnav"></button>
-                            <div class="dropdown-menu" aria-labelledby="dropnav">
-                                <a class="dropdown-item" href='#'>Adidas</a>
-                                <a class="dropdown-item" href='#'>Nike</a>
-                                <a class="dropdown-item" href='#'>Jodan</a>
-                                <a class="dropdown-item" href='#'>MLB</a>
-                                <a class="dropdown-item" href='#'>Vans</a>
-                                <div>
-                        </h4>
-                    </span>
-                    <hr width="60%" size="4px" align="right" />
-                    <span class="home-filter_label">
-                        <h4>Size
-                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"></button>
-                        </h4>
-                    </span>
-                    <hr width="60%" size="4px" align="right" />
-                    <span class="home-filter_label">
-                        <h4>Tùy chỉnh
-                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"></button>
-                        </h4>
-                    </span>
-                    <hr width="60%" size="4px" align="right" />
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="filter">
+                    <div>
+                        <span class="filter-heading">Bộ lọc</span>
+                       
+                    </div>
+                    <div>
+                        <span class="filter-heading">Thương hiệu</span>
+                        <span class="filter-control" onClick="filterbrandtoggle()">+</span>
+                        <div class="filter-brands">
+                            <ul id="filter-brand-items">
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        adidas
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        nike
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        jordan
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        vans
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        mlb
+                                    </label>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-price">
+                        <span class="filter-heading">Giá</span>
+                        <span class="filter-control" onClick="filterpricetoggle()">+</span>
+                        <ul id="filter-price-items">
+                            <li class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Dưới 1,000,000₫
+                                </label>
+                            </li>
+                            <li class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    1,000,000₫ - 2,000,000₫
+                                </label>
+                            </li>
+                            <li class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    2,000,000₫ - 3,500,000₫
+                                </label>
+                            </li>
+                            <li class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    3,500,000₫ - 5,000,000₫
+                                </label>
+                            </li>
+                            <li class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Trên 5,000,000₫
+                                </label>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="filter-size">
+                        <span class="filter-heading">Kích thước</span>
+                        <span class="filter-control" onClick="filtersizetoggle()">+</span>
+                        <ul id="filter-size-items">
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="37" autocomplete="off">
+                                <label class="size-btn" for="37">37</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="37.5" autocomplete="off">
+                                <label class="size-btn" for="37.5">37.5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="38" autocomplete="off">
+                                <label class="size-btn" for="38">38</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="38.5" autocomplete="off">
+                                <label class="size-btn" for="38.5">38.5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="39" autocomplete="off">
+                                <label class="size-btn" for="39">39</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="39.5" autocomplete="off">
+                                <label class="size-btn" for="39.5">39.5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="40" autocomplete="off">
+                                <label class="size-btn" for="40">40</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="40.5" autocomplete="off">
+                                <label class="size-btn" for="40.5">40.5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="41" autocomplete="off">
+                                <label class="size-btn" for="41">41</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="41.5" autocomplete="off">
+                                <label class="size-btn" for="41.5">41.5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="42" autocomplete="off">
+                                <label class="size-btn" for="42">42</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="42.5" autocomplete="off">
+                                <label class="size-btn" for="42.5">42.5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="size-selector" name="options" id="43" autocomplete="off">
+                                <label class="size-btn" for="43">43</label>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 
             <!--LƯỚI SẢN PHẨM-->
-            <div class="col-lg-10">
+            <div class="col-lg-9">
                 <div class="row pro-list">
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list bod">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem  text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
 
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -104,27 +211,21 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
 
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -132,27 +233,21 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
 
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -160,26 +255,21 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -187,26 +277,21 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -214,28 +299,21 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
 
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -243,27 +321,21 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết</h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
 
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -271,26 +343,197 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
                         </div>
                         <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
+                            <div class="pro-price">
+                                <p class="pro-price sale">2,345,678₫
+                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 products">
+                        <div class="pro-img">
+                            <div class="pro-sale"><span>-10%</span></div>
+                            <a href="#">
+                                <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                                <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                            </a>
+                            <div class="pro-btn d-flex">
+                                <button type="submit" class="hidden-btn">Mua ngay</button>
+                                <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="pro-detail">
+                            <h3 class="pro-name"><a href="#">Item</a></h3>
                             <div class="pro-price">
                                 <p class="pro-price sale">2,345,678₫
                                     <span class="pro-price-retail"><del>3,456,789₫</del></span>
@@ -299,221 +542,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 products">
-                        <div id="wapper">
-                            <ul class="pro-list">
-                                <li>
-                                    <a href="#"><img class="pro-img" src="public/images/products/giay3-httk.jpg">
-                                        <div class="hienthi">
-                                            <button type="button" class="btn-xem text-center ">
-                                                <h4>Xem chi tiết </h4>
-                                            </button>
-                                            <button type="button" class="btn-them text-center ">
-                                                <h4>Đặt hàng</h4>
-                                            </button>
-                                        </div>
-                                    </a>
-                                <li>
-                            </ul>
-                        </div>
-                        <div class="pro-detail">
-                            <h3 class="pro-name"><a href="#">kong on the street</a></h3>
-                            <div class="pro-price">
-                                <p class="pro-price sale">2,345,678₫
-                                    <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

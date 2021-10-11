@@ -31,7 +31,7 @@
     <!--CONTENT (chỉnh chỗ này)-->
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-md-7 col-12">
+            <div class="col-lg-7 col-md-12 col-12">
                 <div class="imgpro">
                 	<img width="100%" src="public/images/products/AM96A-ttsp.png" alt="" id="ProductImg">
 					<div class="img-icon">
@@ -43,7 +43,7 @@
                 </div>
             </div>
 			
-            <div class="col-lg-5 col-md-5 col-12">
+            <div class="col-lg-5 col-md-12 col-12">
                 <div class="pro-title">
                 	<h3>Air Max 96 II</h3>
 				</div>
@@ -93,13 +93,22 @@
             </div>
         </div>
 		<div class="introduction">
-        	<h3>Giới thiệu</h3>
-			<p>
-				Lần đầu tiên, Air Max 96 II trở lại với bản làm lại 1-1. Mang lại nét thẩm mỹ thể thao do nhà thiết
-				kế nổi tiếng của Nike Sergio Lorenzo tưởng tượng, với màu sắc hoài cổ trên cấu trúc cổ điển của thập
-				niên 90, đó là sự trở lại với phong cách thể thao cũ. Đệm Nike Air giữ cho nó thoải mái với công
-				nghệ Air được giới thiệu và phát triển năm 1979.
-			</p>
+			<div class="row">
+				<div class="col-lg-5 col-12">
+					<h3>Giới thiệu</h3>
+					<p>Lần đầu tiên, Air Max 96 II trở lại với bản làm lại 1-1. Mang lại nét thẩm mỹ thể thao do nhà thiết
+						kế nổi tiếng của Nike Sergio Lorenzo tưởng tượng, với màu sắc hoài cổ trên cấu trúc cổ điển của thập
+						niên 90, đó là sự trở lại với phong cách thể thao cũ. Đệm Nike Air giữ cho nó thoải mái với công
+						nghệ Air được giới thiệu và phát triển năm 1979.
+					</p>
+				</div>
+				<div class="col-lg-7 col-12">
+					<h3>Size chart</h3>
+					<img src="public/images/others/sizechart-ttsp.png">
+				</div>
+			</div>
+        	
+			
         </div>
 		<div class="row">
             <div class="col">
