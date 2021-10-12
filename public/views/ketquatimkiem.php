@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <span class="filter-heading">Thương hiệu</span>
-                        <span class="filter-control" onClick="filterbrandtoggle(this)">+</span>
+                        <span class="filter-control filter-select" onClick="filterbrandtoggle(this)">+</span>
                         <div class="filter-brands">
                             <ul id="filter-brand-items">
                                 <li class="form-check">
