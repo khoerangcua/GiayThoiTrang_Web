@@ -6,24 +6,30 @@ filterbranditems.style.display = "none";
 filterpriceitems.style.display = "none";
 filtersizeitems.style.display = "none";
 
-function filterbrandtoggle(){
+function filterbrandtoggle(el){
 	if(filterbranditems.style.display == "none"){
 		filterbranditems.style.display = "block";
+		el.innerHTML = "-";
 	}else{
 		filterbranditems.style.display = "none";
+		el.innerHTML = "+";
 	}
 }
-function filterpricetoggle(){
+function filterpricetoggle(el){
 	if(filterpriceitems.style.display == "none"){
 		filterpriceitems.style.display = "block";
+		el.innerHTML = "-";
 	}else{
 		filterpriceitems.style.display = "none";
+		el.innerHTML = "+";
 	}
 }
-function filtersizetoggle(){
+function filtersizetoggle(el){
 	if(filtersizeitems.style.display == "none"){
 		filtersizeitems.style.display = "block";
+		el.innerHTML = "-";
 	}else{
 		filtersizeitems.style.display = "none";
+		el.innerHTML = "+";
 	}
 }

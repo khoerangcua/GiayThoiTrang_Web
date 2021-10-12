@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <span class="filter-heading">Thương hiệu</span>
-                        <span class="filter-control" onClick="filterbrandtoggle()">+</span>
+                        <span class="filter-control" onClick="filterbrandtoggle(this)">+</span>
                         <div class="filter-brands">
                             <ul id="filter-brand-items">
                                 <li class="form-check">
@@ -88,7 +88,7 @@
                     </div>
                     <div class="filter-price">
                         <span class="filter-heading">Giá</span>
-                        <span class="filter-control" onClick="filterpricetoggle()">+</span>
+                        <span class="filter-control" onClick="filterpricetoggle(this)">+</span>
                         <ul id="filter-price-items">
                             <li class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -126,7 +126,7 @@
                     </div>
                     <div class="filter-size">
                         <span class="filter-heading">Kích thước</span>
-                        <span class="filter-control" onClick="filtersizetoggle()">+</span>
+                        <span class="filter-control" onClick="filtersizetoggle(this)">+</span>
                         <ul id="filter-size-items">
                             <li>
                                 <input type="checkbox" class="size-selector" name="options" id="37" autocomplete="off">
