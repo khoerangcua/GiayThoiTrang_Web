@@ -193,7 +193,10 @@ p.pro-price.sale{
 	z-index: 1;
 	transition: all ease 0.5s;
 }
-
+.breadcrumb{
+    padding: 15px 10px;
+    font-size: 13px;
+}
 	
 
 

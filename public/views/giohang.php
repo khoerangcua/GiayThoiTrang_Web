@@ -26,7 +26,16 @@
         include_once("public/templates/header.php");
         ?>
     </header>
+    <!--breadcrumb-->
 
+    <nav style="background-color:#F8F8F8" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+            </ol>
+        </div>
+    </nav>
 
     <!--CONTENT (chỉnh chỗ này)-->
 
@@ -165,19 +174,18 @@
 
         <div class="row pro-list">
             <div class="col-lg-3 col-md-6 col-6 products">
-				<div class="pro-img">
-					<div class="pro-sale"><span>-10%</span></div>
-					<a href="#">
-						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
-						<img class="pro-img" src="public/images/products/C1-ttsp.png">
-						
-					</a>
-					<div class="pro-btn d-flex">
-						<button type="submit" class="hidden-btn">Mua ngay</button>
-						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-					</div>
-				</div>
-				
+                <div class="pro-img">
+                    <div class="pro-sale"><span>-10%</span></div>
+                    <a href="#">
+                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                    </a>
+                    <div class="pro-btn d-flex">
+                        <button type="submit" class="hidden-btn">Mua ngay</button>
+                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                    </div>
+                </div>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -187,21 +195,19 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-6 col-6 products">
-				<div class="pro-img">
-					<div class="pro-sale"><span>-10%</span></div>
-					<a href="#">
-						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
-						<img class="pro-img" src="public/images/products/C1-ttsp.png">
-						
-					</a>
-					<div class="pro-btn d-flex">
-						<button type="submit" class="hidden-btn">Mua ngay</button>
-						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-					</div>
-				</div>
-				
+                <div class="pro-img">
+                    <div class="pro-sale"><span>-10%</span></div>
+                    <a href="#">
+                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                    </a>
+                    <div class="pro-btn d-flex">
+                        <button type="submit" class="hidden-btn">Mua ngay</button>
+                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                    </div>
+                </div>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -211,21 +217,19 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-6 col-6 products">
-				<div class="pro-img">
-					<div class="pro-sale"><span>-10%</span></div>
-					<a href="#">
-						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
-						<img class="pro-img" src="public/images/products/C1-ttsp.png">
-						
-					</a>
-					<div class="pro-btn d-flex">
-						<button type="submit" class="hidden-btn">Mua ngay</button>
-						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-					</div>
-				</div>
-				
+                <div class="pro-img">
+                    <div class="pro-sale"><span>-10%</span></div>
+                    <a href="#">
+                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                    </a>
+                    <div class="pro-btn d-flex">
+                        <button type="submit" class="hidden-btn">Mua ngay</button>
+                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                    </div>
+                </div>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
@@ -235,21 +239,19 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-6 col-6 products">
-				<div class="pro-img">
-					<div class="pro-sale"><span>-10%</span></div>
-					<a href="#">
-						<img class="pro-img pro-img-1" src="public/images/products/D1-ttsp.png">
-						<img class="pro-img" src="public/images/products/C1-ttsp.png">
-						
-					</a>
-					<div class="pro-btn d-flex">
-						<button type="submit" class="hidden-btn">Mua ngay</button>
-						<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-					</div>
-				</div>
-				
+                <div class="pro-img">
+                    <div class="pro-sale"><span>-10%</span></div>
+                    <a href="#">
+                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
+                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+
+                    </a>
+                    <div class="pro-btn d-flex">
+                        <button type="submit" class="hidden-btn">Mua ngay</button>
+                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                    </div>
+                </div>
                 <div class="pro-detail">
                     <h3 class="pro-name"><a href="#">Item</a></h3>
                     <div class="pro-price">
