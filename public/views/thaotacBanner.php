@@ -7,8 +7,16 @@
 
 <body>
 	
+<?php
+require_once("private/ctrls/ctrlBanner.php");
+if (isset($_POST['submit'])) {
+	$controlbanner = new cltrbanner();
+	$controlbanner->addbanner_ctrl();
+
+}
+?>
 	
-	<form method="post" action="../../private/ctrls/ctrlBanner.php" >
+	<form method="post" action="./?page=banneradmin" >
 		<label for="ten">Tên Banner</label>
 		<input  type="text" name="ten"></br>
 		<label for="diachianh">URL</label>
@@ -22,11 +30,14 @@
 		<label for="name">Name</label>
 		<input  type="text" name="name"></br>
 		<label for="value">Value</label>
-		<input  type="text" name="value"></br>
-		
+		<input  type="text" name="value"></br>		
 		<input type="submit" value="Thêm" name="submit">
 		
 	</form>
+
+
+
+	
 	
 </body>
 </html>
