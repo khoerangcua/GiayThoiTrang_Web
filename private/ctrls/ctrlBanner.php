@@ -2,7 +2,7 @@
 require_once("private/models/banner_model.php");
 require_once("private/models/xulyBanner.php");
 
-class cltrbanner
+class ctrlbanner
 {
 	public $bannerM;
 	public function addbanner_ctrl(){
@@ -20,8 +20,8 @@ class cltrbanner
 			}
 			else{
 				$bannerM = new banner(null, $ten, $diachianh, $desc, $trang, $vitri, $name, $value);
-				$xulybanner = new xulybanner();
-				$xulybanner->addBanner($bannerM);
+				$xulyBanner = new xulybanner();
+				$xulyBanner->addBanner($bannerM);
 
 			}
 		
@@ -31,6 +31,10 @@ class cltrbanner
 
 
 }
+	public function showbanner_ctrl(){
+		$xulyBanner = new xulybanner();
+		return $xulyBanner->showBanner();
+	}
 }
 
 ?>

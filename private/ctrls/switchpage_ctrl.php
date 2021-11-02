@@ -23,9 +23,12 @@ class SwichPage_Controler
                 case 'rspw':
                     include_once("public/views/resetpassword.php");
                     break;
-                case 'banneradmin':
-                        include_once("public/views/thaotacBanner.php");
+                case 'admin':
+                        include_once("indexAD.php");
                         break;
+				case 'bannerAD':
+					include_once("public/views/thaotacBanner.php");
+					break;
 
                 default:
                     include_once("public/views/trangchu.php");

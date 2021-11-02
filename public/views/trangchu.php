@@ -31,24 +31,48 @@
     <!--CONTENT (chỉnh chỗ này)-->
 
     <!--content 1-->
+	
     <div class="container-fluid">
         <!--slider1-->
+		
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <a href="" class="carousel-item active">
-                    <img src="public/images/banners/slide1-tc.jpg" class="d-block w-100" alt="">
-                </a>
-                <a href="" class="carousel-item">
-                    <img src="public/images/banners/slide2-tc.jpg" class="d-block w-100" alt="">
-                </a>
-                <a href="" class="carousel-item">
-                    <img src="public/images/banners/slide3-tc.jpg" class="d-block w-100" alt="">
-                </a>
+			
+            
+				<?php 
+				require_once("private/ctrls/ctrlBanner.php");
+				$controlbanner = new ctrlbanner();
+				$firstbanner = true;
+				$firstbanner1 = true;
+				$i=0;
+				?>
+			<div class="carousel-indicators">
+				<?php
+				 foreach($controlbanner->showbanner_ctrl() as $banner){
+				?>
+				
+                	<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i?>" class="<?php echo ($firstbanner1?"active":"")?>" aria-current="true" aria-label="Slide <?php echo $i+1?>"></button>
+                
+				
+				<?php
+					$i ++;
+					$firstbanner1=false;
+				 }
+				 ?>
+			</div>
+             <div class="carousel-inner">
+				<?php
+				foreach($controlbanner->showbanner_ctrl() as $banner){
+				?>
+					
+						<a href="" class="carousel-item <?php echo ($firstbanner?"active":"")?>">
+						<img src="<?php echo $banner->GetDiachianh()?>" class="d-block w-100" alt="">
+						</a>
+				 <?php
+					$firstbanner = false;
+				 	
+					}
+				?>
+                
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
