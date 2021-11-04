@@ -26,23 +26,38 @@ class xulybanner{
 			
 
 		}
-	public function showBanner(){
+	public function showSlideBanner(){
 		$link = null;
 		taoKetNoi($link);
 		
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD'");
+		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD' and `vitri` = 'top'");
 		
 		
 		$arrbanner = array();
 		
 		while($rows = mysqli_fetch_assoc($result)){
 			$bannershow = new banner($rows["id"], $rows["ten"], $rows["diachianh"], $rows["desc"], $rows["trang"], $rows["vitri"], $rows["name"], $rows["value"] );
-			
+			 
 			array_push($arrbanner,$bannershow);
 			
 		}
+		
 		giaiPhongBoNho($link, $result);
+		
 		return($arrbanner);
+	}
+	public function showImgBanner(){
+		$link = null;
+		taoKetNoi($link);
+		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD' and `vitri` = 'bot'");
+		while($rows = mysqli_fetch_assoc($result)){
+			$bannershow = new banner($rows["id"], $rows["ten"], $rows["diachianh"], $rows["desc"], $rows["trang"], $rows["vitri"], $rows["name"], $rows["value"] );
+			 
+			
+			
+		}
+		giaiPhongBoNho($link, $result);
+		return($bannershow);
 	}
 		
 	}

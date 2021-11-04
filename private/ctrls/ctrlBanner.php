@@ -31,9 +31,14 @@ class ctrlbanner
 
 
 }
-	public function showbanner_ctrl(){
+	public function showSlideBanner_ctrl(){
 		$xulyBanner = new xulybanner();
-		return $xulyBanner->showBanner();
+		return $xulyBanner->showSlideBanner();
+	}
+	public function showImgBanner_ctrl(){
+		$xulyBanner = new xulybanner();
+		return $xulyBanner->showImgBanner();
+		
 	}
 }
 

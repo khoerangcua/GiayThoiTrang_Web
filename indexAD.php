@@ -10,7 +10,8 @@
 	<div class="container text-center" style="padding-top: 20%;">
         <nav class="btn-group">
             <a class="btn btn-info" href="?page=bannerAD">Banner</a>
-            <a class="btn btn-primary" href="">Giày</a>
+            <a class="btn btn-primary" href="?page=giayAD.php">Giày</a>
+			<a class="btn btn-primary" href="">Thương hiệu</a>
         </nav>
     </div>
     <style>

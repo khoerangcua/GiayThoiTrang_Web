@@ -47,7 +47,7 @@
 				?>
 			<div class="carousel-indicators">
 				<?php
-				 foreach($controlbanner->showbanner_ctrl() as $banner){
+				 foreach($controlbanner->showSlideBanner_ctrl() as $banner){
 				?>
 				
                 	<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i?>" class="<?php echo ($firstbanner1?"active":"")?>" aria-current="true" aria-label="Slide <?php echo $i+1?>"></button>
@@ -61,10 +61,10 @@
 			</div>
              <div class="carousel-inner">
 				<?php
-				foreach($controlbanner->showbanner_ctrl() as $banner){
+				foreach($controlbanner->showSlideBanner_ctrl() as $banner){
 				?>
 					
-						<a href="" class="carousel-item <?php echo ($firstbanner?"active":"")?>">
+						<a href="?page=search&name=<?php echo $banner->GetName()?>&value=<?php echo $banner->GetValue()?>" class="carousel-item <?php echo ($firstbanner?"active":"")?>">
 						<img src="<?php echo $banner->GetDiachianh()?>" class="d-block w-100" alt="">
 						</a>
 				 <?php
@@ -98,182 +98,42 @@
             </div>
         </div>
         <div class="row pro-list">
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
+			<?php
+			require_once("private/ctrls/ctrlGiay.php");
+			$controllgiay = new ctrlgiay();
+			$i = 0;
+			foreach($controllgiay->showGiayNew_ctrl() as $giay){
+				if($i<8){ ?>
+					<div class="col-lg-3 col-md-6 col-6 products">
+                		<div class="pro-img">
+                   			 <div class="pro-sale"><span>-10%</span></div>
+                   			 <a href="?page=cart&id<?php echo $giay->GetIDgiay(); ?>">
+                        		<img class="pro-img pro-img-1" src="<?php echo $giay->GetAnhchinh(); ?>">
+                        		<img class="pro-img" src="<?php echo $giay->GetAnhphu1(); ?>">
 
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp1-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp1-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                    		</a>
+                    		<div class="pro-btn d-flex">
+                        		<button type="submit" class="hidden-btn">Mua ngay</button>
+                       			<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                    		</div>
+                		</div>
+                		<div class="pro-detail">
+                    		<h3 class="pro-name"><a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>"><?php echo $giay->GetTengiay(); ?></a></h3>
+                    		<div class="pro-price">
+                        		<p class="pro-price sale"><?php echo $giay->GetGia() ;?>₫
+                            		<span class="pro-price-retail"><del><?php echo $giay->GetGia(); ?>₫</del></span>
+                        		</p>
+                    		</div>
+                		</div>
+            		</div>
+					
+				<?php }
+				else break;
+				$i++;
+			}
+			?>
+            
+            
         </div>
 
         <!--sp-giảm giá-->
@@ -287,183 +147,42 @@
         </div>
 
         <div class="row pro-list">
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
+			<?php
+			require_once("private/ctrls/ctrlGiay.php");
+			$controllgiay = new ctrlgiay();
+			$i = 0;
+			foreach($controllgiay->showGiayBSeller_ctrl() as $giay){
+				if($i<8){ ?>
+					<div class="col-lg-3 col-md-6 col-6 products">
+                		<div class="pro-img">
+                   			 <div class="pro-sale"><span>-10%</span></div>
+                   			 <a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>">
+                        		<img class="pro-img pro-img-1" src="<?php echo $giay->GetAnhchinh(); ?>">
+                        		<img class="pro-img" src="<?php echo $giay->GetAnhphu1(); ?>">
 
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp2-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp2-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
+                    		</a>
+                    		<div class="pro-btn d-flex">
+                        		<button type="submit" class="hidden-btn">Mua ngay</button>
+                       			<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                    		</div>
+                		</div>
+                		<div class="pro-detail">
+                    		<h3 class="pro-name"><a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>"><?php echo $giay->GetTengiay(); ?></a></h3>
+                    		<div class="pro-price">
+                        		<p class="pro-price sale"><?php echo $giay->GetGia() ;?>₫
+                            		<span class="pro-price-retail"><del><?php echo $giay->GetGia(); ?>₫</del></span>
+                        		</p>
+                    		</div>
+                		</div>
+            		</div>
+					
+				<?php }
+				else break;
+				$i++;
+			}
+			?>
+            
+            
         </div>
     </div>
     <!--sp cháy hàng-->
@@ -477,187 +196,53 @@
     </div>
     <div class="container">
         <div class="row pro-list">
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
+			<?php
+			require_once("private/ctrls/ctrlGiay.php");
+			$controllgiay = new ctrlgiay();
+			$i = 0;
+			foreach($controllgiay->showGiayHSale_ctrl() as $giay){
+				if($i<8){ ?>
+					<div class="col-lg-3 col-md-6 col-6 products">
+                		<div class="pro-img">
+                   			 <div class="pro-sale"><span>-10%</span></div>
+                   			 <a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>">
+                        		<img class="pro-img pro-img-1" src="<?php echo $giay->GetAnhchinh(); ?>">
+                        		<img class="pro-img" src="<?php echo $giay->GetAnhphu1(); ?>">
 
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 products">
-                <div class="pro-img">
-                    <div class="pro-sale"><span>-10%</span></div>
-                    <a href="#">
-                        <img class="pro-img pro-img-1" src="public/images/products/sp3-1-tc.jpg">
-                        <img class="pro-img" src="public/images/products/sp3-tc.jpg">
-
-                    </a>
-                    <div class="pro-btn d-flex">
-                        <button type="submit" class="hidden-btn">Mua ngay</button>
-                        <button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class="pro-detail">
-                    <h3 class="pro-name"><a href="#">Item</a></h3>
-                    <div class="pro-price">
-                        <p class="pro-price sale">2,345,678₫
-                            <span class="pro-price-retail"><del>3,456,789₫</del></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                    		</a>
+                    		<div class="pro-btn d-flex">
+                        		<button type="submit" class="hidden-btn" >Mua ngay</button>
+                       			<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
+                    		</div>
+                		</div>
+                		<div class="pro-detail">
+                    		<h3 class="pro-name"><a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>"><?php echo $giay->GetTengiay(); ?></a></h3>
+                    		<div class="pro-price">
+                        		<p class="pro-price sale"><?php echo $giay->GetGia() ;?>₫
+                            		<span class="pro-price-retail"><del><?php echo $giay->GetGia(); ?>₫</del></span>
+                        		</p>
+                    		</div>
+                		</div>
+            		</div>
+					
+				<?php }
+				else break;
+				$i++;
+			}
+			?>
+            
         </div>
     </div>
     <!--content 3-->
-        <a href=""><img width="100%" src="public/images/banners/img-tc.jpeg"></a>
-
+        
+		<?php 
+				require_once("private/ctrls/ctrlBanner.php");
+				$controlbanner = new ctrlbanner();
+				$ImgShow= $controlbanner->ShowImgBanner_ctrl();
+				echo '<a href="?page=search&name='.$ImgShow->GetName().'&value='.$ImgShow->GetValue().'"><img width="100%" src="'.$ImgShow->GetDiachianh().'"></a>';
+	
+				
+		?>
     <!--content 4-->
 
     <div class="container">

@@ -29,6 +29,12 @@ class SwichPage_Controler
 				case 'bannerAD':
 					include_once("public/views/thaotacBanner.php");
 					break;
+				case 'giayAD':
+					include_once("public/views/thaotacSP.php");
+					break;
+				case 'brandAD':
+					include_once("public/views/thaotacBrand.php");
+					break;
 
                 default:
                     include_once("public/views/trangchu.php");
