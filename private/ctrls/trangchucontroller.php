@@ -38,7 +38,7 @@ class TrangChuController
                     $active = "";
             }
             
-             echo "<a href='./? page=search&name=" . $banners[$i]['name'] . "&value=" . $banners[$i]["value"] . " class='carousel-item " . $active . "'>
+             echo "<a href='./? page=search&name=". $banners[$i]['name']."&value=". $banners[$i]["value"]."' class='carousel-item ". $active." '>
              <img src='".$banners[$i]["diachianh"]."' class='d-block w-100' alt=''>
              </a>";
         }
