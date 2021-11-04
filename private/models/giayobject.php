@@ -1,9 +1,9 @@
-<?php 
-class giay {
-	private $id_giay;
+<?php
+class Giay {
+	private $idgiay;
 	private $ten;
 	private $gia;
-	private $id_thuonghieu;
+	private $idthuonghieu;
 	private $ngaynhap;
 	private $gioithieu;
 	private $mau;
@@ -14,10 +14,10 @@ class giay {
 	private $anhphu3;
 	private $anhphu4;
 	
-	public function GetIDgiay () {return $this->id_giay;}
+	public function GetIDgiay () {return $this->idgiay;}
 	public function GetTengiay () {return $this->ten;}
 	public function GetGia () {return $this->gia;}
-	public function GetIDthuonghieu () {return $this->id_thuonghieu;}
+	public function GetIDthuonghieu () {return $this->idthuonghieu;}
 	public function GetNgaynhap () {return $this->ngaynhap;}
 	public function GetGioithieu () {return $this->gioithieu;}
 	public function GetMau () {return $this->mau;}
@@ -28,11 +28,11 @@ class giay {
 	public function GetAnhphu3 () {return $this->anhphu3;}
 	public function GetAnhphu4 () {return $this->anhphu4;}
 	
-	public function __construct($id_giay, $ten, $gia, $id_thuonghieu, $ngaynhap, $gioithieu, $mau, $size, $anhchinh, $anhphu1, $anhphu2, $anhphu3, $anhphu4){
-		$this->id_giay = $id_giay;
+	public function __construct($idgiay, $ten, $gia, $idthuonghieu, $ngaynhap, $gioithieu, $mau, $size, $anhchinh, $anhphu1, $anhphu2, $anhphu3, $anhphu4){
+		$this->id_giay = $idgiay;
 		$this->ten = $ten;
 		$this->gia = $gia;
-		$this->id_thuonghieu = $id_thuonghieu;
+		$this->id_thuonghieu = $idthuonghieu;
 		$this->ngaynhap = $ngaynhap;
 		$this->gioithieu = $gioithieu;
 		$this->mau = $mau;

@@ -1,8 +1,9 @@
 <?php
 require_once("private/modules/db_module.php");
-require_once("private/models/banner_model.php");
+require_once("private/models/bannerobject.php");
 
-class xulybanner{
+class BannerModel
+{
 	public function addBanner($banner){	
 		
 		$ten = $banner->GetTenbanner();
@@ -36,9 +37,10 @@ class xulybanner{
 		$arrbanner = array();
 		
 		while($rows = mysqli_fetch_assoc($result)){
-			$bannershow = new banner($rows["id"], $rows["ten"], $rows["diachianh"], $rows["desc"], $rows["trang"], $rows["vitri"], $rows["name"], $rows["value"] );
+			// $bannershow = new banner($rows["id"], $rows["ten"], $rows["diachianh"], $rows["desc"], $rows["trang"], $rows["vitri"], $rows["name"], $rows["value"] );
 			 
-			array_push($arrbanner,$bannershow);
+			// array_push($arrbanner,$bannershow);
+			array_push($arrbanner, $rows);
 			
 		}
 		

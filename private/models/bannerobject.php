@@ -1,5 +1,5 @@
 <?php
-class banner {
+class Banner {
 	private $id ;
 	private $ten; 
 	private $diachianh;

@@ -1,8 +1,8 @@
 <?php 
 require_once("private/modules/db_module.php");
-require_once("private/models/giay_model.php");
+require_once("private/models/giayobject.php");
 
-class xulygiay{
+class GiayModel{
 	public function addGiay($giay){
 		$ten  = $giay->GetTengiay();
 		$gia = $giay->GetGia();
@@ -27,7 +27,7 @@ class xulygiay{
 			giaiPhongBoNho($link,null);
 
 	}
-	public function showGiayNew(){
+	public function LoadNew(){
 		$link = null;
 		taoKetNoi($link);
 		
@@ -86,6 +86,25 @@ class xulygiay{
 			
 		giaiPhongBoNho($link, $result);
 		return($arrgiay);
+	}
+	public function LoadGiayInfor($idgiays){
+
+		$giayinfor = array();
+		$link = "";
+		taoKetNoi($link);
+		foreach ($idgiays as $key => $value) {
+			$result = chayTruyVanTraVeDL($link, "select * from tbl_giay where `id_giay` = '$value' ");
+			
+			while ($row = mysqli_fetch_assoc($result)) {
+
+				array_push($giayinfor,$row);
+				break;
+			}
+			
+		}
+		giaiPhongBoNho($link, $result);
+		return $giayinfor;
+
 	}	
 }
 ?>
