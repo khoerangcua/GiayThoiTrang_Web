@@ -43,7 +43,6 @@
 			$trangChuController->LoadTopBanner();
 			?>
 
-
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
@@ -55,163 +54,74 @@
 		</div>
 
 	</div>
-	<!--content 2-->
-	<div class="container">
 
+	<div class="container">
 		<!--sp-siêu hot-->
 		<div class="row">
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">New arrrivals</h2>
-					<a class="more" href="#">Xem thêm</a>
+					<a class="more" href="./?page=search&name=xemthem&value=moi">Xem thêm</a>
 				</div>
 			</div>
 		</div>
+
 		<div class="row pro-list">
 			<?php
-			require_once("private/ctrls/ctrlGiay.php");
-			$controllgiay = new ctrlgiay();
-			$i = 0;
-			foreach ($controllgiay->showGiayNew_ctrl() as $giay) {
-				if ($i < 8) { ?>
-					<div class="col-lg-3 col-md-6 col-6 products">
-						<div class="pro-img">
-							<div class="pro-sale"><span>-10%</span></div>
-							<a href="?page=cart&id<?php echo $giay->GetIDgiay(); ?>">
-								<img class="pro-img pro-img-1" src="<?php echo $giay->GetAnhchinh(); ?>">
-								<img class="pro-img" src="<?php echo $giay->GetAnhphu1(); ?>">
-
-							</a>
-							<div class="pro-btn d-flex">
-								<button type="submit" class="hidden-btn">Mua ngay</button>
-								<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-							</div>
-						</div>
-						<div class="pro-detail">
-							<h3 class="pro-name"><a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>"><?php echo $giay->GetTengiay(); ?></a></h3>
-							<div class="pro-price">
-								<p class="pro-price sale"><?php echo $giay->GetGia(); ?>₫
-									<span class="pro-price-retail"><del><?php echo $giay->GetGia(); ?>₫</del></span>
-								</p>
-							</div>
-						</div>
-					</div>
-
-			<?php } else break;
-				$i++;
-			}
+			require_once("private/ctrls/TrangChuController.php");
+			$trangChuController = new TrangChuController();
+			$trangChuController->LoadNewArrivals();
 			?>
-
-
 		</div>
 
-		<!--sp-giảm giá-->
+		<!--sp bán chạy-->
 		<div class="row">
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">Best seller</h2>
-					<a class="more" href="#">Xem thêm</a>
+					<a class="more" href="./?page=search&name=xemthem&value=bestseller">Xem thêm</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="row pro-list">
 			<?php
-			require_once("private/ctrls/ctrlGiay.php");
-			$controllgiay = new ctrlgiay();
-			$i = 0;
-			foreach ($controllgiay->showGiayBSeller_ctrl() as $giay) {
-				if ($i < 8) { ?>
-					<div class="col-lg-3 col-md-6 col-6 products">
-						<div class="pro-img">
-							<div class="pro-sale"><span>-10%</span></div>
-							<a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>">
-								<img class="pro-img pro-img-1" src="<?php echo $giay->GetAnhchinh(); ?>">
-								<img class="pro-img" src="<?php echo $giay->GetAnhphu1(); ?>">
+			include_once("private/ctrls/trangchucontroller.php");
 
-							</a>
-							<div class="pro-btn d-flex">
-								<button type="submit" class="hidden-btn">Mua ngay</button>
-								<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-							</div>
-						</div>
-						<div class="pro-detail">
-							<h3 class="pro-name"><a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>"><?php echo $giay->GetTengiay(); ?></a></h3>
-							<div class="pro-price">
-								<p class="pro-price sale"><?php echo $giay->GetGia(); ?>₫
-									<span class="pro-price-retail"><del><?php echo $giay->GetGia(); ?>₫</del></span>
-								</p>
-							</div>
-						</div>
-					</div>
-
-			<?php } else break;
-				$i++;
-			}
+			$trangChuController = new TrangChuController();
+			$trangChuController->LoadBestSeller();
 			?>
-
-
 		</div>
-	</div>
-	<!--sp cháy hàng-->
-	<div class="row">
-		<div class="col">
-			<div class="heading">
-				<h2 class="text-uppercase">Hot sale</h2>
-				<a class="more" href="#">Xem thêm</a>
+
+		<!--sp giảm giá-->
+		<div class="row">
+			<div class="col">
+				<div class="heading">
+					<h2 class="text-uppercase">Hot Sale</h2>
+					<a class="more" href="./?page=search&name=xemthem&value=hotsale">Xem thêm</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container">
+
 		<div class="row pro-list">
 			<?php
-			require_once("private/ctrls/ctrlGiay.php");
-			$controllgiay = new ctrlgiay();
-			$i = 0;
-			foreach ($controllgiay->showGiayHSale_ctrl() as $giay) {
-				if ($i < 8) { ?>
-					<div class="col-lg-3 col-md-6 col-6 products">
-						<div class="pro-img">
-							<div class="pro-sale"><span>-10%</span></div>
-							<a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>">
-								<img class="pro-img pro-img-1" src="<?php echo $giay->GetAnhchinh(); ?>">
-								<img class="pro-img" src="<?php echo $giay->GetAnhphu1(); ?>">
+			include_once("private/ctrls/trangchucontroller.php");
 
-							</a>
-							<div class="pro-btn d-flex">
-								<button type="submit" class="hidden-btn">Mua ngay</button>
-								<button type="submit" class="hidden-btn ms-1">Thêm vào giỏ</button>
-							</div>
-						</div>
-						<div class="pro-detail">
-							<h3 class="pro-name"><a href="?page=cart&id=<?php echo $giay->GetIDgiay(); ?>"><?php echo $giay->GetTengiay(); ?></a></h3>
-							<div class="pro-price">
-								<p class="pro-price sale"><?php echo $giay->GetGia(); ?>₫
-									<span class="pro-price-retail"><del><?php echo $giay->GetGia(); ?>₫</del></span>
-								</p>
-							</div>
-						</div>
-					</div>
-
-			<?php } else break;
-				$i++;
-			}
+			$trangChuController = new TrangChuController();
+			$trangChuController->LoadHotSale();
 			?>
-
 		</div>
 	</div>
 	<!--content 3-->
 
 	<?php
-	require_once("private/ctrls/ctrlBanner.php");
-	$controlbanner = new ctrlbanner();
-	$ImgShow = $controlbanner->ShowImgBanner_ctrl();
-	echo '<a href="?page=search&name=' . $ImgShow->GetName() . '&value=' . $ImgShow->GetValue() . '"><img width="100%" src="' . $ImgShow->GetDiachianh() . '"></a>';
-
-
+	require_once("private/ctrls/trangchucontroller.php");
+	$trangChuController = new TrangChuController;
+	$trangChuController->LoadBottomBanner();
+	
 	?>
-	<!--content 4-->
 
+	<!--content 4-->
 	<div class="container">
 		<div class="row" id="ThongTinT">
 			<div class="col-md-4 col-xs-4 ttin">

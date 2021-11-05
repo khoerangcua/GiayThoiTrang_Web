@@ -1,6 +1,6 @@
 <?php 
 require_once("private/modules/db_module.php");
-require_once("private/models/giayobject.php");
+require_once("private/models/objects/giay.php");
 
 class GiayModel{
 	public function addGiay($giay){
@@ -27,19 +27,19 @@ class GiayModel{
 			giaiPhongBoNho($link,null);
 
 	}
-	public function LoadNew(){
+	public function LoadNew($ngay){
 		$link = null;
 		taoKetNoi($link);
 		
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_giay where `ngaynhap` >= '2021-10-30'");
+		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_giay AS g INNER JOIN tbl_giamgia AS gg ON g.id_giay = gg.id_giay  WHERE `ngaynhap` >= '".$ngay."'");
 		
 		
 		$arrgiay = array();
 		
-		while($rows = mysqli_fetch_assoc($result)){
-			$giayshow = new giay($rows["id_giay"], $rows["ten"], $rows["gia"], $rows["id_thuonghieu"], $rows["ngaynhap"], $rows["gioithieu"], $rows["mau"], $rows["size"], $rows["anhchinh"], $rows["anhphu1"], $rows["anhphu2"], $rows["anhphu3"], $rows["anhphu4"] );
+		while($row = mysqli_fetch_assoc($result)){
 			
-			array_push($arrgiay,$giayshow);
+			
+			array_push($arrgiay,$row);
 			
 			
 		}
@@ -87,24 +87,5 @@ class GiayModel{
 		giaiPhongBoNho($link, $result);
 		return($arrgiay);
 	}
-	public function LoadGiayInfor($idgiays){
-
-		$giayinfor = array();
-		$link = "";
-		taoKetNoi($link);
-		foreach ($idgiays as $key => $value) {
-			$result = chayTruyVanTraVeDL($link, "select * from tbl_giay where `id_giay` = '$value' ");
-			
-			while ($row = mysqli_fetch_assoc($result)) {
-
-				array_push($giayinfor,$row);
-				break;
-			}
-			
-		}
-		giaiPhongBoNho($link, $result);
-		return $giayinfor;
-
-	}	
 }
 ?>

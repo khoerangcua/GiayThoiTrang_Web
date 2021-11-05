@@ -1,6 +1,6 @@
 <?php
 require_once("private/modules/db_module.php");
-require_once("private/models/bannerobject.php");
+require_once("private/models/objects/banner.php");
 
 class BannerModel
 {
@@ -49,17 +49,17 @@ class BannerModel
 		return($arrbanner);
 	}
 	public function showImgBanner(){
+		$banners = array();
+
 		$link = null;
 		taoKetNoi($link);
 		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD' and `vitri` = 'bot'");
 		while($rows = mysqli_fetch_assoc($result)){
-			$bannershow = new banner($rows["id"], $rows["ten"], $rows["diachianh"], $rows["desc"], $rows["trang"], $rows["vitri"], $rows["name"], $rows["value"] );
-			 
-			
-			
+			array_push($banners, $rows);
+			break;
+	
 		}
 		giaiPhongBoNho($link, $result);
-		return($bannershow);
-	}
-		
+		return $banners[0];
+	}		
 	}
