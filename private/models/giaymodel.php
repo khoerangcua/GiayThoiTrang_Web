@@ -47,45 +47,83 @@ class GiayModel{
 		giaiPhongBoNho($link, $result);
 		return($arrgiay);
 	}
-	public function showGiayBSeller(){
-		$link = null;
+	
+
+	public function LoadGiayTheoLoai($idthuonghieu){
+		$giays = array();
+		$link = "";
 		taoKetNoi($link);
-		
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_giay where `ngaynhap` >= '2021-10-30'");
-		
-		
-		$arrgiay = array();
-		
-		while($rows = mysqli_fetch_assoc($result)){
-			$giayshow = new giay($rows["id_giay"], $rows["ten"], $rows["gia"], $rows["id_thuonghieu"], $rows["ngaynhap"], $rows["gioithieu"], $rows["mau"], $rows["size"], $rows["anhchinh"], $rows["anhphu1"], $rows["anhphu2"], $rows["anhphu3"], $rows["anhphu4"] );
-			
-			array_push($arrgiay,$giayshow);
-			
-			
+		$result = chayTruyVanTraVeDL($link, "SELECT * FROM tbl_giaythuonghieu AS gth INNER JOIN tbl_giay as g ON gth.id_giay = g.id_giay WHERE gth.id_thuonghieu = " . $idthuonghieu . "");
+
+		while ($row = mysqli_fetch_assoc($result)) {
+			array_push($giays, $result);
 		}
-			
-		giaiPhongBoNho($link, $result);
-		return($arrgiay);
+
+		return $giays;
 	}
-	public function showGiayHSale(){
-		$link = null;
+
+	public function LoadGiayTheoFiller($thuonghieu, $gia, $size)
+	{
+		
+		$query = "SELECT * FROM (SELECT bangphu1.*, gg.phantramgiam FROM (SELECT g.id_giay, g.ten, g.anhchinh, g.anhphu1, g.gia, g.size, gth.id_thuonghieu FROM tbl_giaythuonghieu gth INNER JOIN tbl_giay AS g ON gth.id_giay = g.id_giay) as bangphu1 INNER JOIN tbl_giamgia AS gg on bangphu1.id_giay = gg.id_giay) AS bangphu2  ";
+		if ($thuonghieu != -1 || $gia != -1 || $size != -1) {
+			$query .= " WHERE ";
+
+			if ($thuonghieu != -1) {
+				for ($i = 0; $i < count($thuonghieu); $i++) {
+
+					if ($i == 0) {
+						$query .= "bangphu2.id_thuonghieu = " . $thuonghieu[$i] . "";
+					} else {
+						$query .= " OR bangphu2.id_thuonghieu = " . $thuonghieu[$i] . "";
+					}
+				}
+			}
+
+			if ($gia != -1) {
+				for ($i = 0; $i < count($gia); $i++) {
+					if ($i == 0 && $thuonghieu != -1) {
+						$query .= " And bangphu2.gia " . $gia[$i] . "";
+					} else {
+						if ($i == 0 && ! $thuonghieu != -1) {
+							$query .= " bangphu2.gia " . $gia[$i] . "";
+						} else {
+							$query .= " OR bangphu2.gia " . $gia[$i] . "";
+						}
+					}
+				}
+			}
+
+			if ($size != -1) {
+				for ($i = 0; $i < count($size); $i++) {
+
+					if ($i == 0 && $gia != -1 || $thuonghieu != -1) {
+						$query .= " And bangphu2.size = '" . $size[$i] . "'";
+					} else {
+						if ($i == 0 && ! ($gia != -1) || $thuonghieu != -1) {
+							$query .= " bangphu2.size = '" . $size[$i] . "'";
+						} else {
+							$query .= " OR bangphu2.size = '" . $size[$i] . "'";
+						}
+					}
+				}
+			}
+			
+
+
+			
+		} 
+		print($query);
+
+		$giays = array();
+		$link = "";
 		taoKetNoi($link);
-		
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_giay where `ngaynhap` >= '2021-10-30'");
-		
-		
-		$arrgiay = array();
-		
-		while($rows = mysqli_fetch_assoc($result)){
-			$giayshow = new giay($rows["id_giay"], $rows["ten"], $rows["gia"], $rows["id_thuonghieu"], $rows["ngaynhap"], $rows["gioithieu"], $rows["mau"], $rows["size"], $rows["anhchinh"], $rows["anhphu1"], $rows["anhphu2"], $rows["anhphu3"], $rows["anhphu4"] );
-			
-			array_push($arrgiay,$giayshow);
-			
-			
+		$result = chayTruyVanTraVeDL($link, $query);
+		while ($row = mysqli_fetch_assoc($result)) {
+			array_push($giays, $row);
 		}
-			
-		giaiPhongBoNho($link, $result);
-		return($arrgiay);
+		return $giays;	
+		
 	}
 }
 ?>
