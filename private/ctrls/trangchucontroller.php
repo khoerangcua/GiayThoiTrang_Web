@@ -8,7 +8,7 @@ class TrangChuController
 {
     public function LoadTopBanner(){
         $bannerModel = new BannerModel();
-        $banners = $bannerModel->showSlideBanner();
+        $banners = $bannerModel->LoadBanners("trangchu", "top");
 
         echo "<div class='carousel-indicators'>";
         
@@ -48,7 +48,7 @@ class TrangChuController
                     $active = "";
             }
             
-             echo "<a href='./? page=search&name=". $banners[$i]['name']."&value=". $banners[$i]["value"]."' class='carousel-item ". $active." '>
+             echo "<a href='./? page=search&from=another&name=". $banners[$i]['name']."&value=". $banners[$i]["value"]."' class='carousel-item ". $active." '>
              <img src='".$banners[$i]["diachianh"]."' class='d-block w-100' alt=''>
              </a> ";
              
@@ -187,8 +187,8 @@ class TrangChuController
     }
     public function LoadBottomBanner(){
         $bannerModel = new  BannerModel();
-        $banner = $bannerModel->showImgBanner();
-        echo "<a href='?page=search&name=".$banner["name"]."&value=".$banner["value"]."'><img width='100%' src='".$banner["diachianh"]."'></a>";
+        $banner = $bannerModel->LoadBanner("trangchu", "bottom");
+        echo "<a href='?page=search&from=another&name=".$banner["name"]."&value=".$banner["value"]."'><img width='100%' src='".$banner["diachianh"]."'></a>";
 
     }
 

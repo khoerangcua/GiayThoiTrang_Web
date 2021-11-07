@@ -227,9 +227,10 @@
                         <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
                     </svg>
                 </a>
-                <a class="page-num" href="#">1</a>
-                <a class="page-num current" href="#">2</a>
-                <a class="page-num" href="#">3</a>
+                <?php
+                $timkiemController = new TimKiemController();
+                $timkiemController->LoadThanhPhanTrang();
+                ?>
                 <a href="#" class="direction">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
@@ -242,15 +243,10 @@
     <!-- NEWS-->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="public/images/banners/slide1-tc.jpg" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item">
-                <img src="public/images/banners/slide2-tc.jpg" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item">
-                <img src="public/images/banners/slide3-tc.jpg" class="d-block w-100" alt="">
-            </div>
+            <?php
+            $timkiemController = new TimKiemController();
+            $timkiemController->LoadBottomBanner();
+            ?>
         </div>
     </div>
 

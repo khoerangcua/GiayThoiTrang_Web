@@ -53,17 +53,17 @@ class GiayModel{
 		$giays = array();
 		$link = "";
 		taoKetNoi($link);
-		$result = chayTruyVanTraVeDL($link, "SELECT * FROM tbl_giaythuonghieu AS gth INNER JOIN tbl_giay as g ON gth.id_giay = g.id_giay WHERE gth.id_thuonghieu = " . $idthuonghieu . "");
+		$result = chayTruyVanTraVeDL($link, "SELECT bangphu1.*, gg.phantramgiam FROM (SELECT g.* FROM tbl_giaythuonghieu AS gth INNER JOIN tbl_giay as g ON gth.id_giay = g.id_giay WHERE gth.id_thuonghieu = ".$idthuonghieu.") AS bangphu1 INNER JOIN tbl_giamgia as gg ON bangphu1.id_giay = gg.id_giay");
 
 		while ($row = mysqli_fetch_assoc($result)) {
-			array_push($giays, $result);
+			array_push($giays, $row);
 		}
 
 		return $giays;
 	}
 
 	public function LoadGiayTheoFiller($thuonghieu, $gia, $size)
-	{
+	{	
 		
 		$query = "SELECT * FROM (SELECT bangphu1.*, gg.phantramgiam FROM (SELECT g.id_giay, g.ten, g.anhchinh, g.anhphu1, g.gia, g.size, gth.id_thuonghieu FROM tbl_giaythuonghieu gth INNER JOIN tbl_giay AS g ON gth.id_giay = g.id_giay) as bangphu1 INNER JOIN tbl_giamgia AS gg on bangphu1.id_giay = gg.id_giay) AS bangphu2  ";
 		if ($thuonghieu != -1 || $gia != -1 || $size != -1) {

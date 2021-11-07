@@ -27,19 +27,17 @@ class BannerModel
 			
 
 		}
-	public function showSlideBanner(){
+	public function LoadBanners($trang, $vitri){
 		$link = null;
 		taoKetNoi($link);
 		
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD' and `vitri` = 'top'");
+		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_banner WHERE `desc` = 'DSD' AND `trang` = '".$trang."' AND `vitri` = '".$vitri."'");
 		
 		
 		$arrbanner = array();
 		
 		while($rows = mysqli_fetch_assoc($result)){
-			// $bannershow = new banner($rows["id"], $rows["ten"], $rows["diachianh"], $rows["desc"], $rows["trang"], $rows["vitri"], $rows["name"], $rows["value"] );
-			 
-			// array_push($arrbanner,$bannershow);
+			
 			array_push($arrbanner, $rows);
 			
 		}
@@ -48,12 +46,12 @@ class BannerModel
 		
 		return($arrbanner);
 	}
-	public function showImgBanner(){
+	public function LoadBanner($trang, $vitri){
 		$banners = array();
 
 		$link = null;
 		taoKetNoi($link);
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD' and `vitri` = 'bot'");
+		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD' and `trang` = '".$trang."' and `vitri` = '".$vitri."'");
 		while($rows = mysqli_fetch_assoc($result)){
 			array_push($banners, $rows);
 			break;
