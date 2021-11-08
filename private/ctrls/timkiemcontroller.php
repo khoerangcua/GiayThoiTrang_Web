@@ -34,38 +34,17 @@ class TimKiemController{
         $thuonghieu = isset($_GET["thuonghieu"]) ? $_GET["thuonghieu"] : -1;
         $gia = isset($_GET["gia"]) ? $_GET["gia"] : -1;
         $size = isset($_GET["size"]) ? $_GET["size"] : -1;
+        
 
         $giays = array();
         $giayModel = new GiayModel();
         $giays = $giayModel->LoadGiayTheoFiller($thuonghieu,  $gia, $size);
-        for ($i = 0; $i < count($giays); $i++) {
-            $giasaukhigiam = ($giays[$i]["gia"] * $giays[$i]["phantramgiam"]) / 100;
-            echo ("
-            <div class='col-lg-3 col-md-6 col-6 products'>
-            <div class='pro-img'>
-                <div class='pro-sale'><span>-" . $giays[$i]["phantramgiam"] . "%</span></div>
-                <a href='./?page=detail&id=" . $giays[$i]["id_giay"] . "'>
-                    <img class='pro-img pro-img-1' src='" . $giays[$i]["anhchinh"] . "'>
-                    <img class='pro-img' src='" . $giays[$i]["anhphu1"] . "'>
-
-                </a>
-                <div class='pro-btn d-flex'>
-                    <button type='submit' class='hidden-btn'>Mua ngay</button>
-                    <button type='submit' class='hidden-btn ms-1'>Thêm vào giỏ</button>
-                </div>
-            </div>
-            <div class='pro-detail'>
-                <h3 class='pro-name'><a href='#'>" . $giays[$i]["ten"] . "</a></h3>
-                <div class='pro-price'>
-                    <p class='pro-price sale'>" . $giasaukhigiam . "₫
-                        <span class='pro-price-retail'><del>" . $giays[$i]["gia"] . "₫</del></span>
-                    </p>
-                </div>
-            </div>
-            </div>
-            ");
+        if (isset($_GET["phantrang"])) {
+            $this->LoadSPPhanTrang($giays, $_GET["phantrang"]);
         }
-
+        else{
+            $this->LoadSPPhanTrang($giays, 0);
+        }
         $_SESSION['giays'] = $giays;
         
 
@@ -103,33 +82,11 @@ class TimKiemController{
             $giays = $giayModel->LoadGiayTheoLoai($_GET["value"]);
             
 
-            for ($i = 0; $i < count($giays); $i++) {
-                $giasaukhigiam = ($giays[$i]["gia"] * $giays[$i]["phantramgiam"]) / 100;
-
-                echo ("
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                <div class='pro-img'>
-                    <div class='pro-sale'><span>-" . $giays[$i]["phantramgiam"] . "%</span></div>
-                    <a href='./?page=detail&id=" . $giays[$i]["id_giay"] . "'>
-                        <img class='pro-img pro-img-1' src='" . $giays[$i]["anhchinh"] . "'>
-                        <img class='pro-img' src='" . $giays[$i]["anhphu1"] . "'>
-    
-                    </a>
-                    <div class='pro-btn d-flex'>
-                        <button type='submit' class='hidden-btn'>Mua ngay</button>
-                        <button type='submit' class='hidden-btn ms-1'>Thêm vào giỏ</button>
-                    </div>
-                </div>
-                <div class='pro-detail'>
-                    <h3 class='pro-name'><a href='#'>" . $giays[$i]["ten"] . "</a></h3>
-                    <div class='pro-price'>
-                        <p class='pro-price sale'>" . $giasaukhigiam . "₫
-                            <span class='pro-price-retail'><del>" . $giays[$i]["gia"] . "₫</del></span>
-                        </p>
-                    </div>
-                </div>
-                </div>
-                ");
+            if (isset($_GET["phantrang"])) {
+                $this->LoadSPPhanTrang($giays, $_GET["phantrang"]);
+            }
+            else{
+                $this->LoadSPPhanTrang($giays, 0);
             }
 
             $_SESSION['giays'] = $giays;
@@ -168,34 +125,11 @@ class TimKiemController{
     private function LoadSPMoi(){
         $giayModel = new GiayModel();
         $giays = $giayModel->LoadNew("2021-1-1");
-        for ($i=0; $i < count($giays) ; $i++) {
-            $giasaukhigiam = ($giays[$i]["gia"] * $giays[$i]["phantramgiam"]) /100 ;
-            echo ("
-            <div class='col-lg-3 col-md-6 col-6 products'>
-            <div class='pro-img'>
-                <div class='pro-sale'><span>-".$giays[$i]["phantramgiam"]."%</span></div>
-                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
-                    <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
-                    <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
-
-                </a>
-                <div class='pro-btn d-flex'>
-                    <button type='submit' class='hidden-btn'>Mua ngay</button>
-                    <button type='submit' class='hidden-btn ms-1'>Thêm vào giỏ</button>
-                </div>
-            </div>
-            <div class='pro-detail'>
-                <h3 class='pro-name'><a href='#'>".$giays[$i]["ten"]."</a></h3>
-                <div class='pro-price'>
-                    <p class='pro-price sale'>".$giasaukhigiam."₫
-                        <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
-                    </p>
-                </div>
-            </div>
-            </div>
-            ");
-
-            
+        if (isset($_GET["phantrang"])) {
+            $this->LoadSPPhanTrang($giays, $_GET["phantrang"]);
+        }
+        else{
+            $this->LoadSPPhanTrang($giays, 0);
         }
         $_SESSION['giays'] = $giays;
 
@@ -203,32 +137,11 @@ class TimKiemController{
     private function LoadSPBanChay(){
         $hoadonModel = new HoaDonModel();
         $giays = $hoadonModel->BestSeller(1);
-        for ($i=0; $i < count($giays) ; $i++) {
-            $giasaukhigiam = ($giays[$i]["gia"] * $giays[$i]["phantramgiam"]) /100 ;
-            echo ("
-            <div class='col-lg-3 col-md-6 col-6 products'>
-            <div class='pro-img'>
-                <div class='pro-sale'><span>-".$giays[$i]["phantramgiam"]."%</span></div>
-                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
-                    <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
-                    <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
-
-                </a>
-                <div class='pro-btn d-flex'>
-                    <button type='submit' class='hidden-btn'>Mua ngay</button>
-                    <button type='submit' class='hidden-btn ms-1'>Thêm vào giỏ</button>
-                </div>
-            </div>
-            <div class='pro-detail'>
-                <h3 class='pro-name'><a href='#'>".$giays[$i]["ten"]."</a></h3>
-                <div class='pro-price'>
-                    <p class='pro-price sale'>".$giasaukhigiam."₫
-                        <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
-                    </p>
-                </div>
-            </div>
-            </div>
-            ");
+        if (isset($_GET["phantrang"])) {
+            $this->LoadSPPhanTrang($giays, $_GET["phantrang"]);
+        }
+        else{
+            $this->LoadSPPhanTrang($giays, 0);
         }
         $_SESSION['giays'] = $giays;
 
@@ -236,32 +149,11 @@ class TimKiemController{
     private function LoadSPGiamGia(){
         $giamgiaModel = new GiamGiaModel();
         $giays = $giamgiaModel->HotSale();
-        for ($i=0; $i < count($giays) ; $i++) {
-            $giasaukhigiam = ($giays[$i]["gia"] * $giays[$i]["phantramgiam"]) /100 ;
-            echo ("
-            <div class='col-lg-3 col-md-6 col-6 products'>
-            <div class='pro-img'>
-                <div class='pro-sale'><span>-".$giays[$i]["phantramgiam"]."%</span></div>
-                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
-                    <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
-                    <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
-
-                </a>
-                <div class='pro-btn d-flex'>
-                    <button type='submit' class='hidden-btn'>Mua ngay</button>
-                    <button type='submit' class='hidden-btn ms-1'>Thêm vào giỏ</button>
-                </div>
-            </div>
-            <div class='pro-detail'>
-                <h3 class='pro-name'><a href='#'>".$giays[$i]["ten"]."</a></h3>
-                <div class='pro-price'>
-                    <p class='pro-price sale'>".$giasaukhigiam."₫
-                        <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
-                    </p>
-                </div>
-            </div>
-            </div>
-            ");
+        if (isset($_GET["phantrang"])) {
+            $this->LoadSPPhanTrang($giays, $_GET["phantrang"]);
+        }
+        else{
+            $this->LoadSPPhanTrang($giays, 0);
         }
 
         $_SESSION['giays'] = $giays;
@@ -298,6 +190,12 @@ class TimKiemController{
 
     public function LoadThanhPhanTrang(){
 
+        
+        $from = $_GET["from"];
+        $name = $_GET["name"];
+        $value = $_GET["value"];       
+
+
         if (isset($_SESSION["giays"])) {
             $giays = $_SESSION["giays"];
             // so luong san pham hien co
@@ -308,19 +206,83 @@ class TimKiemController{
                 
                 echo
                 "
-                <a class='page-num' href='phantrang=".$i."'>".$i."</a>
+                <a class='page-num' href='./?page=search&from=".$from."&name=".$name."&value=".$value."&phantrang=".$i."'>".$i."</a>;
                 ";
             }
         }
         else {
             echo
             "
-            <a class='page-num' href='phantrang=0'>0</a>
+            <a class='page-num' href='./?page=search&from=".$from."&name=".$name."&value=".$value."&phantrang=0'>0</a>
             ";
         }
+    }
 
-         
+    private function LoadSPPhanTrang ($giays, $sotrang){
+        $from = ($sotrang-1)*SO_SP_TREN_TRANG;
+        $dem = 1;
+        for ($i=$from; $i <count($giays) ; $i++) { 
+            if ($dem > SO_SP_TREN_TRANG) {
+                break;
+            }
+            // nếu giày có thông tin giảm giá
+            if (isset($giays[$i]["phantramgiam"])) {
+                $giasaukhigiam = ($giays[$i]["gia"] * $giays[$i]["phantramgiam"]) /100 ;
+            echo ("
+            <div class='col-lg-3 col-md-6 col-6 products'>
+            <div class='pro-img'>
+                <div class='pro-sale'><span>-".$giays[$i]["phantramgiam"]."%</span></div>
+                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                    <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
+                    <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
 
+                </a>
+                <div class='pro-btn d-flex'>
+                    <button type='submit' class='hidden-btn'>Mua ngay</button>
+                    <button type='submit' class='hidden-btn ms-1'>Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class='pro-detail'>
+                <h3 class='pro-name'><a href='#'>".$giays[$i]["ten"]."</a></h3>
+                <div class='pro-price'>
+                    <p class='pro-price sale'>".$giasaukhigiam."₫
+                        <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
+                    </p>
+                </div>
+            </div>
+            </div>
+            ");
+            }
+            // nếu giày không có thông tin giảm giá
+            else {
+                echo ("
+            <div class='col-lg-3 col-md-6 col-6 products'>
+            <div class='pro-img'>
+                <div class='pro-sale'><span>-0%</span></div>
+                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                    <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
+                    <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
+
+                </a>
+                <div class='pro-btn d-flex'>
+                    <button type='submit' class='hidden-btn'>Mua ngay</button>
+                    <button type='submit' class='hidden-btn ms-1'>Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class='pro-detail'>
+                <h3 class='pro-name'><a href='#'>".$giays[$i]["ten"]."</a></h3>
+                <div class='pro-price'>
+                    <p class='pro-price sale'>".$giays[$i]["gia"]."₫
+                        <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
+                    </p>
+                </div>
+            </div>
+            </div>
+            ");
+            }
+            
+            $dem ++;
+        }
     }
 }
 ?>

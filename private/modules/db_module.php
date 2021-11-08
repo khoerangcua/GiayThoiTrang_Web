@@ -8,6 +8,8 @@ function taoKetNoi(&$link){
         echo "Lỗi kết nối máy chủ".mysqli_connect_error();
         exit();
     }
+
+    
 }
 
 function chayTruyVanTraVeDL($link,$q){

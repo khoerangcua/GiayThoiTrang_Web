@@ -15,7 +15,7 @@ class BannerModel
 		$value = $banner->GetValue();
 		
 
-			$link = null;
+			$link = "";
 			taoKetNoi($link);			
 			
 			
@@ -28,7 +28,8 @@ class BannerModel
 
 		}
 	public function LoadBanners($trang, $vitri){
-		$link = null;
+		$link = "";		
+		
 		taoKetNoi($link);
 		
 		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_banner WHERE `desc` = 'DSD' AND `trang` = '".$trang."' AND `vitri` = '".$vitri."'");
@@ -49,7 +50,7 @@ class BannerModel
 	public function LoadBanner($trang, $vitri){
 		$banners = array();
 
-		$link = null;
+		$link = "";
 		taoKetNoi($link);
 		$result = chayTruyVanTraVeDL($link,"select * from tbl_banner where `desc` = 'DSD' and `trang` = '".$trang."' and `vitri` = '".$vitri."'");
 		while($rows = mysqli_fetch_assoc($result)){
