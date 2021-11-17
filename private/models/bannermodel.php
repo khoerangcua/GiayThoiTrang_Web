@@ -28,11 +28,11 @@ class BannerModel
 
 		}
 	public function LoadBanners($trang, $vitri){
-		$link = "";		
-		
+
+		$link = "";				
 		taoKetNoi($link);
 		
-		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_banner WHERE `desc` = 'DSD' AND `trang` = '".$trang."' AND `vitri` = '".$vitri."'");
+		$result = chayTruyVanTraVeDL($link," SELECT * FROM tbl_banner AS banners WHERE banners.desc = 'DSD' AND banners.trang = '$trang' AND banners.vitri = '$vitri' ");
 		
 		
 		$arrbanner = array();

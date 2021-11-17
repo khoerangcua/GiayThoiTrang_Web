@@ -27,26 +27,57 @@ class GiayModel{
 			giaiPhongBoNho($link,null);
 
 	}
-	public function LoadNew($ngay){
+	public function LoadNewArrival($ngay){
+
 		$link = null;
+
 		taoKetNoi($link);
 		
-		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_giay AS g INNER JOIN tbl_giamgia AS gg ON g.id_giay = gg.id_giay  WHERE `ngaynhap` >= '".$ngay."'");
-		
+		$result = chayTruyVanTraVeDL($link,"SELECT giays.*, giamgias.phantramgiam 
+											FROM (SELECT giays.* FROM tbl_giay as giays 
+													WHERE giays.ngaynhap >= $ngay) AS giays 
+											LEFT JOIN tbl_giamgia AS giamgias 
+											ON giays.id_giay = giamgias.id_giay");
 		
 		$arrgiay = array();
 		
 		while($row = mysqli_fetch_assoc($result)){
 			
-			
 			array_push($arrgiay,$row);
-			
-			
+						
 		}
 			
 		giaiPhongBoNho($link, $result);
+
 		return($arrgiay);
 	}
+
+	public function LoadBestSeller($soluongbanduoc){
+        $giays = array();
+
+        $link = "";
+        taoKetNoi($link);
+        $result = chayTruyVanTraVeDL($link, "SELECT * FROM (SELECT g.* FROM (SELECT cthd.id_giay FROM tbl_chitiethoadon as cthd GROUP BY cthd.id_giay HAVING SUM(cthd.soluong) > ".$soluongbanduoc.") AS cthd INNER JOIN tbl_giay as g ON cthd.id_giay = g.id_giay) as bangphu1 LEFT JOIN tbl_giamgia as gg on gg.id_giay = bangphu1.id_giay");
+            
+            while ($row = mysqli_fetch_assoc($result)  ) {
+               
+            array_push($giays,$row);
+        }
+        giaiPhongBoNho($link,$result);
+        return $giays;
+        
+    }
+
+	public function LoadHotSale(){
+        $giays = array();
+        $link = "";
+        taoKetNoi($link);
+        $result = chayTruyVanTraVeDL($link, "SELECT * FROM tbl_giamgia as gg LEFT JOIN tbl_giay as g ON gg.id_giay = g.id_giay WHERE gg.ngayketthuc > CURRENT_DATE()");
+        while ($row = mysqli_fetch_assoc($result)) {
+        array_push($giays, $row);
+        }
+        return $giays;
+    }
 	
 
 	public function LoadGiayTheoLoai($idthuonghieu){
@@ -125,5 +156,7 @@ class GiayModel{
 		return $giays;	
 		
 	}
+
+
 }
 ?>

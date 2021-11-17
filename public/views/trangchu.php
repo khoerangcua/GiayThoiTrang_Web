@@ -70,7 +70,7 @@
 			<?php
 			require_once("private/ctrls/TrangChuController.php");
 			$trangChuController = new TrangChuController();
-			$trangChuController->LoadNewArrivals();
+			$trangChuController->LoadNewArrival(8);
 			?>
 		</div>
 
@@ -89,7 +89,7 @@
 			include_once("private/ctrls/trangchucontroller.php");
 
 			$trangChuController = new TrangChuController();
-			$trangChuController->LoadBestSeller();
+			$trangChuController->LoadBestSeller(8);
 			?>
 		</div>
 
@@ -108,7 +108,7 @@
 			include_once("private/ctrls/trangchucontroller.php");
 
 			$trangChuController = new TrangChuController();
-			$trangChuController->LoadHotSale();
+			$trangChuController->LoadHotSale(8);
 			?>
 		</div>
 	</div>
