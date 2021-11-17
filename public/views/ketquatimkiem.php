@@ -28,19 +28,19 @@
     </header>
 
     <!--breadcrumb-->
-    
+
     <nav style="background-color:#F8F8F8" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Tất cả sản phẩm</li>
+                <li class="breadcrumb-item active" aria-current="to">Tất cả sản phẩm</li>
             </ol>
         </div>
     </nav>
     <!--CONTENT-->
-    
+
     <div class="container">
-        
+
         <!--TIỀU ĐỀ-->
         <div class="row">
             <div class="col">
@@ -54,162 +54,162 @@
         <div class="row">
             <div class="col-lg-3">
                 <form action="./" method="get">
-                <input type="hidden" name="page" value="search">
-                <input type="hidden" name="from" value="self">
+                    <input type="hidden" name="to" value="search">
+                    <input type="hidden" name="from" value="self">
 
-                <div class="filter">
-                    <div class="filter-heading">
-                        <span class="d-xxl-none d-xl-none d-lg-none">Bộ lọc</span>
+                    <div class="filter">
+                        <div class="filter-heading">
+                            <span class="d-xxl-none d-xl-none d-lg-none">Bộ lọc</span>
+
+                        </div>
+                        <div class="filter-brands">
+                            <span class="filter-select">Thương hiệu</span>
+                            <span class="filter-control filter-select" onClick="filterbrandtoggle(this)">-</span>
+                            <ul id="filter-brand-items">
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="1" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        adidas
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="2" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        nike
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="3" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        jordan
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="4" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        mlb
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="5" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        vans
+                                    </label>
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+                        <div class="filter-price">
+                            <span class="filter-select">Giá</span>
+                            <span class="filter-control filter-select" onClick="filterpricetoggle(this)">-</span>
+                            <ul id="filter-price-items">
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value=" < 1000000 " id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Dưới 1,000,000₫
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value="BETWEEN 1000000 AND 2000000" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        1,000,000₫ - 2,000,000₫
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value="BETWEEN 2000000 AND 3500000" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        2,000,000₫ - 3,500,000₫
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value="BETWEEN 3500000 AND 5000000" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        3,500,000₫ - 5,000,000₫
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value=" > 5000000" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Trên 5,000,000₫
+                                    </label>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <div class="filter-size">
+                            <span class="filter-select">Kích thước</span>
+                            <span class="filter-control filter-select" onClick="filtersizetoggle(this)">-</span>
+                            <ul id="filter-size-items">
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="37" id="37" autocomplete="off">
+                                    <label class="size-btn" for="37">37</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="37.5" id="37.5" autocomplete="off">
+                                    <label class="size-btn" for="37.5">37.5</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="38" id="38" autocomplete="off">
+                                    <label class="size-btn" for="38">38</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="38.5" id="38.5" autocomplete="off">
+                                    <label class="size-btn" for="38.5">38.5</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="39" id="39" autocomplete="off">
+                                    <label class="size-btn" for="39">39</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="39.5" id="39.5" autocomplete="off">
+                                    <label class="size-btn" for="39.5">39.5</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="40" id="40" autocomplete="off">
+                                    <label class="size-btn" for="40">40</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="40.5" id="40.5" autocomplete="off">
+                                    <label class="size-btn" for="40.5">40.5</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="41" id="41" autocomplete="off">
+                                    <label class="size-btn" for="41">41</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="41.5" id="41.5" autocomplete="off">
+                                    <label class="size-btn" for="41.5">41.5</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="42" id="42" autocomplete="off">
+                                    <label class="size-btn" for="42">42</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="42.5" id="42.5" autocomplete="off">
+                                    <label class="size-btn" for="42.5">42.5</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="size-selector" name="size[]" value="43" id="43" autocomplete="off">
+                                    <label class="size-btn" for="43">43</label>
+                                </li>
+                            </ul>
+                        </div>
+
+
 
                     </div>
-                    <div class="filter-brands">
-                        <span class="filter-select">Thương hiệu</span>
-                        <span class="filter-control filter-select" onClick="filterbrandtoggle(this)">-</span>
-                        <ul id="filter-brand-items">
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="1" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    adidas
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="2" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    nike
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="3" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    jordan
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="4" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    mlb
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="thuonghieu[]" value="5" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    vans
-                                </label>
-                            </li>
-                            
-
-
-                        </ul>
-                    </div>
-                    <div class="filter-price">
-                        <span class="filter-select">Giá</span>
-                        <span class="filter-control filter-select" onClick="filterpricetoggle(this)">-</span>
-                        <ul id="filter-price-items">
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="gia[]" value=" < 1000000 " id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Dưới 1,000,000₫
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="gia[]" value="BETWEEN 1000000 AND 2000000" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    1,000,000₫ - 2,000,000₫
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="gia[]" value="BETWEEN 2000000 AND 3500000" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    2,000,000₫ - 3,500,000₫
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="gia[]" value="BETWEEN 3500000 AND 5000000" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    3,500,000₫ - 5,000,000₫
-                                </label>
-                            </li>
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" name="gia[]" value=" > 5000000" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Trên 5,000,000₫
-                                </label>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="filter-size">
-                        <span class="filter-select">Kích thước</span>
-                        <span class="filter-control filter-select" onClick="filtersizetoggle(this)">-</span>
-                        <ul id="filter-size-items">
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="37" id="37" autocomplete="off">
-                                <label class="size-btn" for="37">37</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="37.5" id="37.5" autocomplete="off">
-                                <label class="size-btn" for="37.5">37.5</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="38" id="38" autocomplete="off">
-                                <label class="size-btn" for="38">38</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="38.5" id="38.5" autocomplete="off">
-                                <label class="size-btn" for="38.5">38.5</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="39" id="39" autocomplete="off">
-                                <label class="size-btn" for="39">39</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="39.5" id="39.5" autocomplete="off">
-                                <label class="size-btn" for="39.5">39.5</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" nname="size[]" value="40" id="40" autocomplete="off">
-                                <label class="size-btn" for="40">40</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="40.5" id="40.5" autocomplete="off">
-                                <label class="size-btn" for="40.5">40.5</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="41" id="41" autocomplete="off">
-                                <label class="size-btn" for="41">41</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="41.5" id="41.5" autocomplete="off">
-                                <label class="size-btn" for="41.5">41.5</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="42" id="42" autocomplete="off">
-                                <label class="size-btn" for="42">42</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="42.5" id="42.5" autocomplete="off">
-                                <label class="size-btn" for="42.5">42.5</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="size-selector" name="size[]" value="43" id="43" autocomplete="off">
-                                <label class="size-btn" for="43">43</label>
-                            </li>
-                        </ul>
-                    </div>
-
-                    
-
-                </div>
-                <button type="submit" >Tìm</button>
+                    <button type="submit">Tìm</button>
                 </form>
-                
+
             </div>
 
             <!--LƯỚI SẢN PHẨM-->
             <div class="col-lg-9">
                 <div class="row pro-list">
-                    
+
                     <?php
                     include_once("private/ctrls/timkiemcontroller.php");
                     $timkiemController = new TimKiemController();

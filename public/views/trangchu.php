@@ -61,7 +61,7 @@
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">New arrrivals</h2>
-					<a class="more" href="./?page=search&from=another&name=xemthem&value=moi">Xem thêm</a>
+					<a class="more" href="./?to=search&from=another&name=xemthem&value=moi">Xem thêm</a>
 				</div>
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">Best seller</h2>
-					<a class="more" href="./?page=search&from=another&name=xemthem&value=bestseller">Xem thêm</a>
+					<a class="more" href="./?to=search&from=another&name=xemthem&value=bestseller">Xem thêm</a>
 				</div>
 			</div>
 		</div>
@@ -98,7 +98,7 @@
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">Hot Sale</h2>
-					<a class="more" href="./?page=search&from=another&name=xemthem&value=hotsale">Xem thêm</a>
+					<a class="more" href="./?to=search&from=another&name=xemthem&value=hotsale">Xem thêm</a>
 				</div>
 			</div>
 		</div>

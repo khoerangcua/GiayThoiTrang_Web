@@ -38,7 +38,7 @@ class TrangChuController
             }
 
             echo ("
-                    <a href='./? page=search&from=another&name=" . $banners[$i]['name'] . "&value=" . $banners[$i]["value"] . "' class='carousel-item " . $active . " '>
+                    <a href='./?to=search&from=another&name=" . $banners[$i]['name'] . "&value=" . $banners[$i]["value"] . "' class='carousel-item " . $active . " '>
                     <img src='" . $banners[$i]["diachianh"] . "' class='d-block w-100' alt=''>
                     </a> 
                  ");
@@ -63,18 +63,18 @@ class TrangChuController
                         <div class='col-lg-3 col-md-6 col-6 products'>
                             <div class='pro-img'>
                                 <div class='pro-sale'><span>-".$giays[$i]["phantramgiam"]."%</span></div>
-                                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                                <a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>
                                     <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
                                     <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
 
                                 </a>
                                 <div class='pro-btn d-flex'>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
                                 </div>
                             </div>
                             <div class='pro-detail'>
-                                <h3 class='pro-name'><a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
+                                <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'>".$giasaugiam."đ 
                                         <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
@@ -90,18 +90,18 @@ class TrangChuController
                         <div class='col-lg-3 col-md-6 col-6 products'>
                             <div class='pro-img'>
                                 
-                                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                                <a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>
                                     <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
                                     <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
 
                                 </a>
                                 <div class='pro-btn d-flex'>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
                                 </div>
                             </div>
                             <div class='pro-detail'>
-                                <h3 class='pro-name'><a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
+                                <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'> 
                                         <span class='pro-price-retail'>".$giays[$i]["gia"]."₫</span>
@@ -129,18 +129,18 @@ class TrangChuController
                         <div class='col-lg-3 col-md-6 col-6 products'>
                             <div class='pro-img'>
                                 <div class='pro-sale'><span>-".$giays[$i]["phantramgiam"]."%</span></div>
-                                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                                <a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>
                                     <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
                                     <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
 
                                 </a>
                                 <div class='pro-btn d-flex'>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
                                 </div>
                             </div>
                             <div class='pro-detail'>
-                                <h3 class='pro-name'><a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
+                                <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'>".$giasaugiam."đ 
                                         <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
@@ -157,18 +157,18 @@ class TrangChuController
                         <div class='col-lg-3 col-md-6 col-6 products'>
                             <div class='pro-img'>
                                 
-                                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                                <a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>
                                     <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
                                     <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
 
                                 </a>
                                 <div class='pro-btn d-flex'>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
                                 </div>
                             </div>
                             <div class='pro-detail'>
-                                <h3 class='pro-name'><a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
+                                <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'> 
                                         <span class='pro-price-retail'>".$giays[$i]["gia"]."₫</span>
@@ -197,18 +197,18 @@ class TrangChuController
                         <div class='col-lg-3 col-md-6 col-6 products'>
                             <div class='pro-img'>
                                 <div class='pro-sale'><span>-".$giays[$i]["phantramgiam"]."%</span></div>
-                                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                                <a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>
                                     <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
                                     <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
 
                                 </a>
                                 <div class='pro-btn d-flex'>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
                                 </div>
                             </div>
                             <div class='pro-detail'>
-                                <h3 class='pro-name'><a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
+                                <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'>".$giasaugiam."đ 
                                         <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
@@ -225,18 +225,18 @@ class TrangChuController
                         <div class='col-lg-3 col-md-6 col-6 products'>
                             <div class='pro-img'>
                                 
-                                <a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>
+                                <a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>
                                     <img class='pro-img pro-img-1' src='".$giays[$i]["anhchinh"]."'>
                                     <img class='pro-img' src='".$giays[$i]["anhphu1"]."'>
 
                                 </a>
                                 <div class='pro-btn d-flex'>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
-                                    <a href='./?page=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=muangay' class='hidden-btn'><button type='submit' class='hidden-btn'>Mua ngay</button></a>
+                                    <a href='./?to=cart&id=".$giays[$i]["id_giay"]."&from=themvaogio' class='hidden-btn ms-1'><button type='submit' class='hidden-btn'>Thêm vào giỏ</button></a>
                                 </div>
                             </div>
                             <div class='pro-detail'>
-                                <h3 class='pro-name'><a href='./?page=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
+                                <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'> 
                                         <span class='pro-price-retail'>".$giays[$i]["gia"]."₫</span>
@@ -251,7 +251,7 @@ class TrangChuController
     public function LoadBottomBanner(){
         $bannerModel = new  BannerModel();
         $banner = $bannerModel->LoadBanner("trang chu", "bot");
-        echo "<a href='?page=search&from=another&name=".$banner["name"]."&value=".$banner["value"]."'><img width='100%' src='".$banner["diachianh"]."'></a>";
+        echo "<a href='./?to=search&from=another&name=".$banner["name"]."&value=".$banner["value"]."'><img width='100%' src='".$banner["diachianh"]."'></a>";
 
     }
 }

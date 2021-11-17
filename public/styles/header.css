@@ -174,7 +174,7 @@ p.pro-price.sale{
     background: #000000;
     color: #FFFFFF;
     width: 100%;
-    padding: 8px 5px;
+    padding: 4px 5px;
     outline: none;
 }
 .pro-img:hover .pro-btn{
