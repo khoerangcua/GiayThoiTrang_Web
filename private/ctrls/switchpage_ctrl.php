@@ -3,8 +3,8 @@ class SwichPage_Controler
 {
     public function SwitchPage()
     {
-        if (isset($_GET['page'])) {
-            switch ($_GET['page']) {
+        if (isset($_GET['to'])) {
+            switch ($_GET['to']) {
                 case 'detail':
                     include_once("public/views/chitietsp.php");
                     break;

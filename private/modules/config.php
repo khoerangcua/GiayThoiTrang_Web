@@ -3,5 +3,5 @@ define("HOST","localhost");
 define("DB","db_hanghoa");
 define("USER","root");
 define("PASSWORD","");
-define("SO_SP_TREN_TRANG","16");
+define("SO_SP_TREN_TRANG","8");
 ?>

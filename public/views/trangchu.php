@@ -61,7 +61,7 @@
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">New arrrivals</h2>
-					<a class="more" href="./?page=search&from=another&name=xemthem&value=moi">Xem thêm</a>
+					<a class="more" href="./?to=search&from=another&name=xemthem&value=moi">Xem thêm</a>
 				</div>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 			<?php
 			require_once("private/ctrls/TrangChuController.php");
 			$trangChuController = new TrangChuController();
-			$trangChuController->LoadNewArrivals();
+			$trangChuController->LoadNewArrival(8);
 			?>
 		</div>
 
@@ -79,7 +79,7 @@
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">Best seller</h2>
-					<a class="more" href="./?page=search&from=another&name=xemthem&value=bestseller">Xem thêm</a>
+					<a class="more" href="./?to=search&from=another&name=xemthem&value=bestseller">Xem thêm</a>
 				</div>
 			</div>
 		</div>
@@ -87,9 +87,8 @@
 		<div class="row pro-list">
 			<?php
 			include_once("private/ctrls/trangchucontroller.php");
-
 			$trangChuController = new TrangChuController();
-			$trangChuController->LoadBestSeller();
+			$trangChuController->LoadBestSeller(8);
 			?>
 		</div>
 
@@ -98,7 +97,7 @@
 			<div class="col">
 				<div class="heading">
 					<h2 class="text-uppercase">Hot Sale</h2>
-					<a class="more" href="./?page=search&from=another&name=xemthem&value=hotsale">Xem thêm</a>
+					<a class="more" href="./?to=search&from=another&name=xemthem&value=hotsale">Xem thêm</a>
 				</div>
 			</div>
 		</div>
@@ -108,7 +107,7 @@
 			include_once("private/ctrls/trangchucontroller.php");
 
 			$trangChuController = new TrangChuController();
-			$trangChuController->LoadHotSale();
+			$trangChuController->LoadHotSale(8);
 			?>
 		</div>
 	</div>
