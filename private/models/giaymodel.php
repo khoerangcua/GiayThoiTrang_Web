@@ -162,6 +162,22 @@ class GiayModel{
 		return $giays;
 	}
 
+	public function LoadGiay($id_giay)
+	{
+		$link = null;
+		taoKetNoi($link);
+
+		$result = chayTruyVanTraVeDL($link, "SELECT g.*, th.id_thuonghieu FROM (SELECT g.*, s.size FROM (SELECT g.*, gg.phantramgiam FROM (SELECT * FROM tbl_giay AS g WHERE g.id_giay = $id_giay) AS g LEFT JOIN tbl_giamgia AS gg ON g.id_giay = gg.id_giay) AS g INNER JOIN tbl_giaysize as s ON g.id_giay = s.id_giay) AS g INNER JOIN tbl_giaythuonghieu AS th ON g.id_giay = th.id_giay");
+
+		$giays = array();
+		while ($row = mysqli_fetch_assoc($result)) {
+			array_push($giays, $row);
+			
+		}
+
+		return $giays;
+	}
+
 
 }
 ?>

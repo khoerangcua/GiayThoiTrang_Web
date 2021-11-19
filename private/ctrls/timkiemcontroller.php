@@ -273,7 +273,7 @@ class TimKiemController{
 
             // Trường hợp giày có thông tin giảm giá
             if (isset($giays[$i]["phantramgiam"])) {
-                $giasaugiam = $giays[$i]["gia"] * (100 - 30) / 100;
+                $giasaugiam = $giays[$i]["gia"] * (100 - $giays[$i]["phantramgiam"]) / 100;
                 echo ("
                         <div class='col-lg-3 col-md-6 col-6 products'>
                             <div class='pro-img'>

@@ -87,7 +87,6 @@
 		<div class="row pro-list">
 			<?php
 			include_once("private/ctrls/trangchucontroller.php");
-
 			$trangChuController = new TrangChuController();
 			$trangChuController->LoadBestSeller(8);
 			?>
