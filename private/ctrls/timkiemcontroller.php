@@ -28,6 +28,8 @@ class TimKiemController{
                 case 'another':
                     $this->TimKiemTuTrangKhac();
                     break;
+                case 'searchbar':
+                    $this->TimKiemTuSearchBar();
                 default:
                     // header("Location: ./?to=home");
                     break;
@@ -76,6 +78,22 @@ class TimKiemController{
         } else {
             header("Location: ./?to=home");
         }
+    }
+    private function TimKiemTuSearchBar()
+    {
+        $key = $_GET["key"];
+
+        // Truy vấn danh sách sản phẩm theo loại
+        $giayModel = new GiayModel();
+        $giays = $giayModel->LoadGiayTheoTenHoacLoai($key);
+
+        //Kiểm tra có phân trang chưa
+        $page = isset($_GET["page"]) ? $_GET["page"] : 1;
+        $this->LoadGiays($giays, $page);
+
+        // Lưu danh sách giày vào session
+        $_SESSION['giays'] = $giays;
+
     }
 
     //
@@ -248,7 +266,9 @@ class TimKiemController{
                       <a class='to-num' href='$href&page=$i' >$i</a>
                     ";
                 }
-            } else {
+            }
+            if ($_GET["from"] == "another")
+            {
 
                 // Lấy url
                 $name = $_GET["name"];
@@ -260,6 +280,20 @@ class TimKiemController{
                     echo
                     "
                         <a class='to-num' href='./?to=search&from=another&name=" . $name . "&value=" . $value . "&page=" . $i . "'>" . $i . "</a>
+                    ";
+                }
+            }
+            else {
+                // Lấy url
+                $key= $_GET["key"];
+                
+
+                // Hiển thị thanh phân trang
+                for ($i = 1; $i <= $total; $i++) {
+
+                    echo
+                    "
+                        <a class='to-num' href='./?to=search&from=searchbar&key=".$key."&page=" . $i . "'>" . $i . "</a>
                     ";
                 }
             }

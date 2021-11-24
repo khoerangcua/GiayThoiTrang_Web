@@ -4,23 +4,23 @@
         <nav class="m-auto">
             <ul id="menuitems">
                 <li>
-                    <a href="#">Tất cả sản phẩm</a>
+                    <a href="./?to=search&from=self&thuonghieu%5B%5D=1&thuonghieu%5B%5D=2&thuonghieu%5B%5D=3&thuonghieu%5B%5D=4&thuonghieu%5B%5D=5">Tất cả sản phẩm</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#">Adidas</a>
+                    <a href="./?to=search&from=another&name=loai&value=1">Adidas</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Nike</a>
+                    <a href="./?to=search&from=another&name=loai&value=2">Nike</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Jordan</a>
+                    <a href="./?to=search&from=another&name=loai&value=3">Jordan</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">MLB</a>
+                    <a href="./?to=search&from=another&name=loai&value=4">MLB</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Vans</a>
+                    <a href="./?to=search&from=another&name=loai&value=5">Vans</a>
                 </li>
             </ul>
         </nav>
@@ -59,11 +59,12 @@
                     <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
                 </svg></button>
             <form class="d-flex justify-content-center">
-                <input type="text" class="search-box" id="searchbar" placeholder="Tìm kiếm">
+                <input type="hidden" name="to" value="search">
+                <input type="hidden" name="from" value="searchbar">
+                <input type="text" name="key" class="search-box" id="searchbar" placeholder="Tìm kiếm">
                 <button type="submit" class="search-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                     </svg></button>
-
 
             </form>
         </div>

@@ -178,6 +178,22 @@ class GiayModel{
 		return $giays;
 	}
 
+	public function LoadGiayTheoTenHoacLoai($key)
+	{
+		$link = null;
+		taoKetNoi($link);
+
+		$result = chayTruyVanTraVeDL($link, "SELECT bangphu4.*, gg.phantramgiam FROM (SELECT * FROM (SELECT bangphu1.*, th.tenthuonghieu FROM (SELECT g.*, g_th.id_thuonghieu FROM tbl_giay AS g INNER JOIN tbl_giaythuonghieu AS g_th on g.id_giay = g_th.id_giay) AS bangphu1 INNER JOIN tbl_thuonghieu as th on bangphu1.id_thuonghieu = th.id_thuonghieu) AS bangphu3 WHERE bangphu3.ten LIKE '%".$key."%' OR bangphu3.tenthuonghieu LIKE '%".$key."%') AS bangphu4 LEFT JOIN tbl_giamgia AS gg on bangphu4.id_giay = gg.id_giay");
+
+		$giays = array();
+		while ($row = mysqli_fetch_assoc($result)) {
+			array_push($giays, $row);
+			
+		}
+
+		return $giays;
+	}
+
 
 }
 ?>
