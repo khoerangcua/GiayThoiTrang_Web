@@ -13,34 +13,15 @@
 </head>
 
 <body>
-	<div class="container">
-		<div class="row vh-100 justify-content-center align-items-center">
-			<div class="col-sm-8 col-md-6 col-lg-4 shadow login-ui">
-				<a class="row justify-content-center" href="./?page=trangchu"><img src="public/images/icons/header-icon.png" class="icon"></a>
-				<div class="row login-header">
-					<h3>đăng nhập</h3>
-				</div>
+	<?php
+	require_once("private/ctrls/dangnhapcontroller.php");
 
-				<form method="post" class="login-form" action="/private/ctrls/xulilogin.php">
-					<div class="form-floating mb-4">
-						<input type="text" name="username" class="form-control" id="floatingInput" placeholder="Tên đăng nhập">
-						<label for="floatingInput">Tên đăng nhập</label>
-					</div>
-					<div class="form-floating mb-2">
-						<input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Mật khẩu">
-						<label for="floatingPassword">Mật khẩu</label>
-					</div>
-					<div class="mb-4 form-check">
-						<input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
-						<label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
-						<a href="resetpassword.php" class="forgot">Quên mật khẩu?</a>
-					</div>
-					<button type="submit" class="login-btn mb-4" name="submit">Đăng nhập</button>
-					<p class="login-signup">Chưa có tài khoản? <a href="./?page=signup">Đăng ký tại đây</a></p>
-				</form>
-			</div>
-		</div>
-	</div>
+	$dangNhapController = new DangNhapController();
+	$dangNhapController->KiemTraDangNhap();
+	?>
+
+
+	
 	
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>

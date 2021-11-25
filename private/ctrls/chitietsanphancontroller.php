@@ -90,7 +90,8 @@ class ChiTietSanPhamController
 
                         <form action='./' method='GET'>
                             <input type='hidden' name='to' value='cart'>
-                            <input type='hidden' name='id' value='".$id."'>
+                            <input type='hidden' name='id_giay' value='".$id."'>
+                            <input type='hidden' name='action' value='them'>
                             <div class='size-select'>
                                 ".$hienthisize."
                             </div>
@@ -125,7 +126,7 @@ class ChiTietSanPhamController
                     </div>
                 ";
             
-        echo "<div>";
+        echo "</div>";
 
         echo 
         "
@@ -216,7 +217,8 @@ class ChiTietSanPhamController
 
                         <form action='./' method='GET'>
                             <input type='hidden' name='to' value='cart'>
-                            <input type='hidden' name='id' value='".$id."'>
+                            <input type='hidden' name='id_giay' value='".$id."'>
+                            <input type='hidden' name='action' value='them'>
                             <div class='size-select'>
                                 ".$hienthisize."
                             </div>

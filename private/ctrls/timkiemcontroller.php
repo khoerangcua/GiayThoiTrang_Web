@@ -283,7 +283,7 @@ class TimKiemController{
                     ";
                 }
             }
-            else {
+            if ($_GET["from"] == "searchbar") {
                 // Lấy url
                 $key= $_GET["key"];
                 
