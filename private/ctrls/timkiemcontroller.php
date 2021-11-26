@@ -325,8 +325,8 @@ class TimKiemController{
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <div class='pro-price'>
-                                    <p class='pro-price sale'>" . $giasaugiam . "đ 
-                                        <span class='pro-price-retail'><del>" . $giays[$i]["gia"] . "₫</del></span>
+                                    <p class='pro-price sale'>" . number_format($giasaugiam, 0, ',', ' ') . "đ 
+                                        <span class='pro-price-retail'><del>" . number_format($giays[$i]["gia"], 0, ',', ' ') . "₫</del></span>
                                     </p>
                                 </div>
                             </div>
@@ -354,7 +354,7 @@ class TimKiemController{
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'> 
-                                        <span class='pro-price-retail'>" . $giays[$i]["gia"] . "₫</span>
+                                        <span class='pro-price-retail'>" . number_format($giays[$i]["gia"], 0, ',', ' ') . "₫</span>
                                     </p>
                                 </div>
                             </div>

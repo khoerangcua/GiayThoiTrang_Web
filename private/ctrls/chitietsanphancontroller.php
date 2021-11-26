@@ -44,13 +44,13 @@ class ChiTietSanPhamController
         $anhphu4 = $giays[0]["anhphu4"];
         $gioithieu  = $giays[0]["gioithieu"];
         $sizes = array();
+
         foreach ($giays as $key => $value) {
             array_push($sizes, $value["size"]);
         }
 
         
         // Hiển thị thông tin giày
-
         $hienthisize = "";
         foreach ($sizes as $key => $value) {
             $hienthisize .= 
@@ -62,7 +62,10 @@ class ChiTietSanPhamController
             ";
         }
 
-        echo "<div class='row'>";
+        echo 
+        "
+        <div class='row'>
+        ";
                 echo 
                 "
                 
@@ -84,8 +87,8 @@ class ChiTietSanPhamController
 				        </div>
                         <div class='detail-pro-price'>
                             <span class='detail-pro-sale'>-".$phantramgiam."%</span>
-                            <span class='detail-pro-price'>".$giasaugiam."₫</span>
-                            <del>".$gia."₫</del>
+                            <span class='detail-pro-price'>".number_format($giasaugiam, 0, ',', ' ')."₫</span>
+                            <del>".number_format($gia, 0, ',', ' ')."₫</del>
                         </div>
 
                         <form action='./' method='GET'>
@@ -159,6 +162,8 @@ class ChiTietSanPhamController
         echo "<div class='row pro-list'>";
         $this->LoadSanPhamLienQuan($thuonghieu);  
         echo "</div>";
+
+        
         
     }
 
@@ -316,8 +321,8 @@ class ChiTietSanPhamController
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <div class='pro-price'>
-                                    <p class='pro-price sale'>" . $giasaugiam . "đ 
-                                        <span class='pro-price-retail'><del>" . $giays[$i]["gia"] . "₫</del></span>
+                                    <p class='pro-price sale'>" . number_format($giasaugiam, 0, ',', ' ') . "đ 
+                                        <span class='pro-price-retail'><del>" . number_format($giays[$i]["gia"], 0, ',', ' ') . "₫</del></span>
                                     </p>
                                 </div>
                             </div>
@@ -345,7 +350,7 @@ class ChiTietSanPhamController
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'> 
-                                        <span class='pro-price-retail'>" . $giays[$i]["gia"] . "₫</span>
+                                        <span class='pro-price-retail'>" . number_format($giays[$i]["gia"], 0, ',', ' ') . "₫</span>
                                     </p>
                                 </div>
                             </div>

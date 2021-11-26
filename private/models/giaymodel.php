@@ -100,8 +100,7 @@ class GiayModel{
 	public function LoadGiayTheoFiller($thuonghieu, $gia, $size)
 	{
 
-		$query = "SELECT * FROM (SELECT bangphu1.*, tbl_giamgia.phantramgiam FROM (SELECT tbl_giay.*, tbl_giaythuonghieu.id_thuonghieu FROM tbl_giay INNER JOIN tbl_giaythuonghieu ON tbl_giay.id_giay = tbl_giaythuonghieu.id_giay) AS bangphu1 LEFT JOIN
-		tbl_giamgia ON bangphu1.id_giay = tbl_giamgia.id_giay) AS bangphu2";
+		$query = "SELECT DISTINCT(`id_giay`), bangphu2.ten, bangphu2.gia, bangphu2.anhchinh, bangphu2.anhphu1, bangphu2.phantramgiam FROM (SELECT bangphu1.*, tbl_giamgia.phantramgiam FROM (SELECT bangphu.*, tbl_giaysize.size FROM (SELECT tbl_giay.*, tbl_giaythuonghieu.id_thuonghieu FROM tbl_giay INNER JOIN tbl_giaythuonghieu ON tbl_giay.id_giay = tbl_giaythuonghieu.id_giay) AS bangphu INNER JOIN tbl_giaysize ON bangphu.id_giay = tbl_giaysize.id_giay) AS bangphu1 LEFT JOIN tbl_giamgia ON bangphu1.id_giay = tbl_giamgia.id_giay) AS bangphu2";
 
 		if ($thuonghieu != -1 || $gia != -1 || $size != -1) {
 			$query .= " WHERE ";
@@ -123,12 +122,12 @@ class GiayModel{
 
 				for ($i = 0; $i < count($gia); $i++) {
 					if ($i == 0 && $thuonghieu != -1) {
-						$query .= " And ( bangphu2.gia " . $gia[$i] . " ";
+						$query .= " And ( bangphu2.gia - (bangphu2.gia * IFNULL(bangphu2.phantramgiam,0) / 100) " . $gia[$i] . " ";
 					} else {
 						if ($i == 0 && !$thuonghieu != -1) {
-							$query .= " ( bangphu2.gia " . $gia[$i] . " ";
+							$query .= " ( bangphu2.gia - (bangphu2.gia * IFNULL(bangphu2.phantramgiam,0) / 100) " . $gia[$i] . " ";
 						} else {
-							$query .= " OR bangphu2.gia " . $gia[$i] . " ";
+							$query .= " OR bangphu2.gia - (bangphu2.gia * IFNULL(bangphu2.phantramgiam,0) / 100) " . $gia[$i] . " ";
 						}
 					}
 				}
@@ -147,10 +146,13 @@ class GiayModel{
 							$query .= " OR bangphu2.size = '" . $size[$i] . "'";
 						}
 					}
-					$query .= " ) ";
+					
 				}
+				$query .= " ) ";
 			}
 		}
+
+		print $query;
 
 		$giays = array();
 		$link = "";
@@ -159,6 +161,7 @@ class GiayModel{
 		while ($row = mysqli_fetch_assoc($result)) {
 			array_push($giays, $row);
 		}
+		
 		return $giays;
 	}
 

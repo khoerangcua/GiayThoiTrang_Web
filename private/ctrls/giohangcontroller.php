@@ -142,7 +142,7 @@ class GioHangController
                                                 </svg>
                                             </a>
                                         </div>
-                                        <p class='mb-0'><span><strong>".$thanhtien."₫</strong></span></p>
+                                        <p class='mb-0'><span><strong>".number_format($thanhtien, 0, ',', ' ')."₫</strong></span></p>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@ class GioHangController
                         <h3>Thông tin thanh toán</h3>
                         <div class='summary-total'>
                             <p>
-                                Tổng tiền: <span>".$tongtien."₫</span>
+                                Tổng tiền: <span>".number_format($tongtien, 0, ',', ' ')."₫</span>
                             </p>
                         </div>
                         <h5>Bạn có thể nhập mã giảm giá khi xác nhận thanh toán</h5>
@@ -224,7 +224,7 @@ class GioHangController
         ";
 
         // thực hiện in ra danh sách       
-        for ($i=0; $i < $soluonghienthi && $i < $giays ; $i++) {
+        for ($i=0; $i < $soluonghienthi && $i < count($giays) ; $i++) {
 
             // trường hợp giày có thông tin giảm giá
             if (isset($giays[$i]["phantramgiam"])) {
@@ -246,8 +246,8 @@ class GioHangController
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
-                                    <p class='pro-price sale'>".$giasaugiam."đ 
-                                        <span class='pro-price-retail'><del>".$giays[$i]["gia"]."₫</del></span>
+                                    <p class='pro-price sale'>".number_format($giasaugiam, 0, ',', ' ')."đ 
+                                        <span class='pro-price-retail'><del>".number_format($giays[$i]["gia"], 0, ',', ' ')."₫</del></span>
                                     </p>
                                 </div>
                             </div>
@@ -274,7 +274,7 @@ class GioHangController
                                 <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'> 
-                                        <span class='pro-price-retail'>".$giays[$i]["gia"]."₫</span>
+                                        <span class='pro-price-retail'>".number_format($giays[$i]["gia"], 0, ',', ' ')."₫</span>
                                     </p>
                                 </div>
                             </div>
