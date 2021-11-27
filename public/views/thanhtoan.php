@@ -118,7 +118,10 @@
 								</p>
 							</div>
 						</div>
-
+						<div class="col-12">
+                            <label class='note-label'>Ghi chú đơn hàng</label>
+                            <textarea></textarea>
+                        </div>
 						<div class="col-7">
 							<a class="order-return" href="?to=cart">← Quay lại giỏ hàng</a>
 						</div>

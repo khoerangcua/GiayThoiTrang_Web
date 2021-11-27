@@ -152,11 +152,7 @@ class GioHangController
             echo
             "
                     <div class='row cart-note'>
-                        <div class='col-md-5 col-12'>
-                            <label class='cart-note-label'>Ghi chú đơn hàng</label>
-                            <textarea></textarea>
-                        </div>
-                        <div class='col-md-7 col 12'>
+                        <div class='col 12'>
                             <p class='cart-note-label'>Chính sách đổi trả</p>
                             <ul class='policy'>
                                 <li>Chính sách 1</li>
