@@ -55,7 +55,7 @@ class GioHangController
         foreach ($giays as $key => $value) {
             $gia = $value["gia"];
             $phantramgiam = isset($value["phantramgiam"]) ? $value["phantramgiam"] : 0;
-            $tongtien += ($gia - ($gia * $phantramgiam / 100)) * $value["soluong"];
+            $tongtien += (($gia - ($gia * $phantramgiam / 100)) * $value["soluong"]);
         }
         
         // Hiển thị header
@@ -178,7 +178,7 @@ class GioHangController
                             </p>
                         </div>
                         <h5>Bạn có thể nhập mã giảm giá khi xác nhận thanh toán</h5>
-                        <a class='checkout-btn' href='#'>THANH TOÁN</a>
+                        <a class='checkout-btn' href='./?to=purchase'>THANH TOÁN</a>
                     </div>
                 </div>
             </div>

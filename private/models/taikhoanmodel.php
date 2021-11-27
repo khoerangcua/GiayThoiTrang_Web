@@ -28,8 +28,18 @@ class TaiKhoanModel
 
         $link = "";
         taoKetNoi($link);
-        $result = chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_taikhoan` (`id_taikhoan`, `tendangnhap`, `matkhau`, `phanquyen`) VALUES (NULL, '$tendangnhap', '$matkhau', '0');");
 
+        // Kiểm tra tài khoản đã tồn tại ? 
+        $taikhoan = chayTruyVanTraVeDL($link, "SELECT COUNT(`id_taikhoan`) FROM tbl_taikhoan where `tendangnhap` = '$tendangnhap';");
+        $dem = 0;
+        while ($row = mysqli_fetch_array($taikhoan)) {
+           $dem = $row[0];
+        }
+        if ($dem != 0) {
+            return false;
+        }
+
+        $result = chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_taikhoan` (`id_taikhoan`, `tendangnhap`, `matkhau`, `phanquyen`) VALUES (NULL, '$tendangnhap', '$matkhau', '0');");
         if ($result == true) {
             // Lấy id tài khoản mới thêm
             $idtaikhoan = chayTruyVanTraVeDL($link, "SELECT MAX(`id_taikhoan`) FROM tbl_taikhoan");
@@ -71,6 +81,20 @@ class TaiKhoanModel
         taoKetNoi($link);
         $result = chayTruyVanKhongTraVeDL($link, "INSERT INTO tbl_taikhoankhachhang VALUES ($idtaikhoan,$idkhachhang);");
         return $result;
+    }
+
+    public function LoadTaiKhoanInfor($idtaikhoan)
+    {
+        $link = "";
+        taoKetNoi($link);
+        $result = chayTruyVanTraVeDL($link, "SELECT tkkh.id_taikhoan, kh.* FROM tbl_taikhoankhachhang as tkkh INNER JOIN tbl_thongtinkhachhang as kh ON tkkh.id_khachhang = kh.id_khachhang WHERE tkkh.id_taikhoan = $idtaikhoan;");
+        $khachhanginfor = array();
+        while ($row = mysqli_fetch_assoc($result)) {
+            array_push($khachhanginfor, $row);
+            break;
+        }
+
+        return $khachhanginfor[0];
     }
 
 }
