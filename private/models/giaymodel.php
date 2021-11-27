@@ -152,7 +152,7 @@ class GiayModel{
 			}
 		}
 
-		print $query;
+		
 
 		$giays = array();
 		$link = "";

@@ -87,8 +87,8 @@ class ChiTietSanPhamController
 				        </div>
                         <div class='detail-pro-price'>
                             <span class='detail-pro-sale'>-".$phantramgiam."%</span>
-                            <span class='detail-pro-price'>".number_format($giasaugiam, 0, ',', ' ')."₫</span>
-                            <del>".number_format($gia, 0, ',', ' ')."₫</del>
+                            <span class='detail-pro-price'>".number_format($giasaugiam, 0, ',', '.')."₫</span>
+                            <del>".number_format($gia, 0, ',', '.')."₫</del>
                         </div>
 
                         <form action='./' method='GET'>
@@ -321,8 +321,8 @@ class ChiTietSanPhamController
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <div class='pro-price'>
-                                    <p class='pro-price sale'>" . number_format($giasaugiam, 0, ',', ' ') . "đ 
-                                        <span class='pro-price-retail'><del>" . number_format($giays[$i]["gia"], 0, ',', ' ') . "₫</del></span>
+                                    <p class='pro-price sale'>" . number_format($giasaugiam, 0, ',', '.') . "đ 
+                                        <span class='pro-price-retail'><del>" . number_format($giays[$i]["gia"], 0, ',', '.') . "₫</del></span>
                                     </p>
                                 </div>
                             </div>
@@ -350,7 +350,7 @@ class ChiTietSanPhamController
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <div class='pro-price'>
                                     <p class='pro-price sale'> 
-                                        <span class='pro-price-retail'>" . number_format($giays[$i]["gia"], 0, ',', ' ') . "₫</span>
+                                        <span class='pro-price-retail'>" . number_format($giays[$i]["gia"], 0, ',', '.') . "₫</span>
                                     </p>
                                 </div>
                             </div>
