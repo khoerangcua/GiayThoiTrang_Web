@@ -106,11 +106,9 @@ class TrangChuController
                             </div>
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
-                                <div class='pro-price'>
-                                    <p class='pro-price sale'> 
-                                        <span class='pro-price-retail'>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
-                                    </p>
-                                </div>
+                                <p class='pro-price'> 
+                                    <span>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
+                                </p>
                             </div>
                         </div>
                      ");
@@ -177,11 +175,9 @@ class TrangChuController
                             </div>
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
-                                <div class='pro-price'>
-                                    <p class='pro-price sale'> 
-                                        <span class='pro-price-retail'>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
-                                    </p>
-                                </div>
+                                <p class='pro-price'> 
+                                    <span>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
+                                </p>
                             </div>
                         </div>
                      ");
@@ -249,11 +245,9 @@ class TrangChuController
                             </div>
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
-                                <div class='pro-price'>
-                                    <p class='pro-price sale'> 
-                                        <span class='pro-price-retail'>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
-                                    </p>
-                                </div>
+                                <p class='pro-price'> 
+                                    <span>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
+                                </p>
                             </div>
                         </div>
                      ");

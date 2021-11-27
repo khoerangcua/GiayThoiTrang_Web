@@ -117,6 +117,9 @@ a:hover{
 	position: relative;
 
 }
+.pro-price{
+	font-weight: bold;
+}
 p.pro-price{
 	line-height: 1.4;
 	font-size: 14px;
