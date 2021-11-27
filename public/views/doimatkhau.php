@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin tài khoản</title>
+    <title>Đổi mật khẩu</title>
     <!--bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--google font-->
@@ -41,9 +41,9 @@
     <!--CONTENT (chỉnh chỗ này)-->
     <div class="container">
         <div class="row">
-        <div class="col-lg-3 col-md-12 mt-5">
+            <div class="col-lg-3 col-md-12 mt-5">
                 <ul class="nav nav-pills flex-column acc-menu" id="menu">
-                    <li class="acc-items selected">
+                    <li class="acc-items">
                         <a href="?to=account" class="">
                             <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -51,7 +51,7 @@
                                 </svg> Thông tin tài khoản</span>
                         </a>
                     </li>
-                    <li class="acc-items ">
+                    <li class="acc-items selected">
                         <a href="?to=changepassword" class="">
                             <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
                                     <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
@@ -65,51 +65,41 @@
                                 </svg> Đăng xuất</span></a>
                 </ul>
             </div>
-            <div class="col-lg-8 col-md-12">
+            <div class="col-lg-9 col-md-12">
                 <div class="heading" style="padding-bottom:0">
-                    <h3 class="text-uppercase" >Thông tin tài khoản</h3>
+                    <h3 class="text-uppercase">Đổi mật khẩu</h3>
                 </div>
-                <form class='dky-form' method='get' action='./'>
-                    <div class="mb-2">
-                        <label for="username" class="form-label">Tài khoản</label>
-                        <input type="text" id="username" class="form-control" placeholder="datphit" disabled>
-                    </div>
-                    <div class='row'>
-                        <div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-                            <!--Họ-->
-                            <div class="mb-2">
-                                <label for="ho" class="form-label">Họ</label>
-                                <input type="text" class="form-control" id="ho">
-                            </div>
+                <form class='dky-form' method='post' action='./'>
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <label for="oldpwd" class="col-form-label">Nhập mật khẩu cũ </label>
                         </div>
-                        <div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-                            <!--Tên-->
-                            <div class="mb-2">
-                                <label for="ten" class="form-label">Tên</label>
-                                <input type="text" class="form-control" id="ten">
-                            </div>
+                        <div class="col-auto">
+                            <input type="password" id="oldpwd" class="form-control" aria-describedby="passwordHelpInline">
                         </div>
                     </div>
-                    <div class="mb-2">
-                        <label for="address" class="form-label">Địa chỉ</label>
-                        <input type="text" class="form-control" id="address">
-                    </div>
-                    <div class='row'>
-                        <div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-                            <div class="mb-2">
-                                <label for="number" class="form-label">Số điện thoại</label>
-                                <input type="number" class="form-control" id="phone">
-                            </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-4">
+                            <label for="newpwd" class="col-form-label">Nhập mật khẩu mới </label>
                         </div>
-                        <div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-                            <div class="mb-2">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
+                        <div class="col-auto">
+                            <input type="password" id="newpwd" class="form-control" aria-describedby="passwordHelpInline">
                         </div>
                     </div>
-                    <button type='submit' name='capnhat' class='mt-3 update-btn button'>Cập nhật thông tin</button>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-4">
+                            <label for="newpwd2" class="col-form-label">Nhập lại mật khẩu mới </label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="password" id="newpwd2" class="form-control" aria-describedby="passwordHelpInline">
+                        </div>
+                    </div>
 
+
+                    <div class="col-7">
+                    <button type='submit' name='capnhat' class='mt-4 update-btn button'>Đổi mật khẩu</button>
+                    </div>
+                    
                 </form>
             </div>
         </div>

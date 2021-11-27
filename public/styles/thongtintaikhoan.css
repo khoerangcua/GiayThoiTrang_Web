@@ -1,0 +1,19 @@
+.acc-items{
+    padding: 20px;
+    border-bottom: 1px solid #000000;
+}
+.acc-menu{
+    border: solid 1px #666;
+}
+.update-btn{
+    float: right;
+	width: auto;
+  	padding: 10px 30px;
+    font-size: 12px;
+}
+.selected{
+    background-color: #000000;
+}
+.selected a{
+    color: #FFFFFF;
+}
