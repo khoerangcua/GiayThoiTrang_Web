@@ -2,9 +2,22 @@
     height: 344px;
 }
 .filter-heading{
+    padding: 5px 0px;
+    margin-bottom: 25px;
+    background-color: #e5e5e5;
     text-transform: uppercase;
     font-weight: 600;
     text-align: center; 
+}
+@media only screen and (max-width: 992px){
+    #filter{
+        display: none;
+    }
+}
+@media only screen and (min-width: 993px){
+    #filter{
+        display: block;
+    }
 }
 .filter-select{
     font-size: 13px;
@@ -43,14 +56,10 @@
 .filter-size{
     padding-bottom: 10px;
 }
-.filter-size{
-    margin-bottom: 15px;
-}
 .filter-size ul{
     list-style:none;
     padding: 0;
     margin-top: 15px;
-    height: 70px;
 }
 .filter-size li{
     float: left;
@@ -105,4 +114,37 @@
 .form-check-input:focus {
 	border-color: #666666;
 	box-shadow: 0px 0px 50px 2px #666666;
+}
+.filter-btn{
+    margin: 25px 0px;
+	width: 100%;
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+  	padding: 10px;
+  	font-weight: 500;
+  	transition: all 0.5s ease;
+  	position: relative;
+	background: #000000;
+  	border: 0.2px solid #000000;
+  	z-index: 1;
+}
+.filter-btn:after {
+  	position: absolute;
+  	content: "";
+  	width: 0;
+  	height: 100%;
+  	top: 0;
+  	right: 0;
+  	z-index: -1;
+  	background-color: #FFFFFF;
+  	transition: all 0.5s ease;
+}
+.filter-btn:hover{
+  	color: #000000;
+	border: 0.2px solid #000000;	
+}
+.filter-btn:hover:after {
+  	left: 0;
+  	width: 100%;
 }

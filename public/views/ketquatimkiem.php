@@ -53,15 +53,14 @@
         <!--BỘ LỌC-->
         <div class="row">
             <div class="col-lg-3">
-                <form action="./" method="get">
+            <div class="d-xxl-none d-xl-none d-lg-none filter-heading filter-control" onClick="filtertoogle(this)">
+                            <span class="">Bộ lọc sản phẩm ▼</span>
+                        </div>
+                <form action="./" method="get" id="filter">
                     <input type="hidden" name="to" value="search">
                     <input type="hidden" name="from" value="self">
 
                     <div class="filter">
-                        <div class="filter-heading">
-                            <span class="d-xxl-none d-xl-none d-lg-none">Bộ lọc</span>
-
-                        </div>
                         <div class="filter-brands">
                             <span class="filter-select">Thương hiệu</span>
                             <span class="filter-control filter-select" onClick="filterbrandtoggle(this)">-</span>
@@ -201,7 +200,7 @@
 
 
                     </div>
-                    <button type="submit">Tìm</button>
+                    <button type="submit" class="filter-btn">Tìm sản phẩm</button>
                 </form>
 
             </div>

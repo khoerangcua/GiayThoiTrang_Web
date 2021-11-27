@@ -143,5 +143,9 @@ h6 {
   	left: 0;
   	width: 100%;
 }
+.login-fail{
+	font-size: 12px;
+	color: red;
 
+}
 

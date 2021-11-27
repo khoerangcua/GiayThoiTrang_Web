@@ -2,11 +2,21 @@ var filterbranditems = document.getElementById('filter-brand-items');
 var filterpriceitems = document.getElementById('filter-price-items');
 var filtersizeitems = document.getElementById('filter-size-items');
 var filtercontrol = document.getElementsByClassName("filter-control");
+var filter = document.getElementById('filter');
 
 filterbranditems.style.display = "block";
 filterpriceitems.style.display = "block";
 filtersizeitems.style.display = "block";
 
+function filtertoogle(el){
+	if(filter.style.display == "none"){
+		filter.style.display = "block";
+		el.innerHTML = "Bộ lọc sản phẩm ▲";
+	}else{
+		filter.style.display = "none";
+		el.innerHTML = "Bộ lọc sản phẩm ▼"
+	}
+}
 function filterbrandtoggle(el){
 	if(filterbranditems.style.display == "block"){
 		filterbranditems.style.display = "none";

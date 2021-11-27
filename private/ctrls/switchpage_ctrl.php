@@ -35,7 +35,12 @@ class SwichPage_Controler
 				case 'brandAD':
 					include_once("public/views/thaotacBrand.php");
 					break;
-
+                case 'purchase':
+                    include_once("public/views/thanhtoan.php");
+                    break;
+                case 'account':
+                    include_once("public/views/thongtintaikhoan.php");
+                    break;
                 default:
                     include_once("public/views/trangchu.php");
                     break;

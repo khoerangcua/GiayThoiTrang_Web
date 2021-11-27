@@ -68,8 +68,6 @@ class DangNhapController
     }
 
     private function HienThiDangNhapThatBai(){
-        print ("dang nhap that bai");
-
         echo 
         "
         <div class='container'>
@@ -96,7 +94,8 @@ class DangNhapController
                             <label class='form-check-label' for='exampleCheck1'>Ghi nhớ đăng nhập</label>
                             <a href='resetpassword.php' class='forgot'>Quên mật khẩu?</a>
                         </div>
-                        <button type='submit' class='login-btn mb-4'>Đăng nhập</button>
+                        <button type='submit' class='login-btn mb-3'>Đăng nhập</button>
+                        <p class='login-fail mb-4'><strong>×</strong> Đăng nhập thất bại: tài khoản hoặc mật khẩu không đúng </p>
                         <p class='login-signup'>Chưa có tài khoản? <a href='./?to=signup'>Đăng ký tại đây</a></p>
                     </form>
                 </div>
