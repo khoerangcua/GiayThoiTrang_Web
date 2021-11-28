@@ -174,7 +174,7 @@ class GioHangController
                             </p>
                         </div>
                         <h5>Bạn có thể nhập mã giảm giá khi xác nhận thanh toán</h5>
-                        <a class='checkout-btn button' href='#'>THANH TOÁN</a>
+                        <a class='checkout-btn button' href='./?to=purchase'>THANH TOÁN</a>
                     </div>
                 </div>
             </div>
