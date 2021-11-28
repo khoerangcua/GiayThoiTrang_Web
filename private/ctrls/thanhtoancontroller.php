@@ -84,7 +84,7 @@ class ThanhToanController
             <a href='./?to=trangchu'><img src='public/images/icons/header-icon.png' class='d-none d-lg-block icon-lg'></a>
             <a class='row justify-content-center' href='./?to=trangchu'><img src='public/images/icons/header-icon.png' class='d-lg-none d-xl-block d-xl-none icon'></a>
             <br style='clear:both'> 
-            <form method='get' action='./'>
+            <form method='GET' action='./'>
                 <input type='hidden' name='to' value='purchase'>
                 <input type='hidden' name='action' value='thanhtoan'>
                 <input type='hidden' name='idkhachhang' value='".$khachhang["id_khachhang"]."'>
@@ -262,8 +262,6 @@ class ThanhToanController
                     </div>
                 </div>
             </form>
-
-
 	    </div>
         ";
     }

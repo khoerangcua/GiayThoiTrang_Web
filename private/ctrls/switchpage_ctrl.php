@@ -39,7 +39,7 @@ class SwichPage_Controler
                     include_once("public/views/thanhtoan.php");
                     break;
                 case 'account':
-                    include_once("public/views/thongtintaikhoan.php");
+                    include_once("public/views/taikhoan.php");
                     break;
                 case 'changepassword':
                     include_once("public/views/doimatkhau.php");
