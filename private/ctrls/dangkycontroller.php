@@ -127,7 +127,7 @@ class DangKyController
                             </label>
                         </div>
                         <button type='submit' name='dangky' class='dky-btn mb-5'>Đăng ký</button>
-                        <p class='dky-login'>Bạn đã có tài khoản? <a href='./?page=login'>Đăng nhập</a></p>
+                        <p class='dky-login'>Bạn đã có tài khoản? <a href='./?to=login'>Đăng nhập</a></p>
                     </form>
                 </div>	
             </div>
@@ -206,7 +206,7 @@ class DangKyController
                             </label>
                         </div>
                         <button type='submit' name='dangky' class='dky-btn mb-5'>Đăng ký</button>
-                        <p class='dky-login'>Bạn đã có tài khoản? <a href='./?page=login'>Đăng nhập</a></p>
+                        <p class='dky-login'>Bạn đã có tài khoản? <a href='./?to=login'>Đăng nhập</a></p>
                     </form>
                 </div>	
             </div>

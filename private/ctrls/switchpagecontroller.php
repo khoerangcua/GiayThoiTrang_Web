@@ -1,5 +1,5 @@
 <?php
-class SwichPage_Controler
+class SwichPageControler
 {
     public function SwitchPage()
     {

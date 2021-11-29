@@ -117,7 +117,7 @@ class ThanhToanController
 
                             <div class='col-12'>
                                 <div class='form-floating mb-3'>
-                                    <input type='text' name='diachi' value='' class='form-control' id='floatingPassword' placeholder='Địa chỉ'>
+                                    <input type='text' name='diachi' value='".$khachhang["diachi"]."' class='form-control' id='floatingPassword' placeholder='Địa chỉ'>
                                     <label for='floatingPassword'>Địa chỉ</label>
                                 </div>
                             </div>

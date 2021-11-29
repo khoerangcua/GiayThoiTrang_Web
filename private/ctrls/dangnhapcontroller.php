@@ -3,7 +3,6 @@ require_once("private/models/taikhoanmodel.php");
 class DangNhapController
 {
     public function KiemTraDangNhap(){
-        unset($_SESSION["taikhoan"]);
         if (isset($_POST["dangnhap"])) {            
             $tendangnhap = $_POST["tendangnhap"];
             $matkhau = $_POST["matkhau"];
@@ -24,7 +23,7 @@ class DangNhapController
             }
         }
         if (isset($_SESSION["taikhoan"]) && $_SESSION["taikhoan"] != false ) {
-            header("Location: ./?to=cart");       
+            header("Location: ./?to=account");       
         }
         else {
             $this->LoadTrangDangNhap();

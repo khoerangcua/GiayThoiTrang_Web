@@ -93,8 +93,46 @@ class TaiKhoanModel
             array_push($khachhanginfor, $row);
             break;
         }
-
         return $khachhanginfor[0];
+    }
+
+    public function CapNhatThonTinKhachHang($idkhachhang, $ho, $ten, $sdt, $diachi, $email)
+    {
+        $link = "";
+        taoKetNoi($link);
+        $result = chayTruyVanKhongTraVeDL($link, "  UPDATE tbl_thongtinkhachhang SET `ho` = '$ho', `ten` = '$ten', `diachi` = '$diachi' , `sdt` = '$sdt', `email` = '$email' WHERE `id_khachhang` = '$idkhachhang';");
+        print("UPDATE tbl_thongtinkhachhang
+        SET `ho` = $ho, `ten` = $ten, `diachi` = $diachi, `sdt` = $sdt, `email` = $email
+        WHERE `id_khanghang` = $idkhachhang;");
+        return $result;
+    }
+
+    public function ThayDoiMatKhau ($tendangnhap, $matkhaucu, $matkhaumoi, $nhaplaimatkhaumoi)
+    {
+        if ($matkhaumoi != $nhaplaimatkhaumoi) {
+            return false;
+        }
+
+        // Xác thực tài khoản
+        $link = "";
+        taoKetNoi($link);
+        $result = chayTruyVanTraVeDL($link, "SELECT * FROM tbl_taikhoan AS tk WHERE tk.tendangnhap = '$tendangnhap'");
+        
+        //Kiểm tra xác thực mật khẩu cũ
+        $idtaikhoan = "";
+        while ($row = mysqli_fetch_assoc($result)) {
+            if ($row["matkhau"] != $matkhaucu) {
+                return false;
+            }
+            else {
+                $idtaikhoan = $row["id_taikhoan"];
+            }
+            break;
+        }
+
+        //Thực hiện cập nhật
+        $result2 = chayTruyVanKhongTraVeDL($link, "UPDATE tbl_taikhoan AS tk SET tk.matkhau = '$matkhaumoi' WHERE tk.id_taikhoan = '$idtaikhoan'");
+        return $result2;
     }
 
 }
