@@ -51,7 +51,6 @@ class TimKiemController{
         $giays = $giayModel->LoadGiayTheoFiller($thuonghieu,  $gia, $size);
 
 
-
         //Kiểm tra có phân trang chưa
         $page = isset($_GET["page"]) ? $_GET["page"] : 1;
         $this->LoadGiays($giays, $page);
@@ -326,8 +325,8 @@ class TimKiemController{
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <div class='pro-price'>
-                                    <p class='pro-price sale'>" . number_format($giasaugiam, 0, ',', '.') . "đ 
-                                        <span class='pro-price-retail'><del>" . number_format($giays[$i]["gia"], 0, ',', '.') . "₫</del></span>
+                                    <p class='pro-price sale'>" . number_format($giasaugiam, 0, ',', ',') . "đ 
+                                        <span class='pro-price-retail'><del>" . number_format($giays[$i]["gia"], 0, ',', ',') . "₫</del></span>
                                     </p>
                                 </div>
                             </div>
@@ -356,7 +355,7 @@ class TimKiemController{
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=" . $giays[$i]["id_giay"] . "'>" . $giays[$i]["ten"] . "</a></h3>
                                 <p class='pro-price'> 
-                                    <span>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
+                                    <span>".number_format($giays[$i]["gia"], 0, ',', ',')."₫</span>
                                 </p>
                             </div>
                         </div>

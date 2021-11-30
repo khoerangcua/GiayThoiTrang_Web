@@ -32,7 +32,7 @@
     <nav style="background-color:#F8F8F8" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="./?to=home">Trang chủ</a></li>
                 <li class="breadcrumb-item active" aria-current="to">Tất cả sản phẩm</li>
             </ol>
         </div>

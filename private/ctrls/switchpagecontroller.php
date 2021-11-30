@@ -3,8 +3,13 @@ class SwichPageControler
 {
     public function SwitchPage()
     {
-        if (isset($_GET['to'])) {
-            switch ($_GET['to']) {
+        $to = isset($_GET['to']) ? $_GET['to'] : -1;
+        if ($to == -1) {
+            $to = isset($_POST['to']) ? $_POST['to'] : -1;
+        }
+        if ($to != -1) {
+            
+            switch ($to) {
                 case 'detail':
                     include_once("public/views/chitietsp.php");
                     break;
@@ -46,11 +51,11 @@ class SwichPageControler
                     break;
                 
                 default:
-                    include_once("./public/views/trangchu.php");
+                    include_once("public/views/trangchu.php");
                     break;
             }
         } else {
-            include_once("./public/views/trangchu.php");
+            include_once("public/views/trangchu.php");
         }
     }
 }

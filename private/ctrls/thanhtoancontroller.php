@@ -18,7 +18,8 @@ class ThanhToanController
             } else {
                 $ketqua = $this->ThanhToan();
                 if ($ketqua == true) {
-                    $this->ThanhToanThanhCong($taikhoan["id_taikhoan"]);
+                    $chiphivanchuyen = $_GET["hinhthucvanchuyen"] == "tieuchuan" ? 25000: 50000;
+                    $this->ThanhToanThanhCong($taikhoan["id_taikhoan"], $chiphivanchuyen);
                 }
                 else {
                     $this->ThanhToanThatBai();
@@ -27,7 +28,7 @@ class ThanhToanController
         }             
     }
 
-    private function ThanhToanThanhCong($id)
+    private function ThanhToanThanhCong($id, $chiphivanchuyen)
     {
        // Load giỏ hàng
        $gioHangModel = new GioHangModel();
@@ -43,7 +44,7 @@ class ThanhToanController
            $tamtinh += $value["gia"] * $value["soluong"];
            $giamgia += (isset($value["phantramgiam"]) ? $value["gia"] * $value["phantramgiam"] / 100 : 0) * $value["soluong"];
        }
-       $tongtien = $tamtinh + 50000 - $giamgia;
+       $tongtien = $tamtinh + $chiphivanchuyen - $giamgia;
 
        $hoten = $khachhang["ho"] . " " . $khachhang["ten"];
 

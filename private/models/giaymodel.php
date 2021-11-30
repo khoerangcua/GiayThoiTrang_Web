@@ -143,7 +143,7 @@ class GiayModel{
 		$link = null;
 		taoKetNoi($link);
 
-		$result = chayTruyVanTraVeDL($link, "SELECT g.*, th.id_thuonghieu FROM (SELECT g.*, s.size FROM (SELECT g.*, gg.phantramgiam FROM (SELECT * FROM tbl_giay AS g WHERE g.id_giay = $id_giay) AS g LEFT JOIN tbl_giamgia AS gg ON g.id_giay = gg.id_giay) AS g INNER JOIN tbl_giaysize as s ON g.id_giay = s.id_giay) AS g INNER JOIN tbl_giaythuonghieu AS th ON g.id_giay = th.id_giay");
+		$result = chayTruyVanTraVeDL($link, "SELECT bangphu1.*, th.tenthuonghieu FROM (SELECT g.*, th.id_thuonghieu FROM (SELECT g.*, s.size FROM (SELECT g.*, gg.phantramgiam FROM (SELECT * FROM tbl_giay AS g WHERE g.id_giay = $id_giay) AS g LEFT JOIN tbl_giamgia AS gg ON g.id_giay = gg.id_giay) AS g INNER JOIN tbl_giaysize as s ON g.id_giay = s.id_giay) AS g INNER JOIN tbl_giaythuonghieu AS th ON g.id_giay = th.id_giay) AS bangphu1 INNER JOIN tbl_thuonghieu AS th ON bangphu1.id_thuonghieu = th.id_thuonghieu");
 
 		$giays = array();
 		while ($row = mysqli_fetch_assoc($result)) {

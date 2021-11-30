@@ -30,35 +30,14 @@
 </head>
 
 <body>
-	<!--HEADER-->
-	<header>
-		<?php
-		include_once("public/templates/header.php");
-		?>
-	</header>
-	<!--breadcrumb-->
-	<nav style="background-color:#F8F8F8" aria-label="breadcrumb">
-		<div class="container">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-				<li class="breadcrumb-item" aria-current="page">Nike</li>
-				<li class="breadcrumb-item active" aria-current="page">Nike Air Max 96 II</li>
-			</ol>
-		</div>
-	</nav>
-
-
-
-	<!--CONTENT-->
-	<div class="container">
+	
+	
+	<!--CONTENT-->	
 		<?php
 		require_once("private/ctrls/chitietsanphancontroller.php");
 		$chiTietSanPhamController = new ChiTietSanPhamController();
 		$chiTietSanPhamController->LoadChiTietSanPham();
 		?>
-	</div>
-
-
 	<!--FOOTER-->
 	<footer>
 		<?php

@@ -24,12 +24,12 @@
 				</div>
 				<form class="reset-form">
 					<div class="form-floating">
-						<input type="email" class="form-control" id="floatingInput" placeholder="Tên đăng nhập">
-						<label for="floatingInput">Tên đăng nhập</label>
+						<input type="email" class="form-control" id="floatingInput" placeholder="Chức năng khôi phục mật khẩu hiện tại chưa hoạt động được" disabled>
+						<label for="floatingInput">Chức năng này hiện tại không khả dụng</label>
 					</div>
 					<p class="reset-note">Chúng tôi sẽ gửi mật khẩu mới trong email của bạn khi bạn khôi phục mật khẩu</p>
-					<button type="submit" class="reset-btn mb-4">Khôi phục mật khẩu</button>
-					<p class="reset-signup"><a href="login.php">Đăng nhập | </a><a href="dangky.php">Đăng ký</a></p>
+					<button type="submit" class="reset-btn mb-4" disabled>Khôi phục mật khẩu</button>
+					<p class="reset-signup"><a href="./?to=login">Đăng nhập | </a><a href="./?to=signup">Đăng ký</a></p>
 				</form>
 			</div>
 		</div>

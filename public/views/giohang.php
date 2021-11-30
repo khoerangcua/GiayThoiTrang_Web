@@ -20,22 +20,7 @@
 </head>
 
 <body>
-    <!--HEADER-->
-
-
-
-    <!--breadcrumb-->
-
-    <!-- <nav style="background-color:#F8F8F8" aria-label="breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
-            </ol>
-        </div>
-    </nav> -->
-
-    <!--CONTENT (chỉnh chỗ này)-->
+    
 
     <?php
     require_once("private/ctrls/giohangcontroller.php");

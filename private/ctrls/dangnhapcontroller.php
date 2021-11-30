@@ -54,7 +54,7 @@ class DangNhapController
                         <div class='mb-4 form-check'>
                             <input type='checkbox' name='remember' class='form-check-input' id='exampleCheck1'>
                             <label class='form-check-label' for='exampleCheck1'>Ghi nhớ đăng nhập</label>
-                            <a href='resetpassword.php' class='forgot'>Quên mật khẩu?</a>
+                            <a href='./?to=rspw' class='forgot'>Quên mật khẩu?</a>
                         </div>
                         <button type='submit' class='login-btn mb-4'>Đăng nhập</button>
                         <p class='login-signup'>Chưa có tài khoản? <a href='./?to=signup'>Đăng ký tại đây</a></p>

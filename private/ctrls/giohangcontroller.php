@@ -12,6 +12,12 @@ class GioHangController
 
             $hanhdong = isset($_GET["action"]) ? $_GET["action"] : -1;
             if ($hanhdong == "them") {
+                $from = isset($_GET["from"]) ? $_GET["from"] : -1;
+                if ($from == "themvaogio") {
+                    $this->ThemSanPham();
+                    header("Location: ./?to=detail&id=".$_GET["id_giay"]."");
+                    exit();
+                }
                 $this->ThemSanPham();
             }
             if ($hanhdong == "xoa") {
@@ -51,6 +57,7 @@ class GioHangController
 
         $gioHangModel = new GioHangModel();
         $giays = $gioHangModel->LoadGioHang($taikhoan["id_taikhoan"]);
+        
         $tongtien = 0; 
         foreach ($giays as $key => $value) {
             $gia = $value["gia"];
@@ -76,7 +83,7 @@ class GioHangController
             <nav style='background-color:#F8F8F8' aria-label='breadcrumb'>
                 <div class='container'>
                     <ol class='breadcrumb'>
-                        <li class='breadcrumb-item'><a href='#'>Trang chủ</a></li>
+                        <li class='breadcrumb-item'><a href='./?to=home'>Trang chủ</a></li>
                         <li class='breadcrumb-item active' aria-current='page'>Giỏ hàng</li>
                     </ol>
                 </div>
@@ -106,7 +113,7 @@ class GioHangController
                 <div class='col-lg-8 col-sm-12 cart-info'>
                     <p class='cart-note'>Bạn đang có <b>".count($giays)."</b> sản phẩm trong giỏ hàng</p>
             ";
-                    foreach ($giays as $key => $value) {
+                    foreach ($giays as $key => $value) {                       
                         $gia = $value["gia"];
                         $phantramgiam = isset($value["phantramgiam"]) ? $value["phantramgiam"] : 0;
                         $thanhtien = ($gia - ($gia * $phantramgiam / 100)) * $value["soluong"];
@@ -114,7 +121,7 @@ class GioHangController
                         "
                         <div class='row cart-items'>
                             <div class='col-md-5 col-lg-3 col-xl-3 col-3'>
-                                <a href='#!'>
+                                <a href='./?to=detail&id=".$value["id_giay"]."'>
                                     <img class='img-fluid w-100' src='".$value["anhchinh"]."'>
                                 </a>
                             </div>
@@ -142,7 +149,7 @@ class GioHangController
                                                 </svg>
                                             </a>
                                         </div>
-                                        <p class='mb-0'><span><strong>".number_format($thanhtien, 0, ',', '.')."₫</strong></span></p>
+                                        <p class='mb-0'><span><strong>".number_format($thanhtien, 0, ',', ',')."₫</strong></span></p>
                                     </div>
                                 </div>
                             </div>
@@ -165,12 +172,12 @@ class GioHangController
                     </div>
                 </div>
                 <div class='col-lg-4 col-sm-12'>
-                    <a href='#' class='continue'>Tiếp tục mua hàng →</a>
+                    <a href='./?to=home' class='continue'>Tiếp tục mua hàng →</a>
                     <div class='cart-summary'>
                         <h3>Thông tin thanh toán</h3>
                         <div class='summary-total'>
                             <p>
-                                Tổng tiền: <span>".number_format($tongtien, 0, ',', '.')."₫</span>
+                                Tổng tiền: <span>".number_format($tongtien, 0, ',', ',')."₫</span>
                             </p>
                         </div>
                         <h5>Bạn có thể nhập mã giảm giá khi xác nhận thanh toán</h5>
@@ -244,8 +251,8 @@ class GioHangController
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <div class='pro-price'>
-                                    <p class='pro-price sale'>".number_format($giasaugiam, 0, ',', '.')."đ 
-                                        <span class='pro-price-retail'><del>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</del></span>
+                                    <p class='pro-price sale'>".number_format($giasaugiam, 0, ',', ',')."đ 
+                                        <span class='pro-price-retail'><del>".number_format($giays[$i]["gia"], 0, ',', ',')."₫</del></span>
                                     </p>
                                 </div>
                             </div>
@@ -273,7 +280,7 @@ class GioHangController
                             <div class='pro-detail'>
                                 <h3 class='pro-name'><a href='./?to=detail&id=".$giays[$i]["id_giay"]."'>".$giays[$i]["ten"]."</a></h3>
                                 <p class='pro-price'> 
-                                    <span>".number_format($giays[$i]["gia"], 0, ',', '.')."₫</span>
+                                    <span>".number_format($giays[$i]["gia"], 0, ',', ',')."₫</span>
                                 </p>
                             </div>
                         </div>

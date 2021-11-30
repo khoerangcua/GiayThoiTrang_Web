@@ -9,7 +9,10 @@ class TaiKhoanController
             header("Location: ./?to=login");
         }
         else {
-            $action = isset($_GET["action"]) ? $_GET["action"] : -1;
+            $action = isset($_POST["action"]) ? $_POST["action"] : -1;
+            if ($action == -1) {
+                $action = isset($_GET["action"]) ? $_GET["action"] : -1;
+            }
             if ($action == "capnhat") {
                 // Cập nhật thông tin khách hàng
                 $result = $this->CapNhatThongTinKhachHang($taikhoan);
@@ -32,6 +35,15 @@ class TaiKhoanController
                     $this->ThayDoiMatKhauThanhCong($taikhoan);
                 }
                 exit();
+            }
+            if ($action == "dangxuat") {
+
+                
+                if (isset($_SESSION["taikhoan"])) {
+                    unset($_SESSION["taikhoan"]);
+                    header("Location: ./?to=login");
+                }
+                
             }
             $this->LoadGiaoDien($taikhoan);
             
@@ -64,11 +76,11 @@ class TaiKhoanController
                                 <path d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z' />
                             </svg> Đổi mật khẩu
                         </button>
-                        <button class='acc-items sign-out-btn'>
+                        <a href='./?to=account&action=dangxuat'><button class='acc-items sign-out-btn'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-left' viewBox='0 0 16 16'>
                                 <path fill-rule='evenodd' d='M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z' />
                                 <path fill-rule='evenodd' d='M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z' />
-                            </svg> Đăng xuất</button>
+                            </svg> Đăng xuất</button></a>
                     </ul>
                 </div>
 
@@ -77,7 +89,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <input type='hidden' name='idkhachhang' value='".$khachhanginfor["id_khachhang"]."'>
                         <div class='mb-2'>
@@ -127,7 +139,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <div class='row justify-content-center'>
                             <div class='col-4'>
@@ -188,12 +200,12 @@ class TaiKhoanController
     private function CapNhatThongTinKhachHang()
     {
         
-        $ho = $_GET["ho"];
-        $ten = $_GET["ten"];
-        $diachi = $_GET["diachi"];
-        $sdt = $_GET["sdt"];
-        $email = $_GET["email"];
-        $idkhachhang = $_GET["idkhachhang"];
+        $ho = $_POST["ho"];
+        $ten = $_POST["ten"];
+        $diachi = $_POST["diachi"];
+        $sdt = $_POST["sdt"];
+        $email = $_POST["email"];
+        $idkhachhang = $_POST["idkhachhang"];
 
         $taiKhoanModel = new TaiKhoanModel();
         $result = $taiKhoanModel->CapNhatThonTinKhachHang($idkhachhang, $ho, $ten, $sdt, $diachi, $email);
@@ -226,11 +238,12 @@ class TaiKhoanController
                                 <path d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z' />
                             </svg> Đổi mật khẩu
                         </button>
-                        <button class='acc-items sign-out-btn'>
+                        <a href='./?to=account&action=dangxuat'><button class='acc-items sign-out-btn'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-left' viewBox='0 0 16 16'>
                                 <path fill-rule='evenodd' d='M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z' />
                                 <path fill-rule='evenodd' d='M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z' />
                             </svg> Đăng xuất</button>
+                        </a>
                     </ul>
                 </div>
                 
@@ -244,7 +257,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <input type='hidden' name='idkhachhang' value='".$khachhanginfor["id_khachhang"]."'>
                         <div class='mb-2'>
@@ -294,7 +307,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <div class='row justify-content-center'>
                             <div class='col-4'>
@@ -376,11 +389,12 @@ class TaiKhoanController
                                 <path d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z' />
                             </svg> Đổi mật khẩu
                         </button>
-                        <button class='acc-items sign-out-btn'>
+                        <a href='./?to=account&action=dangxuat'><button class='acc-items sign-out-btn'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-left' viewBox='0 0 16 16'>
                                 <path fill-rule='evenodd' d='M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z' />
                                 <path fill-rule='evenodd' d='M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z' />
                             </svg> Đăng xuất</button>
+                        </a>
                     </ul>
                 </div>
 
@@ -394,7 +408,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <input type='hidden' name='idkhachhang' value='".$khachhanginfor["id_khachhang"]."'>
                         <div class='mb-2'>
@@ -450,7 +464,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <div class='row justify-content-center'>
                             <div class='col-4'>
@@ -510,9 +524,9 @@ class TaiKhoanController
     private function ThayDoiMatKhau($taikhoan)
     {
         $tendangnhap = $taikhoan["tendangnhap"];
-        $matkhaucu = $_GET["matkhaucu"];
-        $matkhaumoi = $_GET["matkhaumoi"];
-        $nhaplaimatkhaumoi = $_GET["nhaplaimatkhaumoi"];
+        $matkhaucu = $_POST["matkhaucu"];
+        $matkhaumoi = $_POST["matkhaumoi"];
+        $nhaplaimatkhaumoi = $_POST["nhaplaimatkhaumoi"];
 
         $taiKhoanModel = new TaiKhoanModel();
         $result = $taiKhoanModel->ThayDoiMatKhau($tendangnhap, $matkhaucu, $matkhaumoi, $nhaplaimatkhaumoi);
@@ -546,11 +560,12 @@ class TaiKhoanController
                                 <path d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z' />
                             </svg> Đổi mật khẩu
                         </button>
-                        <button class='acc-items sign-out-btn'>
+                        <a><button class='acc-items sign-out-btn'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-left' viewBox='0 0 16 16'>
                                 <path fill-rule='evenodd' d='M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z' />
                                 <path fill-rule='evenodd' d='M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z' />
                             </svg> Đăng xuất</button>
+                        </a>
                     </ul>
                 </div>
 
@@ -559,7 +574,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <input type='hidden' name='idkhachhang' value='".$khachhanginfor["id_khachhang"]."'>
                         <div class='mb-2'>
@@ -614,7 +629,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <div class='row justify-content-center'>
                             <div class='col-4'>
@@ -697,11 +712,12 @@ class TaiKhoanController
                                 <path d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z' />
                             </svg> Đổi mật khẩu
                         </button>
-                        <button class='acc-items sign-out-btn'>
+                        <a href='./?to=account&action=dangxuat'><button class='acc-items sign-out-btn'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-left' viewBox='0 0 16 16'>
                                 <path fill-rule='evenodd' d='M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z' />
                                 <path fill-rule='evenodd' d='M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z' />
                             </svg> Đăng xuất</button>
+                        </a>
                     </ul>
                 </div>
 
@@ -710,7 +726,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <input type='hidden' name='idkhachhang' value='".$khachhanginfor["id_khachhang"]."'>
                         <div class='mb-2'>
@@ -765,7 +781,7 @@ class TaiKhoanController
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>
-                    <form class='dky-form' method='get' action='./'>
+                    <form class='dky-form' method='post' action='./'>
                         <input type='hidden' name='to' value='account'>
                         <div class='row justify-content-center'>
                             <div class='col-4'>
