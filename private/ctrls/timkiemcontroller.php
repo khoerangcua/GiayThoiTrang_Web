@@ -1,7 +1,6 @@
 <?php
 include_once("private/models/giaymodel.php");
 include_once("private/models/hoadonmodel.php");
-include_once("private/models/giamgiamodel.php");
 include_once("private/models/bannermodel.php");
 include_once("private/modules/config.php");
 

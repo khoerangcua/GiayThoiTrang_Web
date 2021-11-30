@@ -45,11 +45,11 @@ class SwichPageControler
                     include_once("public/views/doimatkhau.php");
                     break;
                 default:
-                    include_once("public/views/trangchu.php");
+                    include_once("./public/views/trangchu.php");
                     break;
             }
         } else {
-            include_once("public/views/trangchu.php");
+            include_once("./public/views/trangchu.php");
         }
     }
 }
