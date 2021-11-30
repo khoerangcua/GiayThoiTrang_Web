@@ -101,9 +101,6 @@ class TaiKhoanModel
         $link = "";
         taoKetNoi($link);
         $result = chayTruyVanKhongTraVeDL($link, "  UPDATE tbl_thongtinkhachhang SET `ho` = '$ho', `ten` = '$ten', `diachi` = '$diachi' , `sdt` = '$sdt', `email` = '$email' WHERE `id_khachhang` = '$idkhachhang';");
-        print("UPDATE tbl_thongtinkhachhang
-        SET `ho` = $ho, `ten` = $ten, `diachi` = $diachi, `sdt` = $sdt, `email` = $email
-        WHERE `id_khanghang` = $idkhachhang;");
         return $result;
     }
 
