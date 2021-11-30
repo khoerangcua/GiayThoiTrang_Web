@@ -233,9 +233,14 @@ class TaiKhoanController
                             </svg> Đăng xuất</button>
                     </ul>
                 </div>
-
+                
                 <!--form1-->
-                <div class='col-lg-9 col-md-12' id='form1'>
+                    <div class='col-lg-9 col-md-12' id='form1'>
+                    <div class='alert alert-success' role='alert'>
+                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check-circle-fill' viewBox='0 0 16 16'>
+                        <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/>
+                    </svg><span>    Cập nhật thông tin thành công!</span>
+                  </div>
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
@@ -381,6 +386,11 @@ class TaiKhoanController
 
                 <!--form1-->
                 <div class='col-lg-9 col-md-12' id='form1'>
+                    <div class='alert alert-danger' role='alert'>
+                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-exclamation-circle-fill' viewBox='0 0 16 16'>
+                    <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/>
+                    </svg><span> Cập nhật thông tin thất bại: Vui lòng kiểm tra lại thông tin!</span>
+                    </div>
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
@@ -425,12 +435,18 @@ class TaiKhoanController
                                 </div>
                             </div>
                         </div>
+                        <span><strong>×</strong> Cập nhật thông tin thất bại: tài khoản hoặc mật khẩu không đúng</span>
                         <button type='submit' name='action' value='capnhat' class='mt-3 update-btn button'>Cập nhật thông tin</button>
 
                     </form>
                 </div>
                 <!--form2-->
                 <div class='col-lg-9 col-md-12' id='form2'>
+                    <div class='alert alert-danger' role='alert'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-exclamation-circle-fill' viewBox='0 0 16 16'>
+                        <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/>
+                        </svg><span> Vui lòng kiểm tra lại thông tin</span>
+                    </div>
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>
@@ -519,13 +535,13 @@ class TaiKhoanController
             <div class='row'>
                 <div class='col-lg-3 col-md-12 mt-5'>
                     <ul class='nav nav-pills flex-column acc-menu' id='menu'>  
-                        <button class='acc-items selected' id='mot'>
+                        <button class='acc-items selected' id='hai'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-person-circle' viewBox='0 0 16 16'>
                                 <path d='M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z' />
                                 <path fill-rule='evenodd' d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z' />
                             </svg> Thông tin tài khoản                    
                         </button>
-                        <button class='acc-items selected' id='hai'>
+                        <button class='acc-items selected' id='mot'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-gear-fill' viewBox='0 0 16 16'>
                                 <path d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z' />
                             </svg> Đổi mật khẩu
@@ -539,7 +555,7 @@ class TaiKhoanController
                 </div>
 
                 <!--form1-->
-                <div class='col-lg-9 col-md-12' id='form1'>
+                <div class='col-lg-9 col-md-12' id='form2'>
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
@@ -589,7 +605,12 @@ class TaiKhoanController
                     </form>
                 </div>
                 <!--form2-->
-                <div class='col-lg-9 col-md-12' id='form2'>
+                <div class='col-lg-9 col-md-12' id='form1'>
+                    <div class='alert alert-success' role='alert'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check-circle-fill' viewBox='0 0 16 16'>
+                        <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/>
+                        </svg><span>    Thay đổi mật khẩu thành công!</span>
+                    </div>
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>
@@ -665,13 +686,13 @@ class TaiKhoanController
             <div class='row'>
                 <div class='col-lg-3 col-md-12 mt-5'>
                     <ul class='nav nav-pills flex-column acc-menu' id='menu'>  
-                        <button class='acc-items selected' id='mot'>
+                        <button class='acc-items selected' id='hai'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-person-circle' viewBox='0 0 16 16'>
                                 <path d='M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z' />
                                 <path fill-rule='evenodd' d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z' />
                             </svg> Thông tin tài khoản                    
                         </button>
-                        <button class='acc-items selected' id='hai'>
+                        <button class='acc-items selected' id='mot'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-gear-fill' viewBox='0 0 16 16'>
                                 <path d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z' />
                             </svg> Đổi mật khẩu
@@ -685,7 +706,7 @@ class TaiKhoanController
                 </div>
 
                 <!--form1-->
-                <div class='col-lg-9 col-md-12' id='form1'>
+                <div class='col-lg-9 col-md-12' id='form2'>
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Thông tin tài khoản</h3>
                     </div>
@@ -735,7 +756,12 @@ class TaiKhoanController
                     </form>
                 </div>
                 <!--form2-->
-                <div class='col-lg-9 col-md-12' id='form2'>
+                <div class='col-lg-9 col-md-12' id='form1'>
+                    <div class='alert alert-danger' role='alert'>
+                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-exclamation-circle-fill' viewBox='0 0 16 16'>
+                    <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/>
+                    </svg><span> Thay đổi mật khẩu thất bại: Vui lòng kiểm tra và nhập lại thông tin!</span>
+                    </div>
                     <div class='heading' style='padding-bottom:0'>
                         <h3 class='text-uppercase'>Đổi mật khẩu</h3>
                     </div>

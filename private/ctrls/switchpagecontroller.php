@@ -41,9 +41,10 @@ class SwichPageControler
                 case 'account':
                     include_once("public/views/taikhoan.php");
                     break;
-                case 'changepassword':
-                    include_once("public/views/doimatkhau.php");
+                case 'orderresult':
+                    include_once("public/views/ketquadathang.php");
                     break;
+                
                 default:
                     include_once("public/views/trangchu.php");
                     break;

@@ -2,7 +2,7 @@ var button1 = document.getElementById("mot");
 var button2 = document.getElementById("hai");
 var form1 = document.getElementById("form1");
 var form2 = document.getElementById("form2");
-
+var notice = document.getElementsByClassName("alert");
 
 form2.style.display = "none";
 button2.style.backgroundColor = "#FFFFFF";
@@ -35,3 +35,7 @@ function showform2() {
     }
     
 }
+
+setTimeout(function hidden(){
+    notice[0].setAttribute('style' , 'display: none');
+}, 4500);

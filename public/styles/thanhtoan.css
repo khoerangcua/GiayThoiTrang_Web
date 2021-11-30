@@ -60,6 +60,12 @@
   	left: 0;
   	width: 100%;
 }
+.order-btn a{
+	color: #fff;
+}
+.order-btn:hover a{
+	color: #000000;
+}
 
 
 input::-webkit-outer-spin-button,
@@ -78,11 +84,11 @@ input[type=number] {
 .form-check-input:checked {
 	background-color: #000000;
 	border-color: #000000;
-	box-shadow: 0px 0px 0px 0px #666666;
+	box-shadow: 0px 0px 0px 0px #666666 !important;
 }
 .form-check-input:focus {
 	border-color: #666666;
-	box-shadow: 0px 0px 0px 0px #666666;
+	box-shadow: 0px 0px 0px 0px #666666 !important;
 }
 .order-return{
 	font-weight: 600;
@@ -177,4 +183,7 @@ display: block;
 textarea{
 	width: 50%;
 	height: 100px;
+}
+.success-info{
+	font-size: 16px;
 }

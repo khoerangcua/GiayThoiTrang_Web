@@ -18,7 +18,7 @@ class ThanhToanController
             } else {
                 $ketqua = $this->ThanhToan();
                 if ($ketqua == true) {
-                    $this->ThanhToanThanhCong();
+                    $this->ThanhToanThanhCong($taikhoan["id_taikhoan"]);
                 }
                 else {
                     $this->ThanhToanThatBai();
@@ -27,12 +27,120 @@ class ThanhToanController
         }             
     }
 
-    private function ThanhToanThanhCong()
+    private function ThanhToanThanhCong($id)
     {
-        // Chưa làm
-        print ("thanhcong");
-    }
+       // Load giỏ hàng
+       $gioHangModel = new GioHangModel();
+       $giays = $gioHangModel->LoadGioHang($id);
 
+       // Load thông tin tài khoản
+       $taiKhoanModel = new TaiKhoanModel();
+       $khachhang = $taiKhoanModel->LoadTaiKhoanInfor($id);
+
+       $tamtinh = 0; 
+       $giamgia = 0;
+       foreach ($giays as $key => $value) {
+           $tamtinh += $value["gia"] * $value["soluong"];
+           $giamgia += (isset($value["phantramgiam"]) ? $value["gia"] * $value["phantramgiam"] / 100 : 0) * $value["soluong"];
+       }
+       $tongtien = $tamtinh + 50000 - $giamgia;
+
+       $hoten = $khachhang["ho"] . " " . $khachhang["ten"];
+
+       echo
+       "
+       <div class='container'>
+           <a href='./?to=trangchu'><img src='public/images/icons/header-icon.png' class='d-none d-lg-block icon-lg'></a>
+           <a class='row justify-content-center' href='./?to=trangchu'><img src='public/images/icons/header-icon.png' class='d-lg-none d-xl-block d-xl-none icon'></a>
+           <br style='clear:both'>
+           <div class='alert alert-success' role='alert'>
+           <p>Bạn đã đặt hàng thành công!</p>
+           <p>Sẽ có người gọi điện xác nhận đơn hàng của bạn trong vòng 24h. Mong bạn chú ý điện thoại nhé!</p>
+         </div>
+           <div class='row justify-content-center align-items-center'>
+           <div class='col-sm-10 col-md-10 col-lg-8 '>
+                    
+                    <div class='row p-2' style='background-color: #dfe0e1'>
+                        <div class='col-lg-7 col-md-12'>
+                            <div class='row login-header'>
+                                <h3 class='order-heading'>Thông tin giao hàng</h3>
+                            </div>
+                            <p class='success-info'>
+                                Họ và tên: $hoten
+                            </p>
+                            <p class='success-info'>
+                                Số điện thoại: ".$khachhang["sdt"]." 
+                            </p>
+
+                           <p class='success-info'>
+                               Địa chỉ: ".$khachhang["diachi"]."
+                            </p>
+                        </div>
+                        
+                        <div class='col-lg-5 col-md-12'>    
+                            <h3 class='order-heading'>Chi tiết về đơn hàng</h3>
+                       <table class='product-table'>
+                           <thead>
+                               <tr>
+                                   <th><span class='visually-hidden'>Ảnh sản phẩm</span></th>
+                                   <th><span class='visually-hidden'>Thông tin sản phẩm</span< /th>
+                                   <th><span class='visually-hidden'>Số lượng</span< /th>
+                                   <th><span class='visually-hidden'>Đơn giá</span< /th>
+                               </tr>
+
+                           </thead>
+                           <tbody>
+                           ";
+                           foreach ($giays as $key => $value) {
+                               echo
+                               "
+                               <tr class='product'>
+                                   <td class='product-image'>
+                                       <div class='product-thumbnail'>
+                                           <div class='thumbnail-wrapper'>
+                                               <img class='thumbnail-img' src='".$value["anhchinh"]."'>
+                                               <span class='thumbnail-quantity'>".$value["soluong"]."</span>
+                                           </div>
+                                       </div>
+                                   </td>
+                                   <th class='product-desc'>
+                                       <span class='product-name'>".$value["ten"]."</span>
+                                       <span class='product-info'>Size: ".$value["size"]."</span>
+                                   </th>
+                                   <td class='product-quantity visually-hidden'>".$value["soluong"]."</td>
+                                   <td class='product-price'>
+                                       <span>".number_format($value["gia"],0,".",",")."₫</span>
+                                   </td>
+                               </tr>
+                               ";
+                           }                               
+                           echo"
+                           </tbody>
+                        </table>
+                        <div class='col-12'>                      
+                           <div class='total'>
+                               <p>
+                                   Tổng cộng: <span id='tongcong2'>".number_format($tongtien, 0, '.', ',')."₫</span>
+                               </p>
+                           </div>
+                        </div>
+                        <div class='col-7 mb-4'>
+                            <button class='order-btn'><a href='index.php'>Quay lại Trang chủ</a></button>
+                        </div>
+                    </div>
+                    </div>
+               </div>
+               <div class='note mt-5'>
+                                <h3 class='order-heading'>Lưu ý với khách hàng</h3>
+                                <p>***Đối với hình thức thanh toán chuyển khoản quý khách vui lòng thực hiện chuyển khoản đến: </p>
+                                <p>- Tài khoản Vietcombank chi nhánh TPHCM</p>
+                                <p>- STK: 123456789123</p>
+                                <p>- Chủ tài khoản: Bảo Hải Đức Đạt Duy</p>
+                                <p>Với nội dung: Họ tên và Số điện thoại của quý khách. Vd: Lê Duy 0123456789 </p>
+                            </div>
+           </div>
+       ";
+   }  
     private function ThanhToanThatBai()
     {
         // Chưa làm
