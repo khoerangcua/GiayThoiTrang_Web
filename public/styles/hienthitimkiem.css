@@ -94,6 +94,9 @@
     opacity: 0.4;
     margin: 0px 10px;
 }
+.to-num{
+    margin-right: 10px;
+}
 .direction:hover, .page-num:hover{
     opacity: 1;
 }
