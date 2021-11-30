@@ -13,9 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <!--link style-->
+    <link rel="stylesheet" href="public/styles/thongtintaikhoan.css">
     <link rel="stylesheet" href="public/styles/header.css">
     <link rel="stylesheet" href="public/styles/footer.css">
-    <link rel="stylesheet" href="public/styles/thongtintaikhoan.css">
+
     <!--(chỉnh chỗ này)-->
 </head>
 
