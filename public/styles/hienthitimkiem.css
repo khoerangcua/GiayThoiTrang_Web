@@ -97,6 +97,9 @@
 .to-num{
     margin-right: 10px;
 }
+.current{
+    color: #888888;
+}
 .direction:hover, .page-num:hover{
     opacity: 1;
 }

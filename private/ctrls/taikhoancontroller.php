@@ -41,7 +41,7 @@ class TaiKhoanController
                 
                 if (isset($_SESSION["taikhoan"])) {
                     unset($_SESSION["taikhoan"]);
-                    header("Location: ./?to=login");
+                    header("Location: index.php");
                 }
                 
             }

@@ -197,14 +197,14 @@ class TimKiemController{
                 echo
                 "
                 <div class='carousel-item active'>
-                    <img src='" . $banners[$i]["diachianh"] . "' class='d-block w-100' alt=''>
+                    <a href='?to=search&from=another&name=loai&value=".$banners[$i]["value"]."'><img src='" . $banners[$i]["diachianh"] . "' class='d-block w-100' alt=''></a>
                 </div>
                 ";
             } else {
                 echo
                 "
                     <div class='carousel-item'>
-                    <img src='" . $banners[$i]["diachianh"] . "' class='d-block w-100' alt=''>
+                    <a href='?to=search&from=another&name=loai&value=".$banners[$i]["value"]."'><img src='" . $banners[$i]["diachianh"] . "' class='d-block w-100' alt=''></a>
                     </div>
                     ";
             }
@@ -265,6 +265,9 @@ class TimKiemController{
                     ";
                 }
             }
+
+            // Kiểm tra tham số phân trang
+            $page = isset($_GET["page"]) ? $_GET["page"] : 1 ;
             if ($_GET["from"] == "another")
             {
 
@@ -275,24 +278,47 @@ class TimKiemController{
                 // Hiển thị thanh phân trang
                 for ($i = 1; $i <= $total; $i++) {
 
-                    echo
-                    "
-                        <a class='to-num' href='./?to=search&from=another&name=" . $name . "&value=" . $value . "&page=" . $i . "'>" . $i . "</a>
-                    ";
+                    if ($i == $page) {
+                        
+                        echo
+                        "
+                            <span class='to-num current'>" . $i . "</span>
+                        ";
+                    } else {
+                        echo
+                        "
+                            <a class='to-num' href='./?to=search&from=another&name=" . $name . "&value=" . $value . "&page=" . $i . "'>" . $i . "</a>
+                        ";
+                    }
+
+                    
                 }
             }
             if ($_GET["from"] == "searchbar") {
                 // Lấy url
                 $key= $_GET["key"];
+
+                
                 
 
                 // Hiển thị thanh phân trang
                 for ($i = 1; $i <= $total; $i++) {
 
-                    echo
-                    "
-                        <a class='to-num' href='./?to=search&from=searchbar&key=".$key."&page=" . $i . "'>" . $i . "</a>
-                    ";
+                    if ($i == $page) {
+                      
+                        echo
+                        "
+                        <span class='to-num current'>" . $i . "</span>
+                        ";
+                    }
+                    else {
+                        echo
+                        "
+                            <a class='to-num' href='./?to=search&from=searchbar&key=".$key."&page=" . $i . "'>" . $i . "</a>
+                        ";
+                    }
+
+                   
                 }
             }
         }
