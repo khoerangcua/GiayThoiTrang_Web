@@ -93,18 +93,16 @@ class ChiTietSanPhamController
             <div class='row'>
             ";
                     echo 
-                    "
-                    
-                        <div class='col-lg-7 col-md-12 col-12'>
-                            <div class='imgpro'>
-                                <img width='100%' src='".$anhchinh."' alt='' id='ProductImg'>
-                                <div class='img-icon'>
-                                    <img src='".$anhphu1."' alt='' class='small-img'>
-                                    <img src='".$anhphu2."' alt='' class='small-img'>
-                                    <img src='".$anhphu3."' alt='' class='small-img'>
-                                    <img src='".$anhphu4."' alt='' class='small-img'>
-                                </div>
-                            </div>
+                    "   <div class='col-lg-7 col-md-12 col-12'>
+                            <div class='imgpro'>
+                                <img width='100%' src='".$anhchinh."' alt='' id='ProductImg'>
+                                <div class='img-icon'>
+                                <img src='".$anhphu1."' alt='' class='small-img'>
+                                <img src='".$anhphu2."' alt='' class='small-img'>
+                                <img src='".$anhphu3."' alt='' class='small-img'>
+                                <img src='".$anhphu4."' alt='' class='small-img'>
+                                </div>
+                            </div>
                         </div>
 
                         <div class='col-lg-5 col-md-12 col-12'>
@@ -252,18 +250,16 @@ class ChiTietSanPhamController
         echo "<div class='container'>";
             echo "<div class='row'>";
                     echo 
-                    "
-                    
-                        <div class='col-lg-7 col-md-12 col-12'>
-                            <div class='imgpro'>
-                                <img width='100%' src='".$anhchinh."' alt='' id='ProductImg'>
-                                <div class='img-icon'>
-                                    <img src='".$anhphu1."' alt='' class='small-img'>
+                    "   <div class='col-lg-7 col-md-12 col-12'>
+                            <div class='imgpro'>
+                                <img width='100%' src='".$anhchinh."' alt='' id='ProductImg'>
+                                <div class='img-icon'>
+                                    <img src='".$anhphu1."' alt='' class='small-img'>
                                     <img src='".$anhphu2."' alt='' class='small-img'>
                                     <img src='".$anhphu3."' alt='' class='small-img'>
                                     <img src='".$anhphu4."' alt='' class='small-img'>
-                                </div>
-                            </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class='col-lg-5 col-md-12 col-12'>
