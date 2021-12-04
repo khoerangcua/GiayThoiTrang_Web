@@ -138,8 +138,6 @@ class DangKyController
 
     private function LoadDangKyThatBai()
     {
-        print("dangkythatbai");
-
         echo
         "
         <div class='container'>
@@ -205,7 +203,8 @@ class DangKyController
                                 Chấp nhận với <span><a href=''>Điều khoản</a></span>
                             </label>
                         </div>
-                        <button type='submit' name='dangky' class='dky-btn mb-5'>Đăng ký</button>
+                        <button type='submit' name='dangky' class='dky-btn mb-2'>Đăng ký</button>
+                        <p class='dky-fail mb-4'><strong>×</strong> Đăng ký thất bại: Vui lòng kiểm tra lại thông tin! </p>
                         <p class='dky-login'>Bạn đã có tài khoản? <a href='./?to=login'>Đăng nhập</a></p>
                     </form>
                 </div>	

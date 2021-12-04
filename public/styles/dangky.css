@@ -93,3 +93,6 @@ html, body{
 .dky-login{
 	text-align: center;
 }
+.dky-fail{
+	color: #FF0004;
+}
